@@ -1,46 +1,35 @@
-[![theme badge](https://img.shields.io/badge/ELIXIR%20toolkit%20theme-jekyll-blue?color=0d6efd)](https://github.com/ELIXIR-Belgium/elixir-toolkit-theme)
+# Research Object Crate (RO-Crate)
 
-# ELIXIR Toolkit Theme
+This is the GitHub repository for contributing to the [Research Object Crate](https://researchobject.github.io/ro-crate/) specification.
 
-This repository serves as an example on how to deploy the [ELIXIR Toolkit Theme](https://elixir-belgium.github.io/elixir-toolkit-theme).
+The [docs/](docs/) folder has the [MarkDown](https://guides.github.com/features/mastering-markdown) content that is rendered to <https://researchobject.github.io/ro-crate/> by [GitHub pages](https://pages.github.com/). Alias <http://researchobject.org/ro-crate/> (note, no https) redirects.
 
-## Why this separate repo
+Feel free to use other folders for non-web content, e.g. examples, JSON-LD contexts, test scripts.
 
-This repo should demonstrate how easy it is to setup the theme, but more importantly, to show how small the amount is you need. This is really the fresh, bare bone start you want when using the theme from scratch. This way of using the theme will also make sure that your own content is not cluttered with theme files and that you can easily stay up to date when improvements to the theme are made.
+## Contribute
 
-## Get started
+This repository is coordinated by the [RO-Crate team](https://researchobject.github.io/ro-crate/#contribute).
 
-### 1. Fork this repository
+To suggest changes, improvements or issues, use the GitHub repository
+<https://github.com/ResearchObject/ro-crate> - if you are new to GitHub or Open
+Source you may appreciate the [GitHub guides](https://guides.github.com/) like
+[Hello World](https://guides.github.com/activities/hello-world/),
+[MarkDown](https://guides.github.com/features/mastering-markdown/) and [How to
+contribute to open source](https://opensource.guide/how-to-contribute/)
 
-Click on the `Fork` button in the top right of GitHub to fork this repository.
+You are welcome to [join us](https://github.com/ResearchObject/ro-crate/issues/1)! 
 
-### 2. Deploy using GitHub Actions
+Contributors are expected to comply with our [Code of Conduct](CODE_OF_CONDUCT.md)
+to ensure an open and inclusive environment.
 
-1. Go to Settings > Pages and enable GitHub Actions as a source
-2. Go to Environments > github-pages and remove the rule under Deployment branches if you want to deploy other branches than master or main via Workflow Dispatch (manually triggered action)
-3. Push a change to master/main branch and the GitHub Actions will be triggered.
+## License
 
-**Deploy using GitHub Pages (alternative)**
+* © 2019-2021 Research Object Crate contributors <https://github.com/ResearchObject/ro-crate/graphs/contributors>
+* © 2018-2020 University of Technology Sydney, Australia
+* © 2018-2021 The University of Manchester, UK
 
-This is the quickest way to deploy the elixir-toolkit-theme, but gives less flexibility and does not allow you to make use of the new way of tagging tools. Visit the [GitHub documentation](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/) to find out more about how to setup GitHub pages. 
+The specification and documentation maintained in this repository is Open Source and licensed as [Apache License, version 2.0](LICENSE), see <https://www.apache.org/licenses/LICENSE-2.0> for details.
 
-NOTE: This way of deploying does not support the tool-tag in the text of the Markdown file to tag tools and resources.
+Any contributions received are assumed to be [covered by the Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0#contributions).
 
-### 3. Checking out your deployment
-
-After waiting a minute or two (deployments can take  a while), you can checkout your website. THe deployment is by default served at https://USER.github.io/FORK-NAME/. 
-
-### 4. Making changes
-
-Any change to the master/main branch will automatically trigger the re-deployment of the website, so your changes come live. More information on how you can configure the theme can be found using these links: 
-
-- [Changing the navigation structures](https://elixir-belgium.github.io/elixir-toolkit-theme/navigation_structures)
-- [Configuring the theme](https://elixir-belgium.github.io/elixir-toolkit-theme/configuring_theme)
-- [Applying custom branding](https://elixir-belgium.github.io/elixir-toolkit-theme/custom_branding)
-- [Markdown cheat sheet](https://elixir-belgium.github.io/elixir-toolkit-theme/markdown_cheat_sheet)
-
-And many more documentation pages can be found on the original [ELIXIR Toolkit Theme website](https://elixir-belgium.github.io/elixir-toolkit-theme).
-
-### 5. Add a LICENSE file to your GitHub repository. 
-
-Add a license to your repository using the [GitHub instructions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository).
+The RO-Crate JSON-LD contexts `context.json` and JSON-LD examples within this specification are distributed under [CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/). 
