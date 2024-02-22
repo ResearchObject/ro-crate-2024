@@ -5,7 +5,7 @@ url: https://www.ldaca.edu.au/
 image: ldaca.png
 ---
 
-[![LDaCA Logo](/assets/img/ldaca_sm.png)](https://ldaca.edu.au/)
+[![LDaCA Logo](assets/img/ldaca_sm.png)](https://ldaca.edu.au/)
 
 The LDaCA Program architecture consists of a set of modular services; data preservation/archiving, APIs for delivery, access control and a discovery portal for data and analysis tools as well as automated container-based notebook environments to run analytics via the Australian Text Analytics Platform (which is a component of the broader program).
 
