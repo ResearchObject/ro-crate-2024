@@ -6,7 +6,7 @@
     Main menu <i title="navbar-toggler" class="fa-solid fa-bars ms-2"></i>
   </button>
   <nav id="side-nav" aria-label="Side navigation">
-    <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="/index">Main </a>
+    <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="index">Main </a>
     <ul class="list-unstyled mb-4">
       {%- for folder in sidebar.subitems %}
       <a class="btn hover-primary text-start d-block mb-1" href="{{folder.url | relative_url }}">{{ folder.title }}</a>
