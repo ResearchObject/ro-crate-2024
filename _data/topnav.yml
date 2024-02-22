@@ -1,0 +1,13 @@
+subitems:
+  - title: 'Home' 
+    url:  /
+  - title: 'Background' 
+    url: /background
+  - title: 'Use Cases' 
+    url: /use_cases
+  - title: 'Community'
+    url: /community
+  - title: 'FAQ'
+    url: /faq
+  - title: 'Specification'
+    url: /specification

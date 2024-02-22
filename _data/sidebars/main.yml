@@ -1,0 +1,17 @@
+subitems:
+  - title: Use Cases
+    hr: true
+    url: /use_cases
+
+  - title: Your Domain
+    url: /domains
+
+  - title: Your Task
+    url: /tasks
+
+  - title: Your Role
+    url: /roles
+
+  - title: Tools
+    url: /tools
+

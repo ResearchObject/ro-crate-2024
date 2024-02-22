@@ -1,0 +1,23 @@
+- Question: "What is RO-Crate?"
+  Answer: "RO-Crate is a community-driven, lightweight approach to packaging research data with associated metadata and identifiers to enable reproducibility and re-use."
+
+- Question: "How does RO-Crate help researchers?"
+  Answer: "RO-Crate helps researchers by providing a standardized way to package and describe their research data, making it easier to share and reproduce their work."
+
+- Question: "What is the purpose of RO-Crate?"
+  Answer: "The purpose of RO-Crate is to improve the reproducibility and re-use of research data by providing a common format for packaging and describing data."
+
+- Question: "Why was RO-Crate created?"
+  Answer: "RO-Crate was created to help researchers easily package and share their research data and metadata in a standardized way, making it easier for others to discover, access, and reuse their data."
+
+- Question: "How does RO-Crate work?"
+  Answer: "RO-Crate works by providing a structured way to package research data and its associated metadata, including information about the data, its creators, and its context. This allows for better organization, discovery, and reuse of research data."
+
+- Question: "What are the benefits of using RO-Crate?"
+  Answer: "Using RO-Crate allows researchers to easily share and preserve their research data, as well as ensure that all necessary metadata is included for automated processing and reproducibility."
+
+- Question: "How can I create an RO-Crate?"
+  Answer: "There are several tools available for creating RO-Crates, including the RO-Crate Python library, the RO-Crate CLI, and the RO-Crate Extension for Google Sheets."
+
+- Question: "How is RO-Crate different from other data packaging formats?"
+  Answer: "RO-Crate is unique in its use of schema.org annotations, which allows for rich metadata descriptions of the data, making it more discoverable and reusable. It also provides a lightweight and flexible approach, making it easier for researchers to adopt and use."

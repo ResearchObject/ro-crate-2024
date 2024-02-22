@@ -1,0 +1,335 @@
+/*-----General styling-----*/
+
+$card-slide-transition:
+    border-width 0.15s ease-in,
+    margin-right 0.15s ease-in;
+
+main {
+    h1 {
+        margin-bottom: 0.5em;
+        font-weight: 600;
+    }
+    h2,
+    .h2-like {
+        font-weight: 600;
+        &::before {
+            content: "";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 41.055 42.576'%3E%3Cpath style='fill:%23e63a47' d='m18.067 22.793-17.21 10a1.73 1.73 0 0 0-.6 2.4l4 6.56a1.73 1.73 0 0 0 2.34.59l33.59-19.58a1.73 1.73 0 0 0 0-3L6.637.233a1.73 1.73 0 0 0-2.34.59l-4 6.56a1.73 1.73 0 0 0 .6 2.4l17.21 10a1.73 1.73 0 0 1-.04 3.01z'/%3E%3C/svg%3E");
+            display: inline-block;
+            width: 0.5em;
+            height: 0.5em;
+            margin-right: 0.6rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+        }
+    }
+
+    h3,
+    .h3-like {
+        font-weight: 600;
+        margin-top: 2rem;
+    }
+
+    .anchorjs-link {
+        margin-left: -2em !important;
+    }
+
+    ol li::marker,
+    ul li::marker {
+        font-size: larger;
+    }
+}
+
+/*-----More information tiles-----*/
+
+.info-card {
+    .hover-primary:not(.badge),
+    .btn.py-4.hover-primary {
+        border-left: 0px solid $primary;
+        transition: $card-slide-transition;
+        &:hover {
+            color: $dark !important;
+            border-left-width: 6px;
+            margin-right: -6px;
+            i {
+                color: $dark !important;
+            }
+            .text-muted {
+                color: $text-muted !important;
+            }
+        }
+        &.bg-white:hover {
+            background-color: $white !important;
+        }
+    }
+
+    .card-header {
+        padding-bottom: 0;
+        border-bottom: 0;     
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+}
+
+/*-----Sidebar-----*/
+
+#side-nav {
+    .btn.sidebar-title {
+        background-color: $blue-x;
+        // font-weight: bold;
+        font-size: 1.3rem;
+        &.active {
+            border-left: 4px solid $primary;
+        }
+    }
+    > ul {
+        margin-top: $spacer;
+        li {
+            a {
+                margin-bottom: 0 !important;
+                border-left: 4px solid $sidebar-bg;
+                &:hover {
+                    border-left-color: $primary !important;
+                    background-color: $primary;
+                }
+            }
+            &.active {
+                &.parent > a {
+                    background-color: $light;
+                    border-left-color: $light;
+                }
+                &:not(.parent) > a {
+                    border-left-color: $primary;
+                }
+            }
+
+            &.mt-3 {
+                padding-top: $spacer;
+                border-top: $border-width $border-style $border-color;
+            }
+        }
+    }
+}
+
+.sidebar-collapse {
+    background-color: $light;
+}
+
+/*-----Selection color-----*/
+
+::-moz-selection {
+    -moz-text-fill-color: $white;
+}
+
+::selection {
+    -webkit-text-fill-color: $white;
+}
+
+/*-----Section navigation tiles-----*/
+
+.navigation-tiles {
+    .btn.py-4.hover-primary {
+        border-left: 0px solid $primary;
+        transition: $card-slide-transition;
+        &:hover {
+            color: $dark !important;
+            border-left-width: 6px;
+            margin-right: -6px;
+            i {
+                color: $dark !important;
+            }
+        }
+        &.bg-light:hover {
+            background-color: $light !important;
+        }
+    }
+    .card {
+        border-left: 0px solid $primary;
+        transition: $card-slide-transition;
+        &:hover {
+            border-left-width: 6px;
+            margin-right: -6px;
+        }
+
+        .card-header {
+            padding-top: 15px;
+            padding-bottom: 0;
+            a:hover {
+                text-decoration: none;
+            }
+            h3 {
+                font-size: 1.2rem;
+                font-weight: bold;
+                display: inline;
+                margin-left: 15px;
+                vertical-align: super;
+            }
+        }
+        button {
+            background-color: $white;
+        }
+        .card-footer {
+            padding-top: 0;
+        }
+    }
+}
+
+/*-----Simple navigation tiles------*/
+.simple-navigation-tile {
+  background-color: white;
+}
+
+
+/*-----Custom primary button-----*/
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active {
+    color: $white;
+}
+
+
+/*-----Top navigation-----*/
+.navbar {
+  background-color: #f5f5f5 !important;
+  padding: 20px 0 20px 0;
+}
+
+.navbar-nav .nav-item > a.active {
+    background-color: $blue-x;
+    border-radius: $border-radius;
+}
+
+@include media-breakpoint-down(sm) {
+    header .navbar .navbar-brand img {
+        height: 37px;
+    }
+}
+
+/* -----Homepage----- */
+
+.landingpage {
+    .h-icon-6 {
+        height: 6em;
+    }
+    .h-icon-5 {
+        height: 5em;
+    }
+    .h-icon-4 {
+        height: 4em;
+    }
+
+    .card {
+        border-left: 0px solid $primary;
+        transition: $card-slide-transition;
+        &:hover {
+            border-left-width: 6px;
+            margin-right: -6px;
+        }
+
+        .card-img-top {
+            width: unset;
+            padding: $card-spacer-x $card-spacer-x 0 $card-spacer-x;
+        }
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        font-weight: 200;
+        text-align: center;
+    }
+    
+    h2 {
+        font-weight: 700;
+    }
+
+    h3 {
+        font-weight: 700;
+    }
+    
+    .featured-content {
+      position: relative;  
+      border-top: 1px solid $primary;
+      border-bottom: 1px solid $primary;
+    }
+
+    .featured-content::before {    
+      content: "";
+      background-image: url('../img/bg22.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+    }
+
+    .featured-content p {
+      color: #4A5251;
+      font-size: 0.95em;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+    }
+
+    .featured-content-header {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      padding-top: 30px;
+      position: relative; 
+    }
+
+    .featured-content-header a { 
+      color: $dark !important;
+    }
+
+    .card-body .fa {
+      color: #4a5251;
+      border: 2px solid $primary;
+      border-radius: 50%;
+      width: 85px;
+      height: 85px;
+      background: white;
+      padding-top: 15px;
+      display: inline-block;
+    }
+}
+
+// Search box
+
+section#search-section {
+    form {
+        max-width: 600px;
+    }
+
+    #search-results {
+        right: unset;
+    }
+    .input-group-text {
+        font-size: 1.5rem;
+    }
+}
+
+#search-input {      
+  background-color: white;
+}
+
+/*-----Sidebar-----*/
+@include media-breakpoint-up(lg) {
+    #sidebar {
+        top: 3rem;
+        z-index: 2;
+        height: calc(100vh - 7rem);
+        overflow-y: auto;
+        position: sticky;
+    }
+}
+
+/*-----Footer------*/
+#back-to-top.visible {
+  bottom: 7px;
+}

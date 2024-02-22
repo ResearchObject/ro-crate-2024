@@ -1,0 +1,47 @@
+- name: Decribo
+  description: an ecosystem of tools, software components and services to create and manage Research Object Crates.
+  status: RC
+  level: All
+  url: https://describo.github.io/#/
+
+- name: ro-crate-excel
+  description: Command-line tool to help create RO-Crates from spreadsheets
+  status: beta
+  level: Beginner
+  url: https://www.npmjs.com/package/ro-crate-excel
+
+- name: ro-crate-html
+  description: HTML rendering of RO-Crate
+  status: beta
+  level: Intermediate
+  url: https://www.npmjs.com/package/ro-crate-html
+
+- name: ro-crate-preview
+  description: GitHub Action for ro-crate-html, e.g. publishing crates on GitHub Pages
+  status: alpha
+  level: Advanced
+  url: https://github.com/marketplace/actions/ro-crate-preview
+
+- name: ro-crate-js
+  description: JavaScript/NodeJS library for RO-Crate rendering as HTML
+  status: beta
+  level: Advanced
+  url: https://www.npmjs.com/package/ro-crate
+
+- name: ro-crate-ruby
+  description: Ruby library to consume/produce RO-Crates
+  status: beta
+  level: Advanced
+  url: https://github.com/ResearchObject/ro-crate-ruby
+
+- name: FAIR-Research-Object
+  description: evaluate FAIRness of Research Objects through an API
+  status: prototype
+  level: Intermediate
+  url: https://github.com/oeg-upm/FAIR-Research-Object
+
+- name: RO-Crate-Registry
+  description: Web-based registry of RO-Crates (assumes ZIP on http/https)
+  status: prototype
+  level: Beginner
+  url: https://github.com/XiaotianWang0918/RO-Crate-Registry

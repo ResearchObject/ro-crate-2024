@@ -1,0 +1,19 @@
+{%- assign sidebar = site.data.sidebars[page.sidebar] %}
+<aside id="sidebar">
+  <button class="btn text-start d-lg-none hover-primary collapsed sidebar-collapse w-100 mb-3" type="button"
+    data-bs-toggle="collapse" data-bs-target="#side-nav" aria-controls="side-nav" aria-expanded="true"
+    aria-label="Toggle navigation">
+    Main menu <i title="navbar-toggler" class="fa-solid fa-bars ms-2"></i>
+  </button>
+  <nav id="side-nav" aria-label="Side navigation">
+    <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="/index">Main </a>
+    <ul class="list-unstyled mb-4">
+      {%- for folder in sidebar.subitems %}
+      <a class="btn hover-primary text-start d-block mb-1" href="{{folder.url | relative_url }}">{{ folder.title }}</a>
+      </li>
+      {%- endfor %}
+    </ul>
+    <script>$("li.active").parents('li').toggleClass("active parent");</script>
+  </nav>
+
+</aside>
