@@ -5,7 +5,7 @@ url: https://www.rohub.org/
 image: ro_hub.svg
 ---
 
-[![ROHub logo](/assets/img/ro_hub.svg)](https://reliance.rohub.org/)
+[![ROHub logo](assets/img/ro_hub.svg)](https://reliance.rohub.org/)
 
 [ROHub](https://reliance.rohub.org/) (Research Object Hub), one of [EOSC](https://eosc.eu/) research enabling services, is a holistic solution for the storage, lifecycle management and preservation of scientific work and operational processes via research objects. It makes these resources available to others, allows to publish and release them through a DOI, and allows to discover and reuse pre-existing scientific knowledge.
 
