@@ -1,0 +1,18 @@
+---
+title: Frequently Asked Questions
+---
+{%- assign allfaqs = site.data.faqs %}
+<h3>Frequently Asked Questions</h3>
+<div class="table-responsive mt-4 mb-5">
+  <table class="table display dataTable">
+    <tbody>
+      {%- for faq in allfaqs %}
+      <tr>
+        <td><b>{{ faq.question }}</b></td>
+        <td></td>
+        <td>{{ faq.answer }}</td>
+      </tr>
+      {%- endfor %}
+    </tbody>
+  </table>
+</div>
