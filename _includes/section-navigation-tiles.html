@@ -89,15 +89,16 @@
                     <h3 class="card-title ml-3">{{current_page.title}}</h3>
                     {%- if current_page.image %}
                     <img alt="logo of {{current_page.title}}" src="assets/img/{{current_page.image }}" class="d-inline tile-img-sm">
-                    {%- endif %}   
-                  </div>
-                  
-                               
+                    {%- endif %}
+                    {%- if current_page.icon %}
+                    <i class="fa fa-2x {{ current_page.icon }}"></i>
+                    {%- endif %}
+                  </div>   
                 </a>
             </div>
             <div class="card-body">
                 {%- if current_page.description %}
-                <p class="card-text">{{ current_page.description}}</p>
+                <p class="card-text px-3">{{ current_page.description}}</p>
                 {%- endif %}
             </div>
             <div class="px-3 pb-3 d-flex justify-content-between">
