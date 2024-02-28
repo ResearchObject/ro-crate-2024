@@ -31,26 +31,26 @@ defaults:
       sidebar: main
   -
     scope:
-      path: "pages/domains"
+      path: "pages/domains/"
     values:
       layout: "default"
       type: domains
   -
     scope:
-      path: "pages/tasks"
+      path: "pages/tasks/"
     values:
       layout: "default"
       type: tasks
   -
     scope:
-      path: "pages/roles"
+      path: "pages/roles/"
     values:
       layout: "default"
       type: roles
 
   -
     scope:
-      path: "pages/use_cases"
+      path: "pages/use_cases/"
     values:
       layout: "default"
       type: use_cases
