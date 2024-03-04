@@ -8,12 +8,34 @@
   <nav id="side-nav" aria-label="Side navigation">
     <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="index">Main </a>
     <ul class="list-unstyled mb-4">
+
       {%- for folder in sidebar.subitems %}
-      <a class="btn hover-primary text-start d-block mb-1" href="{{folder.url | relative_url }}">{{ folder.title }}</a>
+        {%- if page.url == folder.url %}
+          <li class="active">
+        {%- else %}
+          <li>
+        {%- endif %}
+        <a class="btn hover-primary text-start d-block mb-1" href="{{folder.url | relative_url }}">{{ folder.title
+          }}</a>
+        {%- if folder.submenu_type | size > 0 %}
+        <ul class="list-unstyled">
+          {%- for linked_page in site.pages %}
+          {%- if linked_page.type == folder.submenu_type %}
+          {%- if page.url == linked_page.url %}
+              <li class="active">
+            {%- else %}
+              <li>
+            {%- endif %}
+            <a class="btn hover-primary text-start d-block mb-1" href="{{linked_page.url | relative_url }}">{{
+              linked_page.title }}</a>
+          </li>
+          {%- endif %}
+          {%- endfor %}
+        </ul>
+        {%- endif %}
       </li>
       {%- endfor %}
     </ul>
-    <script>$("li.active").parents('li').toggleClass("active parent");</script>
   </nav>
-
 </aside>
+<script>$("li.active").parents('li').toggleClass("active parent");</script>
