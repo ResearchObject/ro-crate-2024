@@ -1,4 +1,29 @@
-- title: Specification
-  url: /specification
+- title: Introduction
+  url: /introduction.html
+- title: Terminology
+  url: /terminology.html
+- title: RO-Crate Structure
+  url: /structure.html
+- title: Metadata of the RO-Crate
+  url: /metadata.html
+- title: Root Data Entity
+  url: /root-data-entity.html
+- title: Data Entities
+  url: /data-entities.html
+- title: Contextual Entities
+  url: /contextual-entities.html
+- title: Provenance of entities
+  url: /provenance.html
+- title: Workflows and scripts
+  url: /workflows.html
 - title: Appendix
   url: /appendix
+  subitems:
+    - title: Changelog
+      url: /appendix/changelog.html
+    - title: Handling relative URI references
+      url: /appendix/relative-uris.html
+    - title: Implementation notes
+      url: /implementation-notes.html
+    - title: RO-Crate JSON-LD
+      url: /appendix/jsonld.html

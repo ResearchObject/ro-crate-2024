@@ -1,0 +1,379 @@
+<!DOCTYPE html> <html lang="en-US"> 
+<!-- Mirrored from www.researchobject.org/ro-crate/1.1/appendix/relative-uris.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Aug 2023 18:06:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="stylesheet" href="../../assets/css/just-the-docs-default.css"> <script src="../../assets/js/vendor/lunr.min.js"></script> <script src="../../assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="icon" href="../../favicon.ico" type="image/x-icon"> <!-- Begin Jekyll SEO tag v2.8.0 --> <title>Handling relative URI references | Research Object Crate (RO-Crate)</title> <meta name="generator" content="Jekyll v3.9.3" /> <meta property="og:title" content="Handling relative URI references" /> <meta property="og:locale" content="en_US" /> <meta name="description" content="RO-Crate is a community effort to establish a lightweight approach to packaging research data with their metadata. It is based on schema.org annotations in JSON-LD, and aims to make best-practice in formal metadata description accessible and practical for use in a wider variety of situations, from an individual researcher working with a folder of data, to large data-intensive computational research environments." /> <meta property="og:description" content="RO-Crate is a community effort to establish a lightweight approach to packaging research data with their metadata. It is based on schema.org annotations in JSON-LD, and aims to make best-practice in formal metadata description accessible and practical for use in a wider variety of situations, from an individual researcher working with a folder of data, to large data-intensive computational research environments." /> <link rel="canonical" href="relative-uris.html" /> <meta property="og:url" content="https://www.researchobject.org/ro-crate/1.1/appendix/relative-uris.html" /> <meta property="og:site_name" content="Research Object Crate (RO-Crate)" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta property="twitter:title" content="Handling relative URI references" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","description":"RO-Crate is a community effort to establish a lightweight approach to packaging research data with their metadata. It is based on schema.org annotations in JSON-LD, and aims to make best-practice in formal metadata description accessible and practical for use in a wider variety of situations, from an individual researcher working with a folder of data, to large data-intensive computational research environments.","headline":"Handling relative URI references","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.researchobject.org/ro-crate/assets/img/ro-crate-wide.svg"}},"url":"https://www.researchobject.org/ro-crate/1.1/appendix/relative-uris.html"}</script> <!-- End Jekyll SEO tag --> </head> <body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewBox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE --> <symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"> <title id="svg-external-link-title">(external link)</title> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md --> <symbol id="svg-copy" viewBox="0 0 16 16"> <title>Copy</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16"> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/> <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/> </svg> </symbol> <symbol id="svg-copied" viewBox="0 0 16 16"> <title>Copied</title> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16"> <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/> <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header"> <a href="../../index.html" class="site-title lh-tight"> <div class="site-logo"></div> </a> <a href="#" id="menu-button" class="site-button"> <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg> </a> </div> <nav aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list"><li class="nav-list-item active"><a href="#" class="nav-list-expander" aria-label="toggle links in RO-Crate 1.1 category"> <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg> </a><a href="../index.html" class="nav-list-link">RO-Crate 1.1</a><ul class="nav-list"><li class="nav-list-item "><a href="../introduction.html" class="nav-list-link">Introduction</a></li><li class="nav-list-item "><a href="../terminology.html" class="nav-list-link">Terminology</a></li><li class="nav-list-item "><a href="../structure.html" class="nav-list-link">RO-Crate Structure</a></li><li class="nav-list-item "><a href="../metadata.html" class="nav-list-link">Metadata of the RO-Crate</a></li><li class="nav-list-item "><a href="../root-data-entity.html" class="nav-list-link">Root Data Entity</a></li><li class="nav-list-item "><a href="../data-entities.html" class="nav-list-link">Data Entities</a></li><li class="nav-list-item "><a href="../contextual-entities.html" class="nav-list-link">Contextual Entities</a></li><li class="nav-list-item "><a href="../provenance.html" class="nav-list-link">Provenance of entities</a></li><li class="nav-list-item "><a href="../workflows.html" class="nav-list-link">Workflows and scripts</a></li><li class="nav-list-item active"><a href="#" class="nav-list-expander" aria-label="toggle links in Appendix category"> <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg> </a><a href="index.html" class="nav-list-link">Appendix</a><ul class="nav-list"><li class="nav-list-item "> <a href="changelog.html" class="nav-list-link">Changelog</a> </li><li class="nav-list-item active"> <a href="relative-uris.html" class="nav-list-link active">Handling relative URI references</a> </li><li class="nav-list-item "> <a href="implementation-notes.html" class="nav-list-link">Implementation notes</a> </li><li class="nav-list-item "> <a href="jsonld.html" class="nav-list-link">RO-Crate JSON-LD</a> </li></ul></li></ul></li><li class="nav-list-item"><a href="../../background.html" class="nav-list-link">Background</a></li><li class="nav-list-item"><a href="../../community-2.html" class="nav-list-link">Community</a></li><li class="nav-list-item"><a href="../../examples.html" class="nav-list-link">Examples</a></li><li class="nav-list-item"><a href="../../outreach.html" class="nav-list-link">Outreach and Publications</a></li><li class="nav-list-item"><a href="../../profiles.html" class="nav-list-link">Profiles</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander" aria-label="toggle links in RO-Crate In Use category"> <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg> </a><a href="../../in-use/index.html" class="nav-list-link">RO-Crate In Use</a><ul class="nav-list"><li class="nav-list-item "><a href="../../in-use/LDaCA.html" class="nav-list-link">Language Data Commons of Australia (LDaCA) Program</a></li><li class="nav-list-item "><a href="../../in-use/life_monitor.html" class="nav-list-link">Life Monitor</a></li><li class="nav-list-item "><a href="../../in-use/rohub.html" class="nav-list-link">ROHub</a></li><li class="nav-list-item "><a href="../../in-use/survey-ontology.html" class="nav-list-link">Survey Ontology</a></li></ul></li><li class="nav-list-item"><a href="../../specification.html" class="nav-list-link">Specification</a></li><li class="nav-list-item"><a href="../../tools/index.html" class="nav-list-link">Tools</a></li><li class="nav-list-item"><a href="../../tutorials.html" class="nav-list-link">Tutorials</a></li></ul> </nav> <footer class="site-footer"> This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll. </footer> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Research Object Crate (RO-Crate)" aria-label="Search Research Object Crate (RO-Crate)" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> <nav aria-label="Auxiliary" class="aux-nav"> <ul class="aux-nav-list"> <li class="aux-nav-list-item"> <a href="https://github.com/ResearchObject/ro-crate" class="site-button" > RO-Crate on GitHub </a> </li> </ul> </nav> </div> <div id="main-content-wrap" class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="../index.html">RO-Crate 1.1</a></li> <li class="breadcrumb-nav-list-item"><a href="index.html">Appendix</a></li> <li class="breadcrumb-nav-list-item"><span>Handling relative URI references</span></li> </ol> </nav> <div id="main-content" class="main-content" role="main"> <!-- Copyright 2019-2020 University of Technology Sydney Copyright 2019-2020 The University of Manchester UK Copyright 2019-2020 RO-Crate contributors<https://github.com/ResearchObject/ro-crate/graphs/contributors> Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. --> <div id="relative-uris"></div> <h1 class="no_toc" id="appendix-handling-relative-uri-references"> <a href="#appendix-handling-relative-uri-references" class="anchor-heading" aria-labelledby="appendix-handling-relative-uri-references"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> APPENDIX: Handling relative URI references </h1> <h2 class="no_toc text-delta" id="table-of-contents"> <a href="#table-of-contents" class="anchor-heading" aria-labelledby="table-of-contents"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Table of contents </h2> <ol id="markdown-toc"> <li><a href="#flattening-json-ld-from-nested-json" id="markdown-toc-flattening-json-ld-from-nested-json">Flattening JSON-LD from nested JSON</a></li> <li><a href="#expandingparsing-json-ld-keeping-relative-referencing" id="markdown-toc-expandingparsing-json-ld-keeping-relative-referencing">Expanding/parsing JSON-LD keeping relative referencing</a></li> <li><a href="#establishing-absolute-uri-for-ro-crate-root" id="markdown-toc-establishing-absolute-uri-for-ro-crate-root">Establishing absolute URI for RO-Crate Root</a></li> <li><a href="#finding-ro-crate-root-in-rdf-triple-stores" id="markdown-toc-finding-ro-crate-root-in-rdf-triple-stores">Finding RO-Crate Root in RDF triple stores</a></li> <li><a href="#parsing-as-rdf-with-a-different-ro-crate-root" id="markdown-toc-parsing-as-rdf-with-a-different-ro-crate-root">Parsing as RDF with a different RO-Crate Root</a></li> <li><a href="#establishing-a-base-uri-inside-a-zip-file" id="markdown-toc-establishing-a-base-uri-inside-a-zip-file">Establishing a base URI inside a ZIP file</a></li> <li><a href="#relativizing-absolute-uris-within-ro-crate-root" id="markdown-toc-relativizing-absolute-uris-within-ro-crate-root">Relativizing absolute URIs within RO-Crate Root</a></li> </ol> <p>The <em>RO-Crate Metadata File</em> use <em>relative URI references</em> to identify files and directories contained within the <em>RO-Crate Root</em> and its children. As described in section <a href="#describing-entities-in-json-ld">Describing entities in JSON-LD</a> above, relative URI references are also frequently used for identifying <em>Contextual entities</em>.</p> <p>When using JSON-LD tooling and RDF libraries to consume or generate RO-Crates, extra care should be taken to ensure these URI references are handled correctly.</p> <p>For this, a couple of scenarios are sketched below with recommendations for consistent handling:</p> <h2 id="flattening-json-ld-from-nested-json"> <a href="#flattening-json-ld-from-nested-json" class="anchor-heading" aria-labelledby="flattening-json-ld-from-nested-json"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Flattening JSON-LD from nested JSON </h2> <p>If performing <a href="https://www.w3.org/TR/json-ld-api/#flattening-algorithm">JSON-LD flattening</a> to generate a valid <em>RO-Crate Metadata File</em>, add <code class="language-plaintext highlighter-rouge">@base: null</code> to the input JSON-LD <code class="language-plaintext highlighter-rouge">@context</code> array to avoid expanding relative URI references. The flattening <code class="language-plaintext highlighter-rouge">@context</code> SHOULD NOT need <code class="language-plaintext highlighter-rouge">@base: null</code>.</p> <p>Example, this JSON-LD is in <a href="https://www.w3.org/TR/json-ld/#compacted-document-form">compacted form</a> which may be beneficial for processing, but is not yet valid <em>RO-Crate Metadata File</em> as it has not been flattened into a <code class="language-plaintext highlighter-rouge">@graph</code> array.</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> 
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span><span class="w">
+    </span><span class="s2">"https://w3id.org/ro/crate/1.1/context"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro-crate-metadata.json"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreativeWork"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RO-Crate Metadata File Descriptor (this file)"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="p">},</span><span class="w">
+  </span><span class="nl">"about"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example RO-Crate"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The RO-Crate Root Data Entity"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"hasPart"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data1.txt"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"File"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"One of hopefully many Data Entities"</span><span class="p">,</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subfolder/"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>Performing <a href="https://www.w3.org/TR/json-ld-api/#flattening-algorithm">JSON-LD flattening</a> with:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> 
+     </span><span class="s2">"https://w3id.org/ro/crate/1.1/context"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>Results in a valid <em>RO-Crate JSON-LD</em> (actual order in <code class="language-plaintext highlighter-rouge">@graph</code> may differ):</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1/context"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro-crate-metadata.json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreativeWork"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"about"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RO-Crate Metadata File Descriptor (this file)"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The RO-Crate Root Data Entity"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"hasPart"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data1.txt"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subfolder/"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example RO-Crate"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data1.txt"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"File"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"One of hopefully many Data Entities"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subfolder/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <blockquote class="note"> <p>The saved <em>RO-Crate JSON-LD</em> SHOULD NOT include <code class="language-plaintext highlighter-rouge">{@base: null}</code> in its <code class="language-plaintext highlighter-rouge">@context</code>.</p> </blockquote> <h2 id="expandingparsing-json-ld-keeping-relative-referencing"> <a href="#expandingparsing-json-ld-keeping-relative-referencing" class="anchor-heading" aria-labelledby="expandingparsing-json-ld-keeping-relative-referencing"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Expanding/parsing JSON-LD keeping relative referencing </h2> <p><a href="https://www.w3.org/TR/json-ld-api/#expansion">JSON-LD Expansion</a> can be used to resolve terms from the <code class="language-plaintext highlighter-rouge">@context</code> to absolute URIs, e.g. <code class="language-plaintext highlighter-rouge">http://schema.org/description</code>. This may be needed to parse <a href="#extending-ro-crate">extended properties</a> or for combinations with other Linked Data.</p> <p>This algorithm would normally also expand <code class="language-plaintext highlighter-rouge">@id</code> fields based on the current <a href="https://www.w3.org/TR/json-ld11/#base-iri">base URI</a> of the <em>RO-Crate Metadata File</em>, but this may be a temporary location like <code class="language-plaintext highlighter-rouge">file:///tmp/rocrate54/ro-crate-metadata.json</code>, meaning <code class="language-plaintext highlighter-rouge">@id</code>: <code class="language-plaintext highlighter-rouge">subfolder/</code> becomes <code class="language-plaintext highlighter-rouge">file:///tmp/rocrate54/subfolder/</code> after JSON-LD expansion.</p> <p>To avoid absoluting local identifiers, before expanding, augment the JSON-LD <code class="language-plaintext highlighter-rouge">@context</code> to ensure it is an array that includes <code class="language-plaintext highlighter-rouge">{"@base": null}</code>.</p> <p>For example, expanding this JSON-LD:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"https://w3id.org/ro/crate/1.1/context"</span><span class="p">,</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro-crate-metadata.json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreativeWork"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"about"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RO-Crate Metadata File Descriptor (this file)"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The RO-Crate Root Data Entity"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"hasPart"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data1.txt"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subfolder/"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example RO-Crate"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>Results in a <a href="https://www.w3.org/TR/json-ld11/#expanded-document-form">expanded form</a> without <code class="language-plaintext highlighter-rouge">@context</code>, using absolute URIs for properties and types, but retains relative URI references for entities within the <em>RO-Crate Root</em>:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro-crate-metadata.json"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"http://schema.org/CreativeWork"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"http://schema.org/about"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"http://purl.org/dc/terms/conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"http://schema.org/description"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RO-Crate Metadata File Descriptor (this file)"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"http://schema.org/Dataset"</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"http://schema.org/description"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The RO-Crate Root Data Entity"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"http://schema.org/hasPart"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data1.txt"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subfolder/"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"http://schema.org/name"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example RO-Crate"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div> <blockquote class="note"> <p><code class="language-plaintext highlighter-rouge">@base: null</code> will not relativize existing absolute URIs that happen to be contained by the <em>RO-Crate Root</em> (see section <a href="#relativizing-absolute-uris-within-ro-crate-root">Relativizing absolute URIs within RO-Crate Root</a>).</p> </blockquote> <blockquote class="tip"> <p>Most RDF parsers supporting JSON-LD will perform this kind of expansion before generating triples, but not all RDF stores or serializations support relative URI references. Consider using an alternative <code class="language-plaintext highlighter-rouge">@base</code> as detailed in sections below.</p> </blockquote> <h2 id="establishing-absolute-uri-for-ro-crate-root"> <a href="#establishing-absolute-uri-for-ro-crate-root" class="anchor-heading" aria-labelledby="establishing-absolute-uri-for-ro-crate-root"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Establishing absolute URI for RO-Crate Root </h2> <p>When loading <em>RO-Crate JSON-LD</em> as RDF, or combining the crate’s Linked Data into a larger JSON-LD, it is important to ensure correct <a href="https://www.w3.org/TR/json-ld11/#base-iri">base URI</a> to resolve URI references that are relative to the <em>RO-Crate Root</em>.</p> <blockquote class="note"> <p>When retrieving an RO-Crate over the web, servers might have performed HTTP redirections so that the base URI is different from what was requested. It is RECOMMENDED to follow section <a href="http://tools.ietf.org/html/rfc3986#section-5.1">Establishing a Base URI of RFC3986</a> before resolving relative links from the <em>RO-Crate Metadata File</em>.</p> </blockquote> <p>For instance, consider this HTTP redirection from a permalink (simplified):</p> <div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">https://w3id.org/ro/crate/1.0/crate</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+
+HTTP/1.1 301 Moved Permanently
+Location: https://www.researchobject.org/ro-crate/1.0/ro-crate-metadata.jsonld
+</code></pre></div></div> <div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">GET</span> <span class="nn">https://www.researchobject.org/ro-crate/1.0/ro-crate-metadata.jsonld</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+
+HTTP/1.1 200 OK
+Content-Type: application/ld+json
+
+{
+    "@context": "https://w3id.org/ro/crate/1.0/context",
+    "@graph": [
+      {
+        "@id": "ro-crate-metadata.jsonld",
+        "@type": "CreativeWork",
+        "conformsTo": {
+          "@id": "https://w3id.org/ro/crate/1.0"
+        },
+        "about": {
+          "@id": "./"
+        },
+        "license": {
+          "@id": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      },
+      {
+        "@id": "./",
+        "@type": "Dataset",
+        "hasPart": [
+          {
+            "@id": "index.html"
+          }
+      }
+    ]
+}
+</code></pre></div></div> <p>Following redirection we see that:</p> <ul> <li><em>Base URI</em> of the <em>RO-Crate Metadata File</em> becomes <code class="language-plaintext highlighter-rouge">https://www.researchobject.org/ro-crate/1.0/ro-crate-metadata.jsonld</code></li> <li>The absolute URI for <code class="language-plaintext highlighter-rouge">index.html</code> resolves to <code class="language-plaintext highlighter-rouge">https://www.researchobject.org/ro-crate/1.0/index.html</code> <ul> <li>..rather than <code class="language-plaintext highlighter-rouge">https://w3id.org/ro/crate/1.0/index.html</code> which would not redirect correctly</li> </ul> </li> </ul> <p>This example also use RO-Crate 1.0, where the <em>RO-Crate Metadata File</em> is called <code class="language-plaintext highlighter-rouge">ro-crate-metadata.jsonld</code> instead of <code class="language-plaintext highlighter-rouge">ro-crate-metadata.json</code>. Note that the recommended <a href="../root-data-entity.html#finding-the-root-data-entity">algorithm to find the Root Data Entity</a> is agnostic to the actual filename.</p> <h2 id="finding-ro-crate-root-in-rdf-triple-stores"> <a href="#finding-ro-crate-root-in-rdf-triple-stores" class="anchor-heading" aria-labelledby="finding-ro-crate-root-in-rdf-triple-stores"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Finding RO-Crate Root in RDF triple stores </h2> <p>When parsing <em>RO-Crate JSON-LD</em> as RDF, where the RDF framework performs resolution to absolute URIs, it may be difficult to find the <em>RO-Crate Root</em> in the parsed triples.</p> <p>The algoritm proposed in section <a href="../root-data-entity.html#finding-the-root-data-entity">Root Data Entity</a> allows finding the RDF resource describing <code class="language-plaintext highlighter-rouge">ro-crate-metadata.json</code>, independent of its parsed base URI. We can adopt this for RDF triples, thus finding crates conforming to this specification can be queried with <a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a>:</p> <div class="language-sparql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">PREFIX</span><span class="w"> </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nn">&lt;http://purl.org/dc/terms/&gt;</span><span class="w">
+</span><span class="k">PREFIX</span><span class="w"> </span><span class="nn">schema:</span><span class="w">  </span><span class="nn">&lt;http://schema.org/&gt;</span><span class="w">
+
+</span><span class="k">SELECT</span><span class="w"> </span><span class="nv">?crate</span><span class="w"> </span><span class="nv">?metadatafile</span><span class="w">
+</span><span class="k">WHERE</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nv">?crate</span><span class="w">        </span><span class="k">a</span><span class="w">                  </span><span class="nn">schema:</span><span class="ss">Dataset</span><span class="w"> </span><span class="p">.</span><span class="w">
+  </span><span class="nv">?metadatafile</span><span class="w"> </span><span class="nn">schema:</span><span class="ss">about</span><span class="w">       </span><span class="nv">?crate</span><span class="w"> </span><span class="p">.</span><span class="w">
+  </span><span class="nv">?metadatafile</span><span class="w"> </span><span class="nn">dcterms:</span><span class="ss">conformsTo</span><span class="w"> </span><span class="nn">&lt;https://w3id.org/ro/crate/1.1&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>..or (less efficient) for any RO-Crate version:</p> <div class="language-sparql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">PREFIX</span><span class="w"> </span><span class="nn">dcterms:</span><span class="w"> </span><span class="nn">&lt;http://purl.org/dc/terms/&gt;</span><span class="w">
+</span><span class="k">PREFIX</span><span class="w"> </span><span class="nn">schema:</span><span class="w">  </span><span class="nn">&lt;http://schema.org/&gt;</span><span class="w">
+
+</span><span class="k">SELECT</span><span class="w"> </span><span class="nv">?crate</span><span class="w"> </span><span class="nv">?metadatafile</span><span class="w"> </span><span class="nv">?spec</span><span class="w">
+</span><span class="k">WHERE</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nv">?crate</span><span class="w">        </span><span class="k">a</span><span class="w">                  </span><span class="nn">schema:</span><span class="ss">Dataset</span><span class="w"> </span><span class="p">.</span><span class="w">
+  </span><span class="nv">?metadatafile</span><span class="w"> </span><span class="nn">schema:</span><span class="ss">about</span><span class="w">       </span><span class="nv">?crate</span><span class="w"> </span><span class="p">.</span><span class="w">
+  </span><span class="nv">?metadatafile</span><span class="w"> </span><span class="nn">dcterms:</span><span class="ss">conformsTo</span><span class="w"> </span><span class="nv">?spec</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+  </span><span class="k">FILTER</span><span class="w"> </span><span class="nb">STRSTARTS</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nv">?spec</span><span class="p">),</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/"</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <h2 id="parsing-as-rdf-with-a-different-ro-crate-root"> <a href="#parsing-as-rdf-with-a-different-ro-crate-root" class="anchor-heading" aria-labelledby="parsing-as-rdf-with-a-different-ro-crate-root"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Parsing as RDF with a different RO-Crate Root </h2> <p>When parsing a <em>RO-Crate Metadata File</em> into <a href="https://www.w3.org/TR/rdf11-concepts/">RDF triples</a>, for instance uploading it to a <em>graph store</em> like <a href="https://jena.apache.org/">Apache Jena</a>’s <a href="https://jena.apache.org/documentation/fuseki2/">Fuseki</a>, it is important to ensure consistent <em>base URI</em>:</p> <ul> <li>Some RDF stores and RDF formats don’t support relative URI references in triples (see <a href="https://www.w3.org/TR/rdf11-concepts/#note-iris">RDF 1.1 note on IRIs</a>)</li> <li>The <em>RO-Crate Root</em> may depend on where the <em>RO-Crate Metadata File</em> was parsed from, e.g. <code class="language-plaintext highlighter-rouge">&lt;file:///tmp/ro-crate-metadata.json&gt;</code> (file) or <code class="language-plaintext highlighter-rouge">&lt;http://localhost:3030/test/ro-crate-metadata.json&gt;</code> (web upload)</li> <li>Parsing multiple RO-Crates into the same RDF graph, using same base URI, may merge them into the same RO-Crate</li> <li><code class="language-plaintext highlighter-rouge">ro-crate-metadata.json</code> may not be recognized as JSON-LD and must be renamed to <code class="language-plaintext highlighter-rouge">ro-crate-metadata.jsonld</code></li> <li>Web servers hosting <code class="language-plaintext highlighter-rouge">ro-crate-metadata.json</code> may not send the <a href="#ro-crate-json-ld-media-type">JSON-LD <em>Content-Type</em></a></li> <li>If base URI is not correct it may be difficult to find the corresponding file and directory paths from an RDF query returning absolute URIs</li> </ul> <blockquote class="tip"> <p>If the RDF library can parse the <em>RO-Crate JSON-LD</em> directly by retrieving from a <code class="language-plaintext highlighter-rouge">http</code>/<code class="language-plaintext highlighter-rouge">https</code> URI of the <em>RO-Crate Metadata File</em> it should calculate the correct base URI as detailed in section <a href="#establishing-absolute-uri-for-ro-crate-root">Establishing absolute URI for RO-Crate Root</a> and you should <strong>not</strong> need to override the base URI as detailed here.</p> </blockquote> <p>If a web-based URI for the <em>RO-Crate root</em> is known, then this can be supplied as a <em>base URI</em>. Most RDF tools support a <code class="language-plaintext highlighter-rouge">--base</code> option or similar. If this is not possible, then the <code class="language-plaintext highlighter-rouge">@context</code> of the <code class="language-plaintext highlighter-rouge">RO-Crate JSON-LD</code> can be modified by ensuring the <code class="language-plaintext highlighter-rouge">@context</code> is an array that sets the desired <code class="language-plaintext highlighter-rouge">@base</code>:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"https://w3id.org/ro/crate/1.1/context"</span><span class="p">,</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/crate255/"</span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro-crate-metadata.json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreativeWork"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"about"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example RO-Crate"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data1.txt"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"File"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"One of hopefully many Data Entities"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subfolder/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>Parsing this will generate triples like below using <code class="language-plaintext highlighter-rouge">http://example.com/crate255/</code> as the <em>RO-Crate Root</em> (shortened):</p> <div class="language-turtle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">&lt;http://example.com/crate255/ro-crate-metadata.json&gt;</span><span class="w"> 
+  </span><span class="nl">&lt;http://purl.org/dc/terms/conformsTo&gt;</span><span class="w"> 
+  </span><span class="nl">&lt;https://w3id.org/ro/crate/1.1&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://example.com/crate255/ro-crate-metadata.json&gt;</span><span class="w"> 
+  </span><span class="nl">&lt;http://schema.org/about&gt;</span><span class="w"> 
+  </span><span class="nl">&lt;http://example.com/crate255/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://example.com/crate255/&gt;</span><span class="w"> 
+  </span><span class="nl">&lt;http://schema.org/name&gt;</span><span class="w"> 
+  </span><span class="s">"Example RO-Crate"</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://example.com/crate255/&gt;</span><span class="w">
+  </span><span class="nl">&lt;http://schema.org/hasPart&gt;</span><span class="w">
+  </span><span class="nl">&lt;http://example.com/crate255/data1.txt&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://example.com/crate255/&gt;</span><span class="w">
+  </span><span class="nl">&lt;http://schema.org/hasPart&gt;</span><span class="w">
+  </span><span class="nl">&lt;http://example.com/crate255/subfolder/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;http://example.com/crate255/data1.txt&gt;</span><span class="w">
+ </span><span class="nl">&lt;http://schema.org/description&gt;</span><span class="w"> 
+ </span><span class="s">"One of hopefully many Data Entities"</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></code></pre></div></div> <p>Generating a <em>RO-Crate JSON-LD</em> from such triples can be done by first <a href="#finding-ro-crate-root-in-rdf-triple-stores">finding the RO-Crate Root</a> and then use it as base URI to <a href="#relativizing-absolute-uris-within-ro-crate-root">relativize absolute URIs within RO-Crate Root</a>.</p> <h2 id="establishing-a-base-uri-inside-a-zip-file"> <a href="#establishing-a-base-uri-inside-a-zip-file" class="anchor-heading" aria-labelledby="establishing-a-base-uri-inside-a-zip-file"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Establishing a base URI inside a ZIP file </h2> <p>An RO-Crate may have been packaged as a ZIP file or similar archive. RO-Crates may exist in a temporary file path which should not determine its identifiers.</p> <p>When parsing such crates it is recommended to use the <a href="https://tools.ietf.org/id/draft-soilandreyes-arcp-03.html">Archive and Package (arcp) URI scheme</a> to establish a temporary/location-based UUID or hash-based (SHA256) <em>base URI</em>.</p> <p>For instance, given a randomly generated UUID <code class="language-plaintext highlighter-rouge">b7749d0b-0e47-5fc4-999d-f154abe68065</code> we can use <code class="language-plaintext highlighter-rouge">arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/</code> as the <code class="language-plaintext highlighter-rouge">@base</code>:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"https://w3id.org/ro/crate/1.1/context"</span><span class="p">,</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/"</span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro-crate-metadata.json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreativeWork"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"about"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The RO-Crate Root Data Entity"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"hasPart"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data1.txt"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subfolder/"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example RO-Crate"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data1.txt"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"File"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"One of hopefully many Data Entities"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subfolder/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>Parsing this as RDF will generate triples including:</p> <div class="language-turtle highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">&lt;arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/ro-crate-metadata.json&gt;</span><span class="w"> 
+  </span><span class="nl">&lt;http://schema.org/about&gt;</span><span class="w"> 
+  </span><span class="nl">&lt;arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/&gt;</span><span class="w"> 
+  </span><span class="nl">&lt;http://schema.org/hasPart&gt;</span><span class="w"> 
+  </span><span class="nl">&lt;arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/data1.txt&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></code></pre></div></div> <p>Here consumers can assume <code class="language-plaintext highlighter-rouge">/</code> is the <em>RO-Crate Root</em> and generating relative URIs can safely be achieved by search-replace as the arcp URI is unique. Saving <em>RO-Crate JSON-LD</em> from the triples can be done by using the arcp URI to <a href="#relativizing-absolute-uris-within-ro-crate-root">relativize absolute URIs within RO-Crate Root</a>.</p> <blockquote class="tip"> <p><strong>Bagit</strong>: The arcp specification suggests how <a href="https://tools.ietf.org/html/draft-soilandreyes-arcp-03#appendix-A.4">BagIt identifiers</a> can be used to calculate the base URI. See also section <a href="#combining-with-other-packaging-schemes">Combining with other packaging schemes</a> - note that in this approach the <em>RO-Crate Root</em> will be the payload folder <code class="language-plaintext highlighter-rouge">/data/</code> under the calculated arcp base URI.</p> </blockquote> <h2 id="relativizing-absolute-uris-within-ro-crate-root"> <a href="#relativizing-absolute-uris-within-ro-crate-root" class="anchor-heading" aria-labelledby="relativizing-absolute-uris-within-ro-crate-root"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Relativizing absolute URIs within RO-Crate Root </h2> <p>Some applications may prefer working with absolute URIs, e.g. in a joint graph store or web-based repository, but should relativize URIs within the <em>RO-Crate Root</em> before generating the <em>RO-Crate Metadata File</em>.</p> <p>Assuming a repository at <code class="language-plaintext highlighter-rouge">example.com</code> has JSON-LD with absolute URIs:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/crate415/ro-crate-metadata.json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreativeWork"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"about"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/crate415/"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/crate415/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The RO-Crate Root Data Entity"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"hasPart"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/crate415/data1.txt"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/crate415/subfolder/"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example RO-Crate"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>Then performing <a href="https://www.w3.org/TR/json-ld-api/#flattening-algorithm">JSON-LD flattening</a> with this <code class="language-plaintext highlighter-rouge">@context</code>:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/crate415/"</span><span class="p">},</span><span class="w">
+     </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <p>Will output <em>RO-Crate JSON-LD</em> with relative URIs:</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://example.com/crate415/"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"@graph"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dataset"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The RO-Crate Root Data Entity"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"hasPart"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"data1.txt"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"subfolder/"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example RO-Crate"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ro-crate-metadata.json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CreativeWork"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"conformsTo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://w3id.org/ro/crate/1.1"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"about"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <blockquote class="warning"> <p>This method would also relativize URIs outside the <em>RO-Crate Root</em> that are on the same host, e.g. <code class="language-plaintext highlighter-rouge">http://example.com/crate255/other.txt</code> would become <code class="language-plaintext highlighter-rouge">../create255/other.txt</code> - this can particularly be a challenge with local <code class="language-plaintext highlighter-rouge">file:///</code> URIs. `</p> </blockquote> <!-- Below are reference links not rendered in HTML, see https://kramdown.gettalong.org/syntax.html#reference-links Be aware that this file is used by RO-Crate 1.1 and later versions of the specification, DO NOT DELETE entries and DO NOT change VERSIONED links. This file is included by the others using this %include line (excluding comment/endcomment) and is also rendered into the end of the PDF. --> <hr> <footer> <p><a href="#top" id="back-to-top">Back to top</a></p> <p class="text-small text-grey-dk-100 mb-0">&#169; Copyright 2021-2023. University of Technology Sydney, The University of Manchester UK and RO-Crate contributors</p> <div class="d-flex mt-2"> <p class="text-small text-grey-dk-000 mb-0"> <a href="https://github.com/ResearchObject/ro-crate/edit/master/docs/1.1/appendix/relative-uris.md" id="edit-this-page">Edit this page on GitHub.</a> </p> </div> </footer> </div> </div> <div class="search-overlay"></div> </div> </body> 
+<!-- Mirrored from www.researchobject.org/ro-crate/1.1/appendix/relative-uris.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Aug 2023 18:06:53 GMT -->
+</html>
