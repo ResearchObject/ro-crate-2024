@@ -1,5 +1,0 @@
----
-title: Specification
----
-
-## Specification

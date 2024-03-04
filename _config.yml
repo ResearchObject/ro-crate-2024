@@ -11,6 +11,7 @@ remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@2.4.0
 
 include:
   - pages
+  - pages/specification/*
   
 exclude:
   - README.md
