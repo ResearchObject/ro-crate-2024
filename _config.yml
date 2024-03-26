@@ -11,6 +11,7 @@ remote_theme: ELIXIR-Belgium/elixir-toolkit-theme@2.4.0
 
 include:
   - pages
+  - pages/specification/*
   
 exclude:
   - README.md
@@ -54,6 +55,17 @@ defaults:
     values:
       layout: "default"
       type: use_cases
+
+  -
+    scope:
+      path: "_specification"
+    values:
+      layout: "default"
+      sidebar: spec
+
+collections:
+  specification:
+    output: true
 
 
 theme_variables: 
