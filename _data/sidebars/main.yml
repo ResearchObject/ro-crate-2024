@@ -1,6 +1,5 @@
 subitems:
   - title: Use Cases
-    hr: true
     url: /use_cases
     submenu_type: use_cases
 

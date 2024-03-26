@@ -1,7 +1,7 @@
 ---
 title: Contextual Entities
 redirect_from:
-  - /1.1-DRAFT/contextual-entities
+  - /specification/1.1-DRAFT/contextual-entities
 excerpt: |
   The RO-Crate contain additional information about Contextual Entities for the
   use of both humans and machines. This also helps to maximize the extent to

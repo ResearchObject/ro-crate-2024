@@ -56,6 +56,17 @@ defaults:
       layout: "default"
       type: use_cases
 
+  -
+    scope:
+      path: "_specification"
+    values:
+      layout: "default"
+      sidebar: spec
+
+collections:
+  specification:
+    output: true
+
 
 theme_variables: 
   topnav:

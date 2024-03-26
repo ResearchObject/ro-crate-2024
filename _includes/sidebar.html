@@ -5,29 +5,33 @@
     aria-label="Toggle navigation">
     Main menu <i title="navbar-toggler" class="fa-solid fa-bars ms-2"></i>
   </button>
+
+  <!-- MAIN MENUS -->
+  {%- if page.sidebar == 'main' %}
   <nav id="side-nav" aria-label="Side navigation">
     <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="index">Home </a>
     <ul class="list-unstyled mb-4">
-
       {%- for folder in sidebar.subitems %}
-        {%- if page.url == folder.url %}
-          <li class="active">
+      {%- if page.url == folder.url %}
+      <li class="active">
         {%- else %}
-          <li>
+      <li>
         {%- endif %}
-        <a class="btn hover-primary text-start d-block mb-1" href="{{folder.url | relative_url }}">{{ folder.title
-          }}</a>
+        <a class="btn hover-primary text-start d-block mb-1" href="{{ folder.url | relative_url }}">
+          {{ folder.title}}
+        </a>
         {%- if folder.submenu_type | size > 0 %}
         <ul class="list-unstyled">
           {%- for linked_page in site.pages %}
           {%- if linked_page.type == folder.submenu_type %}
           {%- if page.url == linked_page.url %}
-              <li class="active">
+          <li class="active">
             {%- else %}
-              <li>
+          <li>
             {%- endif %}
-            <a class="btn hover-primary text-start d-block mb-1" href="{{linked_page.url | relative_url }}">{{
-              linked_page.title }}</a>
+            <a class="btn hover-primary text-start d-block mb-1" href="{{ linked_page.url | relative_url }}">
+              {{ linked_page.title }}
+            </a>
           </li>
           {%- endif %}
           {%- endfor %}
@@ -37,5 +41,61 @@
       {%- endfor %}
     </ul>
   </nav>
+  {%- endif %}
+  <!-- END MAIN MENUS -->
+
+  <!-- SPEC MENUS -->
+  {%- if page.sidebar == 'spec' %}
+  <nav id="side-nav" aria-label="Side navigation">
+    <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="../">Home (Main)</a>
+    <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="../specification">Home (Specification)</a>
+    <ul class="list-unstyled mb-4">
+      {%- for version in sidebar.versions %}
+      {%- if page.url == version.url %}
+      <li class="active">
+        {%- else %}
+      <li>
+        {%- endif %}
+        <a class="btn hover-primary text-start d-block mb-1" href="{{ version.url | relative_url }}">
+          {{ version.title}}
+        </a>
+        {%- if version.subitems %}
+        <ul class="list-unstyled mb-4">
+          {%- for folder in version.subitems %}
+          {%- if page.url == folder.url %}
+          <li class="active">
+            {%- else %}
+          <li>
+            {%- endif %}
+            <a class="btn hover-primary text-start d-block mb-1" href="{{ folder.url | relative_url }}">
+              {{ folder.title}}
+            </a>
+            {%- if folder.subitems %}
+            <ul class="list-unstyled">
+              {%- for subsubfolder in folder.subitems %}
+              {%- if page.url == subsubfolder.url %}
+              <li class="active">
+                {%- else %}
+              <li>
+                {%- endif %}
+                <a class="btn hover-primary text-start d-block mb-1" href="{{ subsubfolder.url | relative_url }}">{{
+                  subsubfolder.title }}</a>
+              </li>
+              {%- endfor %}
+            </ul>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+      </li>
+    </ul>
+    
+    {%- endif %}
+    </li>
+    {%- endfor %}
+    </ul>
+  </nav>
+  {%- endif %}
+  <!-- END SPEC MENUS -->
+
 </aside>
 <script>$("li.active").parents('li').toggleClass("active parent");</script>

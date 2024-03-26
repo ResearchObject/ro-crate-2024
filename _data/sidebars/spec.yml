@@ -1,29 +1,44 @@
-- title: Introduction
-  url: /introduction.html
-- title: Terminology
-  url: /terminology.html
-- title: RO-Crate Structure
-  url: /structure.html
-- title: Metadata of the RO-Crate
-  url: /metadata.html
-- title: Root Data Entity
-  url: /root-data-entity.html
-- title: Data Entities
-  url: /data-entities.html
-- title: Contextual Entities
-  url: /contextual-entities.html
-- title: Provenance of entities
-  url: /provenance.html
-- title: Workflows and scripts
-  url: /workflows.html
-- title: Appendix
-  url: /appendix
+title: Specification
+versions:
+- title: RO-Crate 1.1 (newest release)
+  url: /specification/1.1/
   subitems:
-    - title: Changelog
-      url: /appendix/changelog.html
-    - title: Handling relative URI references
-      url: /appendix/relative-uris.html
-    - title: Implementation notes
-      url: /implementation-notes.html
-    - title: RO-Crate JSON-LD
-      url: /appendix/jsonld.html
+  - title: Introduction
+    url: /specification/1.1/introduction.html
+  - title: Terminology
+    url: /specification/1.1/terminology.html
+  - title: RO-Crate Structure
+    url: /specification/1.1/structure.html
+  - title: Metadata of the RO-Crate
+    url: /specification/1.1/metadata.html
+  - title: Root Data Entity
+    url: /specification/1.1/root-data-entity.html
+  - title: Data Entities
+    url: /specification/1.1/data-entities.html
+  - title: Contextual Entities
+    url: /specification/1.1/contextual-entities.html
+  - title: Provenance of entities
+    url: /specification/1.1/provenance.html
+  - title: Workflows and scripts
+    url: /specification/1.1/workflows.html
+  - title: Appendix
+    url: /specification/1.1/appendix
+    subitems:
+      - title: Changelog
+        url: /specification/1.1/appendix/changelog.html
+      - title: Handling relative URI references
+        url: /specification/1.1/appendix/relative-uris.html
+      - title: Implementation notes
+        url: /specification/1.1/implementation-notes.html
+      - title: RO-Crate JSON-LD
+        url: /specification/1.1/appendix/jsonld.html
+- title: RO-Crate 1.2-DRAFT (draft for next release)
+  url: /specification/1.2-DRAFT
+- title: RO-Crate 1.0
+  url: /specification/1.0
+- title: RO-Crate 0.2
+  url: /specification/0.2
+- title: DataCrate 1.0 review (imported from datacrate)
+  url: https://docs.google.com/document/d/150SzIG8Zs3wecPTUue7wxKn6V26oi7rYucS5lxnmWZU/edit
+- title: ROLite Draft 0.1.0
+  url: /specification/0.1.0
