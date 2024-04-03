@@ -56,7 +56,9 @@ defaults:
       layout: "default"
       type: use_cases
 
-      path: "pages/specification"
+  -
+    scope:
+      path: "_specification"
     values:
       layout: "default"
       sidebar: spec
