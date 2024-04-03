@@ -36,9 +36,9 @@
     {%- unless include.search == nil %}
     <div class="col">
         <div class="input-group">
-            <span class="input-group-text" id="search-label">Search</span>
-            <input type="text" id="title-search" class="form-control" onkeyup="StartSearch();" placeholder="Type here..." aria-label="{{page.type | replace: '_', ' ' |}}" aria-describedby="search-label">
-            <button class="btn btn-primary" title="Button to clear search" type="button" id="clearsearch">
+            <label class="input-group-text" id="search-label">Search</label>
+            <input type="text" id="title-search" class="form-control" onkeyup="StartSearch();" placeholder="Type here..." aria-label="Search {{ include.type | replace: '_', ' ' }}">
+            <button class="btn btn-primary" title="Clear search" type="button" id="clearsearch" aria-label="Clear search">
                 <i class="fa-solid fa-backspace"></i>
             </button>
         </div>
