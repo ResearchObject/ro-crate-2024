@@ -16,7 +16,3 @@ subitems:
   - title: Your Role
     url: /roles
     submenu_type: roles
-
-  - title: Tools
-    url: /tools
-
