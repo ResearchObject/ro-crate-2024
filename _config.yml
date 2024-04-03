@@ -63,6 +63,12 @@ defaults:
       layout: "default"
       sidebar: spec
 
+  - scope:
+      path: "pages/about"
+    values:
+      layout: "default"
+      sidebar: about
+
 collections:
   specification:
     output: true
