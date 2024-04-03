@@ -83,7 +83,7 @@
     <div class="col" data-affiliations="{{affiliations_classes}}" related-pages="{{related_pages_classes}}">
         <div class="card h-100">
             <div class="card-header d-inline">
-               <a class="stretched-link" aria-label="Go to the {{current_page.title}} page" href="{{ current_page.url | relative_url }}">
+               <a class="stretched-link" aria-label="{{current_page.title}}" href="{{ current_page.url | relative_url }}">
                   <div class="px-3 pb-3 d-flex justify-content-between align-items-center">                    
                     <h3 class="card-title ml-3">{{current_page.title}}</h3>
                     {%- if current_page.image %}
