@@ -5,5 +5,5 @@ subitems:
     url: /community
   - title: Tools
     url: /tools
-  - title: Profiles
-    url: /profiles
+  # - title: Profiles
+  #   url: /profiles

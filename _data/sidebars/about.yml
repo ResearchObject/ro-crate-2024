@@ -7,5 +7,11 @@ subitems:
   - title: Background
     url: /background
 
+  # - title: Getting Started
+  #   url: /getting_started
+
+  # - title: Tutorials
+  #   url: /tutorials
+
   - title: FAQ
     url: /faq
