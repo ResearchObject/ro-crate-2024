@@ -1,5 +1,7 @@
 ---
 title: The focus of an RO-Crate
+redirect_from:
+  - /1.2-DRAFT/crate-focus
 excerpt: |
   In addition to simple data packaging, Crates may have a "main" entry point or topic (referenced with a singleton `mainEntity` property), or function as a bundle of one or more Contextual Entities referenced via the `mentions` property.
 nav_order: 7
@@ -25,6 +27,7 @@ parent: RO-Crate 1.2-DRAFT
 -->
 
 # The focus of an RO-Crate
+
 <div id="crate-focus"></div>
 
 In addition to simple data packaging, Crates may have a "main" entry point or topic (referenced with a singleton `mainEntity` property), or function as a bundle of one or more Contextual Entities referenced via the `mentions` property.
@@ -144,7 +147,6 @@ For example, RO-Crates can be used as containers for schema.org-style vocabulari
 }    
 ```
 
-
 The following example shows both a `mainEntity` which is a _Data Entity_ and a _Contextual Entity_ which is a test suite (`#test1`).
 
 ```json
@@ -167,7 +169,7 @@ The following example shows both a `mainEntity` which is a _Data Entity_ and a _
                 }
             ]
         },
-		    {
+      {
             "@id": "#test1",
             "name": "test1",
             "@type": "TestSuite",

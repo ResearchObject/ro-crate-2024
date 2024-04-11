@@ -1,5 +1,7 @@
 ---
 title: Metadata of the RO-Crate
+redirect_from:
+  - /1.2-DRAFT/metadata
 excerpt: |
   RO-Crate aims to capture and describe the Research Object using
   structured metadata. The RO-Crate Metadata Descriptor contains the
@@ -30,9 +32,11 @@ parent: RO-Crate 1.2-DRAFT
 <div id="metadata"></div>
 
 # RO-Crate Metadata
+
 {: .no_toc }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
@@ -61,7 +65,7 @@ RO-Crate makes use of the [Linked Data principles] for its description. In parti
 RO-Crate realizes these principles using a particular set of technologies and best practices:
 
 1. The _RO-Crate Metadata Document_ can be stored in an _RO-Crate Metadata File_. The _RO-Crate Metadata File_ and an _RO-Crate Website_ can be directly published on the web together with the RO-Crate payload. In addition, a data package (e.g. BagIt Zip archive) that contain the RO-Crate can also be published on the web.
-2. The _RO-Crate Metadata Document_ is based on the structured data format [JSON-LD]. 
+2. The _RO-Crate Metadata Document_ is based on the structured data format [JSON-LD].
 3. Multiple open source tools/libraries are available [for JSON][JSON] and [for JSON-LD][JSON-LD].
 4. The _RO-Crate Website_ is [HTML 5], and the _RO-Crate Metadata Document_ is [JSON-LD], one of the [W3C RDF 1.1 formats].
 5. The _RO-Crate Metadata Document_ reuse common vocabularies like [Schema.org], and this specification [recommend identifiers](#recommended-identifiers) it should link to.
@@ -71,17 +75,16 @@ RO-Crate realizes these principles using a particular set of technologies and be
 For all entities listed in an _RO-Crate Metadata Document_ the following principles apply:
 
 1. The entity MUST have a `@id` (see [Describing entities in JSON-LD](appendix/jsonld.md#describing-entities-in-json-ld))
-2. The entity MUST have a `@type`, which MAY be an array. 
+2. The entity MUST have a `@type`, which MAY be an array.
 3. The `@type` SHOULD include at least one [Schema.org] type that accurately describe the entity. [Thing] or [CreativeWork] are valid fallbacks if no alternative external or ad-hoc term is found (see [Extending RO-Crate](appendix/jsonld.md#extending-ro-crate)).
 5. The entity SHOULD have a human-readable `name`, in particular if its `@id` do not go to a human-readable Web page
 6. The properties used on the entity SHOULD be applicable to the `@type` (or superclass) according to their definitions. For instance, the property [publisher] can be used on a [Dataset] as it applies to its superclass [CreativeWork].
 7. Property references to other entities (e.g. `author` property to a `Person` entity) SHOULD use the `{ "@id": "..."}` object form (see [JSON-LD appendix](appendix/jsonld.md))
 8. The entity SHOULD be ultimately referencable from the root data set (possibly through another reachable data- or [contextual entity](contextual-entities.md))
 
-
 ## Base metadata standard: Schema.org
 
-[Schema.org] is the base metadata standard for RO-Crate. Schema.org was chosen because it is widely used on the World Wide Web and supported by search engines, on the assumption that discovery is likely to be maximized if search engines index the content. 
+[Schema.org] is the base metadata standard for RO-Crate. Schema.org was chosen because it is widely used on the World Wide Web and supported by search engines, on the assumption that discovery is likely to be maximized if search engines index the content.
 
 {: .note }
 > As far as we know there is no alternative, well-maintained linked-data schema for research data with the coverage needed for this project - i.e. a single standard for expressing all the examples presented in this specification.
@@ -91,7 +94,6 @@ RO-Crate relies heavily on [Schema.org], using a constrained subset of [JSON-LD]
 {: .tip }
 > The main principle of RO-Crate is to use a [Schema.org] whenever possible, even if its official definition may seem broad or related to every day objects. For instance, [IndividualProduct] can describe scientific equipment and instruments (see [Provenance of entities](provenance.md)). RO-Crate implementers are free to use additional properties and types beyond this specification (see also appendix [Extending RO-Crate(appendix/jsonld.md#extending-ro-crate)]).
 
-
 ### Differences from Schema.org
 
 Generally, the standard _type_ and _property_ names (_terms_) from [Schema.org] should be used. However, RO-Crate uses variant names for some elements, specifically:
@@ -100,7 +102,7 @@ Generally, the standard _type_ and _property_ names (_terms_) from [Schema.org] 
 * `Journal` is mapped to <http://schema.org/Periodical>.
 
 {: .warning }
-> JSON-LD examples given on the [Schema.org] website may not be in _flattened_ form; any nested entities in _RO-Crate JSON-LD_ SHOULD be described as separate contextual entities in the flat `@graph` list. 
+> JSON-LD examples given on the [Schema.org] website may not be in _flattened_ form; any nested entities in _RO-Crate JSON-LD_ SHOULD be described as separate contextual entities in the flat `@graph` list.
 
 To simplify processing and avoid confusion with string values, the _RO-Crate JSON-LD Context_ requires URIs and entity references to be given in the form `"author": {"@id": "http://example.com/alice"}`, even where [Schema.org] for some properties otherwise permit shorter forms like `"author": "http://example.com/alice"`.
 
@@ -109,34 +111,34 @@ See the appendix [RO-Crate JSON-LD](appendix/jsonld.md) for details.
 ## Additional metadata standards
 
 RO-Crate also uses the _Portland Common Data Model_ ([PCDM] version <https://pcdm.org/2016/04/18/models>) to describe repositories or collections of digital objects and imports these terms:
- 
-- `RepositoryObject` mapped to <http://pcdm.org/models#Object>
-- `RepositoryCollection` mapped to <http://pcdm.org/models#Collection>
-- `RepositoryFile` mapped to <http://pcdm.org/models#File>
-- `hasMember` mapped to <http://pcdm.org/models#hasMember>
-- `hasFile` mapped to <http://pcdm.org/models#hasFile>
+
+* `RepositoryObject` mapped to <http://pcdm.org/models#Object>
+* `RepositoryCollection` mapped to <http://pcdm.org/models#Collection>
+* `RepositoryFile` mapped to <http://pcdm.org/models#File>
+* `hasMember` mapped to <http://pcdm.org/models#hasMember>
+* `hasFile` mapped to <http://pcdm.org/models#hasFile>
 
 {: .note }
 > The terms `RepositoryObject` and `RepositoryCollection` are renamed to avoid collision between other vocabularies and the PCDM terms `Collection` and `Object`. The term `RepositoryFile` is renamed to avoid clash with RO-Crate's `File` mapping to <http://schema.org/MediaObject>.
 
 RO-Crate use the [Profiles Vocabulary](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/) to describe [profiles](../profiles) using these terms and definitions:
 
-- `ResourceDescriptor` mapped to <http://www.w3.org/ns/dx/prof/ResourceDescriptor> ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Class:ResourceDescriptor))
-- `ResourceRole` mapped to <http://www.w3.org/ns/dx/prof/ResourceRole> ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Class:ResourceRole))
-- `Profile` mapped to <http://www.w3.org/ns/dx/prof/Profile>  ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Class:Profile))
-- `hasArtifact` mapped to <http://www.w3.org/ns/dx/prof/hasArtifact>  ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Property:hasArtifact))
-- `hasResource` mapped to <http://www.w3.org/ns/dx/prof/hasResource> ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Property:hasResource))
-- `hasRole` mapped to <http://www.w3.org/ns/dx/prof/hasRole> ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Property:hasRole))
+* `ResourceDescriptor` mapped to <http://www.w3.org/ns/dx/prof/ResourceDescriptor> ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Class:ResourceDescriptor))
+* `ResourceRole` mapped to <http://www.w3.org/ns/dx/prof/ResourceRole> ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Class:ResourceRole))
+* `Profile` mapped to <http://www.w3.org/ns/dx/prof/Profile>  ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Class:Profile))
+* `hasArtifact` mapped to <http://www.w3.org/ns/dx/prof/hasArtifact>  ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Property:hasArtifact))
+* `hasResource` mapped to <http://www.w3.org/ns/dx/prof/hasResource> ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Property:hasResource))
+* `hasRole` mapped to <http://www.w3.org/ns/dx/prof/hasRole> ([definition](https://www.w3.org/TR/2019/NOTE-dx-prof-20191218/#Property:hasRole))
 
 From [Dublin Core Terms](http://purl.org/dc/terms/) RO-Crate use:
 
-- `conformsTo` mapped to <http://purl.org/dc/terms/conformsTo>
-- `Standard` mapped to <http://purl.org/dc/terms/Standard>
+* `conformsTo` mapped to <http://purl.org/dc/terms/conformsTo>
+* `Standard` mapped to <http://purl.org/dc/terms/Standard>
 
 From the [IANA link relations] registry:
-- `cite-as` mapped to <http://www.iana.org/assignments/relation/cite-as> (defined by [RFC8574])
+* `cite-as` mapped to <http://www.iana.org/assignments/relation/cite-as> (defined by [RFC8574])
 
-These terms are being proposed by [Bioschemas profile ComputationalWorkflow 1.0-RELEASE][ComputationalWorkflow profile 1.0] and [FormalParameter 1.0-RELEASE][FormalParameter profile 1.0] to be integrated into Schema.org: 
+These terms are being proposed by [Bioschemas profile ComputationalWorkflow 1.0-RELEASE][ComputationalWorkflow profile 1.0] and [FormalParameter 1.0-RELEASE][FormalParameter profile 1.0] to be integrated into Schema.org:
 
 * `ComputationalWorkflow` mapped to <https://bioschemas.org/ComputationalWorkflow>
 * `FormalParameter` mapped to <https://bioschemas.org/FormalParameter>
@@ -146,14 +148,12 @@ These terms are being proposed by [Bioschemas profile ComputationalWorkflow 1.0-
 {: .note }
 > In this specification the proposed Bioschemas terms use the temporary <https://bioschemas.org/> namespace; future releases of RO-Crate may reflect mapping to the <http://schema.org/> namespace.
 
-
 ## Summary of Coverage
 
 RO-Crate is simply a way to make metadata assertions about a set of files and folders that make up a _Dataset_. These assertions can be made at two levels:
 
 * Assertions at the RO-Crate level: for an RO-Crate to be useful, some metadata should be provided about the dataset as a whole (see minimum requirements for different use-cases below). In the _RO-Crate Metadata Document_, we distinguish the _Root Data Entity_ which represents the RO-Crate as a whole, from other _Data Entities_ (files and folders contained in the RO-Crate) and _Contextual Entities_, e.g. a person, organisation, place related to an RO-Crate _Data Entity_
 * Assertions about files and folders contained in the RO-Crate: in addition to providing metadata about the RO-Crate as a whole, RO-Crate allows metadata assertions to be made about any other _Data Entity_
-
 
 This document has guidelines for ways to represent common requirements for describing data in a research context, e.g.:
 
@@ -170,18 +170,16 @@ However, as RO-Crate uses the [Linked Data principles], adopters of RO-Crate are
 
 A future version of this specification aim to cater for variable-level assertions: In some cases, e.g. for tabular data, additional metadata may be provided about the structure and variables within a given file. See the use case [Describe a tabular data file directly in RO-Crate metadata](https://github.com/ResearchObject/ro-crate/issues/27) for work-in-progress.
 
-
 ## Recommended Identifiers
 
 _RO-Crate JSON-LD_ SHOULD use the following IDs where possible:
 
-* For a _Root Data Entity_, an `identifier` which is RECOMMENDED to be a  <https://doi.org/> URI. 
+* For a _Root Data Entity_, an `identifier` which is RECOMMENDED to be a  <https://doi.org/> URI.
 * For a [Person] participating in the research process: [ORCID] identifiers, e.g. <https://orcid.org/0000-0002-1825-0097>
 * For [Organization]s including [funder]s,  [Research Organization Registry URIs], e.g. <https://ror.org/0384j8v12>
 * For entities of type [Place], a [geonames] URL, e.g. <http://sws.geonames.org/8152662/>
 * For file formats, a [Pronom] URL, for example <https://www.nationalarchives.gov.uk/PRONOM/fmt/831>.
 
 In the absence of the above, RO-Crates SHOULD contain stable persistent URIs to identify all entities wherever possible.
-
 
 {% include references.liquid %}
