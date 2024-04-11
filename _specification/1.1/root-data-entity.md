@@ -1,7 +1,8 @@
 ---
 title: Root Data Entity
 redirect_from:
-  - /specification/1.1-DRAFT/root-data-entity
+  - /1.1-DRAFT/root-data-entity
+  - /1.1/root-data-entity
 nav_order: 5
 parent: RO-Crate 1.1
 ---
@@ -24,9 +25,11 @@ parent: RO-Crate 1.1
 -->
 
 # Root Data Entity
+
 {: .no_toc }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
@@ -36,9 +39,9 @@ The **Root Data Entity** is a [Dataset] that represent the RO-Crate as a whole;
 a _Research Object_ that includes the _Data Entities_ and the related
 _Contextual Entities_.
 
-As explained in section [RO-Crate structure](structure.md), the RO-Crate description 
-is stored as _JSON-LD_ in the _RO-Crate Metadata File_ `ro-crate-metadata.json` in 
-the _RO-Crate root_ directory. 
+As explained in section [RO-Crate structure](structure.md), the RO-Crate description
+is stored as _JSON-LD_ in the _RO-Crate Metadata File_ `ro-crate-metadata.json` in
+the _RO-Crate root_ directory.
 
 ## RO-Crate Metadata File Descriptor
 
@@ -68,10 +71,10 @@ property referencing the _Root Data Entity_, which SHOULD have an `@id` of `./`.
 }
 ```
 
-The [conformsTo] of the _RO-Crate Metadata File Descriptor_ 
+The [conformsTo] of the _RO-Crate Metadata File Descriptor_
 SHOULD be a versioned permalink URI of the RO-Crate specification
-that the _RO-Crate JSON-LD_ conforms to. The URI SHOULD 
-start with `https://w3id.org/ro/crate/`. 
+that the _RO-Crate JSON-LD_ conforms to. The URI SHOULD
+start with `https://w3id.org/ro/crate/`.
 
 ### Finding the Root Data Entity
 
@@ -112,16 +115,16 @@ common use-cases:
 
 The _Root Data Entity_ MUST have the following properties:
 
-*  `@type`: MUST be [Dataset]
-*  `@id`:  MUST end with `/` and SHOULD be the string `./`
-*  `name`: SHOULD identify the dataset to humans well enough to disambiguate it from other RO-Crates
-*  `description`: SHOULD further elaborate on the name to provide a summary of the context in which the dataset is important.
-*  `datePublished`: MUST be a string in [ISO 8601 date format][DateTime] and SHOULD be specified to at least the precision of a day, MAY be a timestamp down to the millisecond. 
-*  `license`: SHOULD link to a _Contextual Entity_ in the _RO-Crate Metadata File_ with a name and description. MAY have a URI (eg for Creative Commons or Open Source licenses). MAY, if necessary be a textual description of how the RO-Crate may be used.
+* `@type`: MUST be [Dataset]
+* `@id`:  MUST end with `/` and SHOULD be the string `./`
+* `name`: SHOULD identify the dataset to humans well enough to disambiguate it from other RO-Crates
+* `description`: SHOULD further elaborate on the name to provide a summary of the context in which the dataset is important.
+* `datePublished`: MUST be a string in [ISO 8601 date format][DateTime] and SHOULD be specified to at least the precision of a day, MAY be a timestamp down to the millisecond.
+* `license`: SHOULD link to a _Contextual Entity_ in the _RO-Crate Metadata File_ with a name and description. MAY have a URI (eg for Creative Commons or Open Source licenses). MAY, if necessary be a textual description of how the RO-Crate may be used.
 
 {: .note }
-> These requirements are stricter than those published 
-> for [Google Dataset Search](https://developers.google.com/search/docs/data-types/dataset) which 
+> These requirements are stricter than those published
+> for [Google Dataset Search](https://developers.google.com/search/docs/data-types/dataset) which
 > requires a `Dataset` to have a `name` and `description`,
 
 {: .warning }
@@ -129,7 +132,7 @@ The _Root Data Entity_ MUST have the following properties:
 
 ## Minimal example of RO-Crate
 
-The following _RO-Crate Metadata File_ represents a minimal description of an _RO-Crate_. 
+The following _RO-Crate Metadata File_ represents a minimal description of an _RO-Crate_.
 
 ```json
 { "@context": "https://w3id.org/ro/crate/1.1/context", 

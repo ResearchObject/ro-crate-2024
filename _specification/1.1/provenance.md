@@ -1,7 +1,8 @@
 ---
 title: Provenance of entities
 redirect_from:
-  - /specification/1.1-DRAFT/provenance
+  - /1.1-DRAFT/provenance
+  - /1.1/provenance
 nav_order: 8
 parent: RO-Crate 1.1
 ---
@@ -26,9 +27,11 @@ parent: RO-Crate 1.1
 <div id="provenance"></div>
 
 # Detailing provenance of entities
+
 {: .no_toc }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
@@ -37,7 +40,6 @@ parent: RO-Crate 1.1
 ## Equipment used to create files
 
 To specify which **equipment** was used to create or update a [Data Entity](data-entities.md), the _RO-Crate JSON-LD_ SHOULD have a _Context Entity_ for each item of equipment which SHOULD be of `@type` [IndividualProduct]. The entity SHOULD have a serial number, manufacturer that identifies it as completely as possible. In this case the equipment is a bespoke machine. The equipment SHOULD be described on a web page, and the address of the description SHOULD be used as its `@id`.
-
 
 ```json
 {
@@ -49,11 +51,9 @@ To specify which **equipment** was used to create or update a [Data Entity](data
 }
 ```
 
-
 Uses [CreateAction] and [UpdateAction] type to model the contributions of _Context Entities_ of type [Person] or [Organization] in the creation of files.
 
 In this example the CreateAction has a human [agent], the object is a Place (a cave) and the Hovermap drone is the [instrument] used in the file creation event.
-
 
 ```json
 {
@@ -84,9 +84,6 @@ In this example the CreateAction has a human [agent], the object is a Place (a c
       "name": "Victoria Arch"
   }
 ```
-
-
-
 
 ## Software used to create files
 
@@ -231,16 +228,13 @@ To record curation actions which modify a [File] within a Dataset - for example,
 }
 ```
 
-
-
-
 ## Digital Library and Repository content
 
-To describe an export from a Digital Library or repository system, RO-Crate uses the _Portland Common Data Model_ ([PCDM]). 
+To describe an export from a Digital Library or repository system, RO-Crate uses the _Portland Common Data Model_ ([PCDM]).
 
-A [Contextual Entity](contextual-entities.md) from a repository, representing an abstract entity such as a person, or a work, or a place SHOULD have a `@type` of [RepositoryObject], in addition to any other types. 
+A [Contextual Entity](contextual-entities.md) from a repository, representing an abstract entity such as a person, or a work, or a place SHOULD have a `@type` of [RepositoryObject], in addition to any other types.
 
-Objects MAY be grouped together in [RepositoryCollection]s with [hasMember] pointing to the [RepositoryObject]. 
+Objects MAY be grouped together in [RepositoryCollection]s with [hasMember] pointing to the [RepositoryObject].
 
 {: .note }
 > The terms `RepositoryObject` and `RepositoryCollection` are renamed in RO-Crate to avoid collision between other vocabularies and the PCDM terms `Collection` and `Object`. The term `RepositoryFile` is renamed to avoid clash with RO-Crate's `File` mapping to <http://schema.org/MediaObject>.
@@ -249,7 +243,6 @@ Objects MAY be grouped together in [RepositoryCollection]s with [hasMember] poin
 > PCDM specifies that files should have only technical metadata, not descriptive metadata, which is _not_ a restriction in RO-Crate. If the RO-Crate is to be imported into a strict PCDM repository, modeling of object/file relationships will be necessary.
 
 For example, this data is exported from an [Omeka] repository:
-
 
 ```json
 {
@@ -307,4 +300,5 @@ For example, this data is exported from an [Omeka] repository:
    "@id": "content/166/original_eece70f73bf8979c0bcfb97065948531.pdf"
 }
 ```
+
 {% include references.liquid %}

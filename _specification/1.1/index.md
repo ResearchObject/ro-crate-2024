@@ -4,6 +4,7 @@ has_children: true
 nav_order: 1
 redirect_from:
   - /specification/1.1/about
+  - /1.1/about
 excerpt: |
   This document specifies a method, known as RO-Crate (Research Object Crate), of organizing file-based data with associated metadata, using Linked Data principles, in both human and machine readable formats, with the ability to include additional domain-specific metadata.
 
@@ -29,9 +30,6 @@ excerpt: |
    limitations under the License.
 -->
 
-
-
-{% include_relative _metadata.liquid  %}
-
+{% include_relative_metadata.liquid  %}
 
 {% include references.liquid %}

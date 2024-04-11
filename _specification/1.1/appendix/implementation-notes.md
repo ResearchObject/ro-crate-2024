@@ -3,7 +3,8 @@ title: Implementation notes
 parent: Appendix
 grand_parent: RO-Crate 1.1
 redirect_from:
-  - /specification/1.1-DRAFT/appendix/implementation-notes
+  - /1.1-DRAFT/appendix/implementation-notes
+  - /1.1/appendix/implementation-notes
 excerpt: 
 ---
 <!--
@@ -25,9 +26,11 @@ excerpt:
 -->
 
 # APPENDIX: Implementation notes
+
 {: .no_toc }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
@@ -41,8 +44,7 @@ When implementing tools to work with RO-Crate it is not necessary to use JSON-LD
 
 - **Code defensively**. Code should not assume that values will always be a String; values for properties may be single scalar values such as strings or integers (`"2"` or 2), or references to other entities such as `{"@id", "_:1"}` (where the referenced entity may or may not be described in the crate, see the point above about having a `getEntity()` method).
 
-- **Read the *whole* specification**. The RO-Crate specification addresses  common use cases individually, introducing aspects of the specification as in a progressive manner. Some key points, such as _entities may have more than one value for `@type`_, may not be apparent from a quick reading.
-
+- **Read the _whole_ specification**. The RO-Crate specification addresses  common use cases individually, introducing aspects of the specification as in a progressive manner. Some key points, such as _entities may have more than one value for `@type`_, may not be apparent from a quick reading.
 
 ## Combining with other packaging schemes
 
@@ -61,7 +63,7 @@ metadata, the semantics of data, while BagIt is about reliable transfer.
 
 ### Adding RO-Crate to Bagit
 
-RO-Crate can be combined with BagIt simply by placing the RO-Crate files 
+RO-Crate can be combined with BagIt simply by placing the RO-Crate files
 within the BagIt payload (`data/`) directory.
 
 ```
@@ -86,7 +88,7 @@ Tag-File-Character-Encoding: UTF-8
 
 The _BagIt base directory_ containing `bagit.txt` can have any name, and can be archived/transferred in any way, e.g.  within a ZIP archive, SFTP or even be exposed on the web.
 
-The manifest file contains file checksums; the BagIt specifications [recommends SHA-512](https://www.rfc-editor.org/rfc/rfc8493.html#section-2.4) as default algorithm, that is `manifest-sha512.txt` SHOULD be present. 
+The manifest file contains file checksums; the BagIt specifications [recommends SHA-512](https://www.rfc-editor.org/rfc/rfc8493.html#section-2.4) as default algorithm, that is `manifest-sha512.txt` SHOULD be present.
 
 The BagIt manifest file MUST list the checksum of _all_ payload files in `data/` and its subdirectories. Where `data/` is also the [RO-Crate Root](../structure.md) the manifest therefore MUST include `ro-crate-metadata.json`:
 
@@ -102,7 +104,7 @@ e1105ed0…5e13  data/chipseq_20200910.json
 Creating the manifest file without using BagIt tools/libraries can be done using the equivalent of:
 
 ```sh
-$ find data -type f -print0 | xargs -0 sha512sum > manifest-sha512.txt
+find data -type f -print0 | xargs -0 sha512sum > manifest-sha512.txt
 ```
 
 Similarly checking the payload directory:
@@ -114,13 +116,13 @@ data/ro-crate-metadata.json: FAILED
 sha512sum: WARNING: 2 computed checksums did NOT match
 ```
 
-The BagIt manifest complements the [RO-Crate structure](../structure.md) as 
+The BagIt manifest complements the [RO-Crate structure](../structure.md) as
 it provide a complete listing of all payload files with
-cryptographically strong checksums, ensuring the crate has been fully 
+cryptographically strong checksums, ensuring the crate has been fully
 archived/transferred, which the weak CRC-32 checksum (TCP/IP,
-ZIP, gzip) is insufficient to guarantee, particularly for large crates. 
+ZIP, gzip) is insufficient to guarantee, particularly for large crates.
 
-To ensure the manifest file itself is complete, it is RECOMMENDED to include its 
+To ensure the manifest file itself is complete, it is RECOMMENDED to include its
 checksum in `tagmanifest-sha512.txt`:
 
 ```
@@ -138,13 +140,11 @@ measures, e.g.
 `gpg --detach-sign --armor --output tagmanifest-sha512.txt.asc tagmanifest-sha512.txt`
 in combination with a secure PGP key exchange or equivalent trust network.
 
-
 #### Base URI in BagIt
 
 The arcp specification suggests how [BagIt UUID identifiers] can be used to calculate the base URI of a bag, see section [Establishing a base URI inside a ZIP file](relative-uris.md#establishing-a-base-uri-inside-a-zip-file).  For this purpose it is RECOMMENDED that `bag-info.txt` includes a fresh UUID like:
 
     External-Identifier: urn:uuid:24e51ca2-5067-4598-935a-dac4e327d05a
-
 
 #### Referencing external files
 
@@ -162,7 +162,7 @@ https://media.githubusercontent.com/…/SPT5_INPUT_R1.bigWig 963489 data/results
 BagIt tools can help complete the bag and verify the checksum of the downloaded
 files according to the manifest.
 
-The RO-Crate contained in `data/` MAY describe the bag with 
+The RO-Crate contained in `data/` MAY describe the bag with
 [data entities](../data-entities.md#embedded-data-entities-that-are-also-on-the-web)
 as if the bag was _complete_, even if the large file is not (yet) present:
 
@@ -177,13 +177,12 @@ as if the bag was _complete_, even if the large file is not (yet) present:
 ```
 
 It is RECOMMENDED that the `url` is provided in the data entity
-and consistent with the line in `fetch.txt` in case the RO-Crate 
+and consistent with the line in `fetch.txt` in case the RO-Crate
 is transferred outside its BagIt container.
 
 The `fetch.txt` approach can also be useful where other files in the RO-Crate
-reference a downloadable file by relative paths within `data/`, even if 
+reference a downloadable file by relative paths within `data/`, even if
 this file is not itself described in the RO-Crate metadata.
-
 
 #### Snapshots of external files
 
@@ -206,16 +205,15 @@ https://media.githubusercontent.com/…/SPT5_INPUT_R1.bigWig 963489 data/snapsho
 ```
 
 In this case the file `data/snapshots/SPT5_INPUT_R1.bigWig` may be present,
-but unknown by RO-Crate; BagIt contains a checksummed snapshot of the 
-web resource. Compared with the first approach, the RO-Crate is here 
+but unknown by RO-Crate; BagIt contains a checksummed snapshot of the
+web resource. Compared with the first approach, the RO-Crate is here
 primarily pointing at a web resource which is allowed to change
 without causing a BagIt checksum error.
-
 
 ### Example of wrapping a BagIt bag in an RO-Crate
 
 Alternatively, an RO-Crate can _wrap_ a BagIt bag, so that the RO-Crate metadata
-is outside of the bag directory and can be changed without changing the payload's checksums. 
+is outside of the bag directory and can be changed without changing the payload's checksums.
 
 ```
 <RO-Crate root directory>/
@@ -240,7 +238,6 @@ A [Data Entity](../data-entities.md) describing `example.txt` in this scenario w
   "name": "Example file"
 }
 ```
-
 
 ## Repository-specific identifiers
 
@@ -267,4 +264,5 @@ _Root Data Entities_ MAY include repository-specific identifiers, described usin
    "value": "https://doi.org/10.4225/59/59672c09f4a4b"
  }
 ```
+
 {% include references.liquid %}
