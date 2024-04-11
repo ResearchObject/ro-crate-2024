@@ -1611,7 +1611,7 @@ Where there is no RDF ontology available, then implementors SHOULD attempt to pr
 [actionStatus]: http://schema.org/actionStatus
 [ActionStatusType]: http://schema.org/ActionStatusType
 
-[DataCrate BagIt Profile]: https://raw.githubusercontent.com/UTS-eResearch/datacrate/master/spec/1.0/profile-datacrate-v1.0.json
+[DataCrate BagIt Profile]: https://raw.githubusercontent.com/UTS-eResearch/datacrate/ba37cc707d48d3569663ab04f9d4f5c25dac6e34/spec/1.0/profile-datacrate-v1.0.json
 [DataCrate JSON-LD Context]: ./context.json
 [JSON-LD Framing 1.1]: https://json-ld.org/spec/latest/json-ld-framing/
 [DataCrate JSON-LD frame]: ./frame.json
