@@ -38,7 +38,7 @@ $btn-border-radius-sm: $border-radius;
 
 // Links
 $link-color: $blue;
-$link-decoration: none;
+$link-decoration: underline;
 
 // Font changes
 $body-color: $dark;
@@ -52,4 +52,3 @@ $h5-font-size: 1rem !default;
 $h6-font-size: 1rem !default;
 
 @import "bootstrap/variables";
-
