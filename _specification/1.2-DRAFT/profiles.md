@@ -46,7 +46,7 @@ Recommendations:
 * The profile description SHOULD use key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL as described in [RFC 2119].
 
 Suggestions:
-* The profile MAY require/suggest which `@type` of [data entities](data-entities.md) and/or [contextual entities](contextual-entities.md) are expected.
+* The profile MAY require/suggest which `@type` of [data entities](data-entities) and/or [contextual entities](contextual-entities) are expected.
 * The profile MAY require/suggest _properties_ expected per type of entity (e.g. _"Each [CreativeWork] must declare a [license]"_)
 * The profile MAY require/suggest a particular [version of RO-Crate](https://www.researchobject.org/ro-crate/specification.html).
 * The profile MAY recommend [RO-Crate extensions](appendix/jsonld.md#extending-ro-crate) with domain-specific terms and vocabularies.
@@ -56,7 +56,7 @@ Suggestions:
 
 ## Declaring conformance of an RO-Crate profile
 
-RO-Crate can describe a profile by adding it as an [contextual entity](contextual-entities.md):
+RO-Crate can describe a profile by adding it as an [contextual entity](contextual-entities):
 
 ```json
 {
@@ -75,7 +75,7 @@ The contextual entity for a profile:
 * SHOULD have a descriptive [name]
 * MAY declare [version], preferably according to [Semantic Versioning][semver]
 
-RO-Crates that are _conforming to_ (or intending to conform to) such a profile SHOULD declare this using `conformsTo` on the [root data entity](root-data-entity.md):
+RO-Crates that are _conforming to_ (or intending to conform to) such a profile SHOULD declare this using `conformsTo` on the [root data entity](root-data-entity):
 
 ```json
 {
@@ -138,7 +138,7 @@ try retrieving `https://about.workflowhub.eu/Workflow-RO-Crate/1.0/ro-crate-meta
 
 ### What is included in the Profile Crate? 
 
-Below follows the suggested [data entities](data-entities.md) to include in a Profile Crate using `hasPart`. 
+Below follows the suggested [data entities](data-entities) to include in a Profile Crate using `hasPart`. 
 
 #### Declaring the role within the crate
 
@@ -234,7 +234,7 @@ The recommended [predefined roles](https://www.w3.org/TR/dx-prof/#resource-roles
 
 The examples in the rest of this document will list the data entities with a corresponding `ResourceDescriptor` entity, but for brevity not repeating the required `hasPart` `hasArtifact` and `DefinedTerm` declarations.
 
-Below follows the suggested [data entities](data-entities.md) to include in a Profile Crate using `hasPart`:
+Below follows the suggested [data entities](data-entities) to include in a Profile Crate using `hasPart`:
 
 #### Profile description entity
 

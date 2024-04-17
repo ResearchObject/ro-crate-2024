@@ -86,7 +86,7 @@ The _BagIt base directory_ containing `bagit.txt` can have any name, and can be 
 
 The manifest file contains file checksums; the BagIt specifications [recommends SHA-512](https://www.rfc-editor.org/rfc/rfc8493.html#section-2.4) as default algorithm, that is `manifest-sha512.txt` SHOULD be present. 
 
-The BagIt manifest file MUST list the checksum of _all_ payload files in `data/` and its subdirectories. Where `data/` is also the [RO-Crate Root](../structure.md) the manifest therefore MUST include `ro-crate-metadata.json`:
+The BagIt manifest file MUST list the checksum of _all_ payload files in `data/` and its subdirectories. Where `data/` is also the [RO-Crate Root](../structure) the manifest therefore MUST include `ro-crate-metadata.json`:
 
 ```
 41846747…ee71  data/ro-crate-metadata.json
@@ -112,7 +112,7 @@ data/ro-crate-metadata.json: FAILED
 sha512sum: WARNING: 2 computed checksums did NOT match
 ```
 
-The BagIt manifest complements the [RO-Crate structure](../structure.md) as 
+The BagIt manifest complements the [RO-Crate structure](../structure) as 
 it provide a complete listing of all payload files with
 cryptographically strong checksums, ensuring the crate has been fully 
 archived/transferred, which the weak CRC-32 checksum (TCP/IP,
@@ -229,7 +229,7 @@ is outside of the bag directory and can be changed without changing the payload'
   |         example.txt 
 ```
 
-A [Data Entity](../data-entities.md) describing `example.txt` in this scenario would have an `@id` of `bag1/data/example.txt`:
+A [Data Entity](../data-entities) describing `example.txt` in this scenario would have an `@id` of `bag1/data/example.txt`:
 
 ```json
 {
@@ -241,7 +241,7 @@ A [Data Entity](../data-entities.md) describing `example.txt` in this scenario w
 
 ## Repository-specific identifiers
 
-_Root Data Entities_ MAY include repository-specific identifiers, described using [Contextual Entities](../contextual-entities.md) using a [PropertyValue], with a [name] that identifies the repository and the [identifier] as a value. The _same_ identifier MAY be used in multiple different repositories and effectively namespaced using the `name` of the `ProperyValue`.
+_Root Data Entities_ MAY include repository-specific identifiers, described using [Contextual Entities](../contextual-entities) using a [PropertyValue], with a [name] that identifies the repository and the [identifier] as a value. The _same_ identifier MAY be used in multiple different repositories and effectively namespaced using the `name` of the `ProperyValue`.
 
 ```json
 {

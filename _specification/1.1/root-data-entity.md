@@ -37,7 +37,7 @@ The **Root Data Entity** is a [Dataset] that represent the RO-Crate as a whole;
 a _Research Object_ that includes the _Data Entities_ and the related
 _Contextual Entities_.
 
-As explained in section [RO-Crate structure](structure.md), the RO-Crate description 
+As explained in section [RO-Crate structure](structure), the RO-Crate description 
 is stored as _JSON-LD_ in the _RO-Crate Metadata File_ `ro-crate-metadata.json` in 
 the _RO-Crate root_ directory. 
 
@@ -96,7 +96,7 @@ _Root Data Entity_. As [stated earlier](structure.md#self-describing-and-self-co
 the _RO-Crate Metadata File_ is not an
 exhaustive manifest or inventory, that is, it does not necessarily list or
 describe all files in the package. For this reason, there are no minimum
-metadata requirements in terms of describing [Data Entities](data-entities.md) (files and folders)
+metadata requirements in terms of describing [Data Entities](data-entities) (files and folders)
 other than the _Root Data Entity_. Extensions of RO-Crate dealing with specific
 types of dataset may put further constraints or requirements of metadata beyond
 the Root Data Entity (see the appendix [Extending RO-Crate](appendix/jsonld.md#extending-ro-crate)).

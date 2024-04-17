@@ -44,9 +44,9 @@ RO-Crate aims to capture and describe the [Research Object][ResearchObject] usin
 
 The _RO-Crate Metadata Descriptor_ contains the metadata that describes the RO-Crate and its content, in particular:
 
-* [Root Data Entity](root-data-entity.md) - the RO-Crate `Dataset` itself, a gathering of data
-* [Data Entities](data-entities.md) - the _data_ payload, in the form of files and folders
-* [Contextual Entities](contextual-entities.md) - related things in the world (e.g. people, organizations, places), providing provenance for the data entities and the RO-Crate.
+* [Root Data Entity](root-data-entity) - the RO-Crate `Dataset` itself, a gathering of data
+* [Data Entities](data-entities) - the _data_ payload, in the form of files and folders
+* [Contextual Entities](contextual-entities) - related things in the world (e.g. people, organizations, places), providing provenance for the data entities and the RO-Crate.
 
 This machine-readable metadata can also be represented for human consumption in the _RO-Crate Website_, linking to data and Web resources.
 
@@ -77,8 +77,8 @@ For all entities listed in an _RO-Crate Metadata Document_ the following princip
 3. The `@type` SHOULD include at least one [Schema.org] type that accurately describe the entity. [Thing] or [CreativeWork] are valid fallbacks if no alternative external or ad-hoc term is found (see [Extending RO-Crate](appendix/jsonld.md#extending-ro-crate)).
 5. The entity SHOULD have a human-readable `name`, in particular if its `@id` do not go to a human-readable Web page
 6. The properties used on the entity SHOULD be applicable to the `@type` (or superclass) according to their definitions. For instance, the property [publisher] can be used on a [Dataset] as it applies to its superclass [CreativeWork].
-7. Property references to other entities (e.g. `author` property to a `Person` entity) SHOULD use the `{ "@id": "..."}` object form (see [JSON-LD appendix](appendix/jsonld.md))
-8. The entity SHOULD be ultimately referencable from the root data set (possibly through another reachable data- or [contextual entity](contextual-entities.md))
+7. Property references to other entities (e.g. `author` property to a `Person` entity) SHOULD use the `{ "@id": "..."}` object form (see [JSON-LD appendix](appendix/jsonld))
+8. The entity SHOULD be ultimately referencable from the root data set (possibly through another reachable data- or [contextual entity](contextual-entities))
 
 
 ## Base metadata standard: Schema.org
@@ -91,7 +91,7 @@ For all entities listed in an _RO-Crate Metadata Document_ the following princip
 RO-Crate relies heavily on [Schema.org], using a constrained subset of [JSON-LD], and this specification gives opinionated recommendations on how to represent the metadata using existing [linked data] best practices.
 
 {: .tip }
-> The main principle of RO-Crate is to use a [Schema.org] whenever possible, even if its official definition may seem broad or related to every day objects. For instance, [IndividualProduct] can describe scientific equipment and instruments (see [Provenance of entities](provenance.md)). RO-Crate implementers are free to use additional properties and types beyond this specification (see also appendix [Extending RO-Crate(appendix/jsonld.md#extending-ro-crate)]).
+> The main principle of RO-Crate is to use a [Schema.org] whenever possible, even if its official definition may seem broad or related to every day objects. For instance, [IndividualProduct] can describe scientific equipment and instruments (see [Provenance of entities](provenance)). RO-Crate implementers are free to use additional properties and types beyond this specification (see also appendix [Extending RO-Crate(appendix/jsonld.md#extending-ro-crate)]).
 
 
 ### Differences from Schema.org
@@ -106,7 +106,7 @@ Generally, the standard _type_ and _property_ names (_terms_) from [Schema.org] 
 
 To simplify processing and avoid confusion with string values, the _RO-Crate JSON-LD Context_ requires URIs and entity references to be given in the form `"author": {"@id": "http://example.com/alice"}`, even where [Schema.org] for some properties otherwise permit shorter forms like `"author": "http://example.com/alice"`.
 
-See the appendix [RO-Crate JSON-LD](appendix/jsonld.md) for details.
+See the appendix [RO-Crate JSON-LD](appendix/jsonld) for details.
 
 ## Additional metadata standards
 

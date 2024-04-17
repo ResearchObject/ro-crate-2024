@@ -46,7 +46,7 @@ The structure an _RO-Crate_ MUST follow is:
 The name of the _RO-Crate root_ directory is not defined, but a root directory is identifiable by the presence of the _RO-Crate Metadata File_, `ro-crate-metadata.json`. For instance, if an _RO-Crate_ is archived in a ZIP-file, the ZIP root directory is an _RO-Crate root_ directory if it contains `ro-crate-metadata.json`.
 
 
-[Data Entities](data-entities.md) in the RO-Crate MUST either be _payload files/directories_ present within the RO-Crate root directory or its subdirectories, or be [Web-based Data Entities](data-entities.html#web-based-data-entities).
+[Data Entities](data-entities) in the RO-Crate MUST either be _payload files/directories_ present within the RO-Crate root directory or its subdirectories, or be [Web-based Data Entities](data-entities.html#web-based-data-entities).
 
 <!--
 RO-Crates can be _nested_ by including payload directories that themselves contain an _RO-Crate Metadata File_.
@@ -66,12 +66,12 @@ A valid _RO-Crate JSON-LD_ graph MUST describe:
 
 1. The [RO-Crate Metadata File Descriptor](root-data-entity.md#ro-crate-metadata-file-descriptor)
 2. The [Root Data Entity](root-data-entity.md#direct-properties-of-the-root-data-entity)
-3. Zero or more [Data Entities](data-entities.md)
-4. Zero or more [Contextual Entities](contextual-entities.md)
+3. Zero or more [Data Entities](data-entities)
+4. Zero or more [Contextual Entities](contextual-entities)
 
 It is RECOMMENDED that any referenced _contextual entities_ are also described in the _RO-Crate Metadata File_ with the same identifier. Similarly it is RECOMMENDED that any _contextual entity_ in the _RO-Crate Metadata file_ is linked to from at least one of the other entities using the same identifier. 
 
-The appendix [RO-Crate JSON-LD](appendix/jsonld.md) details the general structure of the JSON-LD that is expected in the _RO-Crate Metadata File_. In short, the rest of this specification describe the different types of entities that can be added as `{}` objects to the _RO-Crate JSON-LD_ `@graph` array below:
+The appendix [RO-Crate JSON-LD](appendix/jsonld) details the general structure of the JSON-LD that is expected in the _RO-Crate Metadata File_. In short, the rest of this specification describe the different types of entities that can be added as `{}` objects to the _RO-Crate JSON-LD_ `@graph` array below:
 
 ```json
 { "@context": "https://w3id.org/ro/crate/1.1/context",
@@ -115,14 +115,14 @@ If present in the root directory, `ro-crate-preview.html` MUST:
 
 These are the actual files and directories that make up the dataset being described.
 
-The base RO-Crate specification makes no assumptions about the presence of any specific files or folders beyond the reserved RO-Crate files described above. Payload files may appear directly in the _RO-Crate Root_ alongside the _RO-Crate Metadata File_, and/or appear in sub-directories of the _RO-Crate Root_. Each file and directory MAY be represented as [Data Entities](data-entities.md) in the _RO-Crate Metadata File_.
+The base RO-Crate specification makes no assumptions about the presence of any specific files or folders beyond the reserved RO-Crate files described above. Payload files may appear directly in the _RO-Crate Root_ alongside the _RO-Crate Metadata File_, and/or appear in sub-directories of the _RO-Crate Root_. Each file and directory MAY be represented as [Data Entities](data-entities) in the _RO-Crate Metadata File_.
 
 
 ## Self-describing and self-contained
 
 RO-Crates SHOULD be self-describing and self-contained.
 
-A minimal RO-Crate is a directory containing a single [RO-Crate Metadata File](root-data-entity.md) `ro-crate-metadata.json`. 
+A minimal RO-Crate is a directory containing a single [RO-Crate Metadata File](root-data-entity) `ro-crate-metadata.json`. 
 
 At the basic level, an RO-Crate is a collection of files and resources represented as a Schema.org [Dataset], that together form a meaningful unit for the purposes of communication, citation, distribution, preservation, etc.  The _RO-Crate Metadata File_ describes the RO-Crate, and MUST be stored in the _RO-Crate Root_. 
 
