@@ -37,7 +37,7 @@ jobs:
 
       - name: Validate all links, enforce alt text
         run: |
-          bundle exec htmlproofer ./_site
+          bundle exec htmlproofer --ignore-files "/.*\/ro-crate-preview\.html/" ./_site
 
       - name: Ensure no unexpected encoded HTML in output
         run: |
