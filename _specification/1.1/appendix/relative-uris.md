@@ -27,11 +27,9 @@ redirect_from:
 <div id="relative-uris"></div>
 
 # APPENDIX: Handling relative URI references
-
 {: .no_toc }
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
 1. TOC
@@ -39,11 +37,11 @@ redirect_from:
 
 The _RO-Crate Metadata File_ use _relative URI references_ to identify files and directories
 contained within the _RO-Crate Root_ and its children.  As described in section
-[Describing entities in JSON-LD](#describing-entities-in-json-ld) above,
-relative URI references are also frequently used for
+[Describing entities in JSON-LD](#describing-entities-in-json-ld) above, 
+relative URI references are also frequently used for 
 identifying _Contextual entities_.
 
-When using JSON-LD tooling and RDF libraries to consume or generate RO-Crates,
+When using JSON-LD tooling and RDF libraries to consume or generate RO-Crates, 
 extra care should be taken to ensure these URI references are handled correctly.
 
 For this, a couple of scenarios are sketched below with recommendations for
@@ -139,9 +137,10 @@ Results in a valid _RO-Crate JSON-LD_ (actual order in `@graph` may differ):
 {: .note }
 > The saved _RO-Crate JSON-LD_ SHOULD NOT include `{@base: null}` in its `@context`.
 
+
 ## Expanding/parsing JSON-LD keeping relative referencing
 
-[JSON-LD Expansion] can be used to
+[JSON-LD Expansion] can be used to 
 resolve terms from the `@context` to absolute URIs, e.g. `http://schema.org/description`. This may be needed to parse [extended properties](#extending-ro-crate) or for combinations with other Linked Data.
 
 This algorithm would normally also expand `@id` fields based on the current [base URI][JSON-LD base URI] of the _RO-Crate Metadata File_, but this may be a temporary location like `file:///tmp/rocrate54/ro-crate-metadata.json`, meaning `@id`: `subfolder/` becomes `file:///tmp/rocrate54/subfolder/` after JSON-LD expansion.
@@ -299,8 +298,8 @@ Content-Type: application/ld+json
 Following redirection we see that:
 
 * _Base URI_ of the _RO-Crate Metadata File_ becomes `https://www.researchobject.org/ro-crate/1.0/ro-crate-metadata.jsonld`
-* The absolute URI for `index.html` resolves to `https://www.researchobject.org/ro-crate/1.0/index.html`
-  * ..rather than `https://w3id.org/ro/crate/1.0/index.html` which would not redirect correctly
+* The absolute URI for `index.html` resolves to `https://www.researchobject.org/ro-crate/1.0/index.html` 
+  - ..rather than `https://w3id.org/ro/crate/1.0/index.html` which would not redirect correctly
 
 This example also use RO-Crate 1.0, where the _RO-Crate Metadata File_ is called `ro-crate-metadata.jsonld` instead of `ro-crate-metadata.json`. Note that the recommended
 [algorithm to find the Root Data Entity](../root-data-entity.md#finding-the-root-data-entity)
@@ -339,6 +338,7 @@ WHERE {
   FILTER STRSTARTS(str(?spec), "https://w3id.org/ro/crate/")
 }
 ```
+
 
 ## Parsing as RDF with a different RO-Crate Root
 
@@ -421,15 +421,17 @@ Parsing this will generate triples like below using `http://example.com/crate255
 
 Generating a _RO-Crate JSON-LD_ from such triples can be done by first [finding the RO-Crate Root](#finding-ro-crate-root-in-rdf-triple-stores) and then use it as base URI to [relativize absolute URIs within RO-Crate Root](#relativizing-absolute-uris-within-ro-crate-root).
 
+
 ## Establishing a base URI inside a ZIP file
 
 An RO-Crate may have been packaged as a ZIP file or similar archive. RO-Crates may exist in a temporary file path which should not determine its identifiers.
 
 When parsing such crates it is recommended to use the
 [Archive and Package (arcp) URI scheme][ARCP]
-to establish a temporary/location-based UUID or hash-based (SHA256) _base URI_.
+to establish a temporary/location-based UUID or hash-based (SHA256) _base URI_. 
 
 For instance, given a randomly generated UUID `b7749d0b-0e47-5fc4-999d-f154abe68065` we can use `arcp://uuid,b7749d0b-0e47-5fc4-999d-f154abe68065/` as the `@base`:
+
 
 ```json
 {

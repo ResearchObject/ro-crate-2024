@@ -31,11 +31,9 @@ parent: RO-Crate 1.1
 <div id="workflows"></div>
 
 # Workflows and Scripts
-
 {: .no_toc }
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
 1. TOC
@@ -141,6 +139,7 @@ It is possible to indicate _steps_ that are executed as part of an `Computationa
 }
 ```
 
+
 ## Workflow diagram/sketch
 
 It can be beneficial to show a diagram or sketch to explain the script/workflow. This may have been generated from a workflow management system, or drawn manually as a diagram. This diagram MAY be included from the `SoftwareSourceCode` data entity by using `image`, pointing to an [ImageObject] data entity which is [about] the `SoftwareSourceCode`:
@@ -190,7 +189,7 @@ A workflow diagram may still be provided even if there is no programmatic `Softw
 
 Data entities representing _workflows_ (`@type: ComputationalWorkflow`)
 SHOULD comply with the Bioschemas [ComputationalWorkflow profile][ComputationalWorkflow profile 0.5],
-where possible.
+where possible. 
 
 When complying with this profile, the workflow data entities
 MUST describe these properties and their related contextual entities:

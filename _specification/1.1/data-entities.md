@@ -25,11 +25,9 @@ parent: RO-Crate 1.1
 -->
 
 # Data Entities
-
 {: .no_toc }
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
 1. TOC
@@ -184,22 +182,22 @@ The table below outlines the properties that Data Entities, when present, MUST h
 ### Encoding file paths
 
 Note that all `@id` [identifiers must be valid URI references](appendix/jsonld.html#describing-entities-in-json-ld), care must be taken to express any relative paths using `/` separator, correct casing, and escape special characters like space (`%20`) and percent (`%25`), for instance a _File Data Entity_ from the Windows path `Results and Diagrams\almost-50%.png` becomes `"@id": "Results%20and%20Diagrams/almost-50%25.png"` in the _RO-Crate JSON-LD_.
-
+ 
 In this document the term _URI_ includes international *IRI*s; the _RO-Crate Metadata File_ is always UTF-8 and international characters in identifiers SHOULD be written using native UTF-8 characters (*IRI*s), however traditional URL encoding of Unicode characters with `%` MAY appear in `@id` strings. Example: `"@id": "面试.mp4"` is preferred over the equivalent `"@id": "%E9%9D%A2%E8%AF%95.mp4"`
 
 ### File Data Entity
 
 A [File] _Data Entity_ MUST have the following properties:
 
-* `@type`: MUST be `File`, or an array where `File` is one of the values.
-* `@id` MUST be either a _URI Path_ relative to the _RO Crate root_, or an absolute URI.
+*  `@type`: MUST be `File`, or an array where `File` is one of the values.
+*  `@id` MUST be either a _URI Path_ relative to the _RO Crate root_, or an absolute URI.
 
 ### Directory File Entity
 
 A [Dataset] (directory) _Data Entity_ MUST have the following properties:
 
-* `@type` MUST be `Dataset` or an array where `Dataset` is one of the values.
-* `@id`  MUST be either a _URI Path_ relative to the _RO Crate root_, or an absolute URI. The id SHOULD end with `/`
+*  `@type` MUST be `Dataset` or an array where `Dataset` is one of the values.
+*  `@id`  MUST be either a _URI Path_ relative to the _RO Crate root_, or an absolute URI. The id SHOULD end with `/`
 
 ## Web-based Data Entities
 
@@ -251,7 +249,7 @@ Example of an RO-Crate including a _File Data Entity_ external to the _RO-Crate 
 }
 ```
 
-Additional care SHOULD be taken to improve persistence and long-term preservation of web resources included
+Additional care SHOULD be taken to improve persistence and long-term preservation of web resources included 
 in an RO-Crate as they can be more difficult to archive or move along with the _RO-Crate root_, and
 may change intentionally or unintentionally leaving the RO-Crate with incomplete or outdated information.
 
@@ -272,14 +270,14 @@ As files on the web may change, the timestamp property [sdDatePublished] SHOULD 
 
 ### Embedded data entities that are also on the web
 
-File Data Entities may already have a corresponding web presence, for instance a landing page that describes the file, including persistent identifiers (e.g. DOI) resolving to an intermediate HTML page instead of the downloadable file directly.
+File Data Entities may already have a corresponding web presence, for instance a landing page that describes the file, including persistent identifiers (e.g. DOI) resolving to an intermediate HTML page instead of the downloadable file directly. 
 
 These can be included for File Data Entities as additional metadata, regardless of whether the File is included in the _RO-Crate Root_ directory or exists on the Web, by using the properties:
 
 * [identifier] for formal identifier strings such as DOIs
-* [url] with a string URL corresponding to a _download_ link (if not available, a download landing page) for this file
+* [url] with a string URL corresponding to a *download* link (if not available, a download landing page) for this file
 * [subjectOf] to a [CreativeWork] (or [WebPage]) that mentions this file or its content (but also other resources)
-* [mainEntityOfPage] to a [CreativeWork]  (or [WebPage]) that primarily describes this file (or its content)
+* [mainEntityOfPage] to a [CreativeWork]  (or [WebPage]) that primarily describes this file (or its content) 
 
 ```json
   {
@@ -304,7 +302,7 @@ These can be included for File Data Entities as additional metadata, regardless 
 
 A _Directory File Entry_ or [Dataset] identifier expressed as an absolute URL on the web can be harder to download than a [File] because it consists of multiple resources. It is RECOMMENDED that such directories have a complete listing of their content in [hasPart], enabling download traversal.
 
-Alternatively, a common mechanism to provide downloads of a reasonably sized directory is as an archive file in formats such as `.zip` or `.tar.gz`, described as a [DataDownload].
+Alternatively, a common mechanism to provide downloads of a reasonably sized directory is as an archive file in formats such as `.zip` or `.tar.gz`, described as a [DataDownload]. 
 
 ```json
   {
@@ -325,5 +323,6 @@ Alternatively, a common mechanism to provide downloads of a reasonably sized dir
 Similarly, the _RO-Crate root_ entity may also provide a [distribution] URL, in which case the download SHOULD be an archive that contains the _RO-Crate Metadata file_.
 
 In all cases, consumers should be aware that a `DataDownload` is a snapshot that may not reflect the current state of the `Dataset` or RO-Crate.
+
 
 {% include references.liquid %}

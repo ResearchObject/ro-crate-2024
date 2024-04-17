@@ -30,6 +30,9 @@ excerpt: |
    limitations under the License.
 -->
 
-{% include_relative_metadata.liquid  %}
+
+
+{% include_relative _metadata.liquid  %}
+
 
 {% include references.liquid %}
