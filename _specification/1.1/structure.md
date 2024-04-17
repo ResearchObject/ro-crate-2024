@@ -64,8 +64,8 @@ RO-Crates can be _nested_ by including payload directories that themselves conta
 
 A valid _RO-Crate JSON-LD_ graph MUST describe:
 
-1. The [RO-Crate Metadata File Descriptor](root-data-entity.md#ro-crate-metadata-file-descriptor)
-2. The [Root Data Entity](root-data-entity.md#direct-properties-of-the-root-data-entity)
+1. The [RO-Crate Metadata File Descriptor](root-data-entity#ro-crate-metadata-file-descriptor)
+2. The [Root Data Entity](root-data-entity#direct-properties-of-the-root-data-entity)
 3. Zero or more [Data Entities](data-entities)
 4. Zero or more [Contextual Entities](contextual-entities)
 
@@ -130,6 +130,6 @@ While RO-Crate is well catered for describing a _Dataset_ as files and relevant 
 
 It is important to note that the _RO-Crate Metadata File_ is **not an exhaustive manifest** or inventory, that is, it does not necessarily list or describe all files in the package.  Rather it is focused on providing sufficient amount of metadata to understand and use the content, and is designed to be compatible with existing and future approaches that _do_ have full inventories / manifest and integrity checks, e.g. by using checksums, such as [BagIt] and Oxford Common File Layout [OCFL Objects][OCFL Object].
 
-The intention is that RO-Crates can work well with a variety of archive file formats, e.g. tar, zip, etc., and approaches to capturing file manifests and file fixity, such as [BagIt], [OCFL] and [git] (see also appendix [Combining with other packaging schemes](appendix/implementation-notes.md#combining-with-other-packaging-schemes)). An RO-Crate can also be hosted on the web or mainly refer to web resources, although extra care to ensure persistence and consistency should be taken for archiving such RO-Crates.
+The intention is that RO-Crates can work well with a variety of archive file formats, e.g. tar, zip, etc., and approaches to capturing file manifests and file fixity, such as [BagIt], [OCFL] and [git] (see also appendix [Combining with other packaging schemes](appendix/implementation-notes#combining-with-other-packaging-schemes)). An RO-Crate can also be hosted on the web or mainly refer to web resources, although extra care to ensure persistence and consistency should be taken for archiving such RO-Crates.
 
 {% include references.liquid %}

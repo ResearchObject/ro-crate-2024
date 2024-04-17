@@ -138,7 +138,7 @@ in combination with a secure PGP key exchange or equivalent trust network.
 
 #### Base URI in BagIt
 
-The arcp specification suggests how [BagIt UUID identifiers] can be used to calculate the base URI of a bag, see section [Establishing a base URI inside a ZIP file](relative-uris.md#establishing-a-base-uri-inside-a-zip-file).  For this purpose it is RECOMMENDED that `bag-info.txt` includes a fresh UUID like:
+The arcp specification suggests how [BagIt UUID identifiers] can be used to calculate the base URI of a bag, see section [Establishing a base URI inside a ZIP file](relative-uris#establishing-a-base-uri-inside-a-zip-file).  For this purpose it is RECOMMENDED that `bag-info.txt` includes a fresh UUID like:
 
     External-Identifier: urn:uuid:24e51ca2-5067-4598-935a-dac4e327d05a
 
@@ -160,7 +160,7 @@ BagIt tools can help complete the bag and verify the checksum of the downloaded
 files according to the manifest.
 
 The RO-Crate contained in `data/` MAY describe the bag with 
-[data entities](../data-entities.md#embedded-data-entities-that-are-also-on-the-web)
+[data entities](../data-entities#embedded-data-entities-that-are-also-on-the-web)
 as if the bag was _complete_, even if the large file is not (yet) present:
 
 ```json
@@ -184,7 +184,7 @@ this file is not itself described in the RO-Crate metadata.
 
 #### Snapshots of external files
 
-As an alternative to the above, [web-based data entities](../data-entities.md#web-based-data-entities)
+As an alternative to the above, [web-based data entities](../data-entities#web-based-data-entities)
 can be used in the RO-Crate:
 
 ```json

@@ -72,9 +72,9 @@ RO-Crate realizes these principles using a particular set of technologies and be
 
 For all entities listed in an _RO-Crate Metadata Document_ the following principles apply:
 
-1. The entity MUST have a `@id` (see [Describing entities in JSON-LD](appendix/jsonld.md#describing-entities-in-json-ld))
+1. The entity MUST have a `@id` (see [Describing entities in JSON-LD](appendix/jsonld#describing-entities-in-json-ld))
 2. The entity MUST have a `@type`, which MAY be an array. 
-3. The `@type` SHOULD include at least one [Schema.org] type that accurately describe the entity. [Thing] or [CreativeWork] are valid fallbacks if no alternative external or ad-hoc term is found (see [Extending RO-Crate](appendix/jsonld.md#extending-ro-crate)).
+3. The `@type` SHOULD include at least one [Schema.org] type that accurately describe the entity. [Thing] or [CreativeWork] are valid fallbacks if no alternative external or ad-hoc term is found (see [Extending RO-Crate](appendix/jsonld#extending-ro-crate)).
 5. The entity SHOULD have a human-readable `name`, in particular if its `@id` do not go to a human-readable Web page
 6. The properties used on the entity SHOULD be applicable to the `@type` (or superclass) according to their definitions. For instance, the property [publisher] can be used on a [Dataset] as it applies to its superclass [CreativeWork].
 7. Property references to other entities (e.g. `author` property to a `Person` entity) SHOULD use the `{ "@id": "..."}` object form (see [JSON-LD appendix](appendix/jsonld))
@@ -91,7 +91,7 @@ For all entities listed in an _RO-Crate Metadata Document_ the following princip
 RO-Crate relies heavily on [Schema.org], using a constrained subset of [JSON-LD], and this specification gives opinionated recommendations on how to represent the metadata using existing [linked data] best practices.
 
 {: .tip }
-> The main principle of RO-Crate is to use a [Schema.org] whenever possible, even if its official definition may seem broad or related to every day objects. For instance, [IndividualProduct] can describe scientific equipment and instruments (see [Provenance of entities](provenance)). RO-Crate implementers are free to use additional properties and types beyond this specification (see also appendix [Extending RO-Crate(appendix/jsonld.md#extending-ro-crate)]).
+> The main principle of RO-Crate is to use a [Schema.org] whenever possible, even if its official definition may seem broad or related to every day objects. For instance, [IndividualProduct] can describe scientific equipment and instruments (see [Provenance of entities](provenance)). RO-Crate implementers are free to use additional properties and types beyond this specification (see also appendix [Extending RO-Crate(appendix/jsonld#extending-ro-crate)]).
 
 
 ### Differences from Schema.org

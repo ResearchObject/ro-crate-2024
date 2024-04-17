@@ -100,7 +100,7 @@ The order of the `@graph` array is not significant. Above we see that the RO-Cra
 
 Properties of an entity can refer to another URI or entity by using the form `{"@id": "uri-reference"}` as in the example above, where the [author] property in the [File] entity refer to the [Person] entity, identified as `#alice`. 
 
-Identifiers in `@id` SHOULD be either a valid _absolute URI_ like <http://example.com/>, or a _URI path_ relative to the RO-Crate root directory. Although legal in JSON-LD, `@id` paths in RO-Crate SHOULD NOT use `../` to climb out of the _RO-Crate Root_, rather such references SHOULD be translated to absolute URIs. See also section [Core Metadata for Data Entities](../data-entities.md#core-metadata-for-data-entities).
+Identifiers in `@id` SHOULD be either a valid _absolute URI_ like <http://example.com/>, or a _URI path_ relative to the RO-Crate root directory. Although legal in JSON-LD, `@id` paths in RO-Crate SHOULD NOT use `../` to climb out of the _RO-Crate Root_, rather such references SHOULD be translated to absolute URIs. See also section [Core Metadata for Data Entities](../data-entities#core-metadata-for-data-entities).
 
 Care must be taken to express any relative paths using `/` separator and escape special characters like space (`%20`). As JSON-LD supports _IRIs_, international characters in identifiers SHOULD be encoded in UTF-8 rather than `%`-escaped.
 
@@ -344,7 +344,7 @@ The `@id` of the extension terms should after the move be made absolute URIs tha
 
 For terms it is RECOMMENDED to change the `@id` of the terms after moving to be based on the profile's permalink, e.g. the profile with `@id` <https://w3id.org/cpm/ro-crate> defines the term <https://w3id.org/cpm/ro-crate#CPMProvenanceFile>. 
 
-See sections on [profile extension terms](../profiles.md#extension-terms) and [Profile JSON-LD context](../profiles.md#json-ld-context).  [Custom file formats](../data-entities.md#adding-detailed-descriptions-of-encodings) and common [contextual entities](../contextual-entities) may also be moved to the profile, ensuring their `@id` are absolute URI and resolve to the profile JSON-LD.
+See sections on [profile extension terms](../profiles#extension-terms) and [Profile JSON-LD context](../profiles#json-ld-context).  [Custom file formats](../data-entities#adding-detailed-descriptions-of-encodings) and common [contextual entities](../contextual-entities) may also be moved to the profile, ensuring their `@id` are absolute URI and resolve to the profile JSON-LD.
 
 This can reduce repetition in their JSON-LD, but means additional measures must be taken to ensure the resulting RO-Crates remain functional over time, e.g. not to remove terms as the profile evolves over time.
 

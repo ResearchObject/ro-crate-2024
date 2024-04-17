@@ -86,20 +86,20 @@ the _Root Data Entity_ by following this algorithm:
 5. .. if the entity has an `@id` URI that matches _root_ return it
 
 See also the appendix on
-[finding RO-Crate Root in RDF triple stores](appendix/relative-uris.md#finding-ro-crate-root-in-rdf-triple-stores).
+[finding RO-Crate Root in RDF triple stores](appendix/relative-uris#finding-ro-crate-root-in-rdf-triple-stores).
 
 ### Purpose of Metadata File
 
 To ensure a base-line interoperability between RO-Crates, and for an RO-Crate to
 be considered a _Valid RO-Crate_, a minimum set of metadata is required for the
-_Root Data Entity_. As [stated earlier](structure.md#self-describing-and-self-contained)
+_Root Data Entity_. As [stated earlier](structure#self-describing-and-self-contained)
 the _RO-Crate Metadata File_ is not an
 exhaustive manifest or inventory, that is, it does not necessarily list or
 describe all files in the package. For this reason, there are no minimum
 metadata requirements in terms of describing [Data Entities](data-entities) (files and folders)
 other than the _Root Data Entity_. Extensions of RO-Crate dealing with specific
 types of dataset may put further constraints or requirements of metadata beyond
-the Root Data Entity (see the appendix [Extending RO-Crate](appendix/jsonld.md#extending-ro-crate)).
+the Root Data Entity (see the appendix [Extending RO-Crate](appendix/jsonld#extending-ro-crate)).
 
 The _RO-Crate Metadata File Descriptor_ MAY contain information such as
 licensing for the _RO-Crate Metadata File_ so metadata can be licensed

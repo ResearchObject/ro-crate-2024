@@ -54,7 +54,7 @@ RO-Crate distinguishes between _contextual entities_ and _data entities_.
 Some contextual entities can also be considered data entities -- for instance the [license](#licensing-access-control-and-copyright) property refers to a [CreativeWork] that can reasonably be downloaded, however a license document is not usually considered as part of research outputs and would therefore typically not be included in [hasPart] on the [root data entity](root-data-entity). 
 
 {: .tip }
-> Files in the _RO-Crate Root_ are not necessarily data entities -- the [RO-Crate Metadata Descriptor](root-data-entity.md#ro-crate-metadata-file-descriptor) is a file in the _RO-Crate Root_, but is considered a _Contextual Entity_ as it is describing the RO-Crate, rather than being part of it. On the other hand, the [Root Data Entity](root-data-entity.md#root-data-entity) is a data entity within its own metadata file.
+> Files in the _RO-Crate Root_ are not necessarily data entities -- the [RO-Crate Metadata Descriptor](root-data-entity#ro-crate-metadata-file-descriptor) is a file in the _RO-Crate Root_, but is considered a _Contextual Entity_ as it is describing the RO-Crate, rather than being part of it. On the other hand, the [Root Data Entity](root-data-entity#root-data-entity) is a data entity within its own metadata file.
 
 Likewise, some data entities may also be described as contextual entities, for instance a `File` that is also a [ScholarlyArticle]. In such cases the _contextual data entity_ MUST be described as a single JSON object in the RO-Crate Metadata JSON `@graph` and SHOULD list both relevant data and contextual types in a `@type` array. 
 
@@ -63,7 +63,7 @@ The RO-Crate Metadata JSON `@graph` MUST NOT list multiple entities with the sam
 
 ## Identifiers for contextual entities
 
-A challenge can be how to assign [identifiers for contextual entities](appendix/jsonld.md#describing-entities-in-json-ld), that is deciding on their `@id` value.
+A challenge can be how to assign [identifiers for contextual entities](appendix/jsonld#describing-entities-in-json-ld), that is deciding on their `@id` value.
 
 If an existing permalink (e.g. `https://orcid.org/0000-0002-1825-0097`) or other absolute URI (e.g. `https://en.wikipedia.org/wiki/Josiah_S._Carberry`) is reasonably unique for that entity, that URI SHOULD be used as identifier for the contextual entity in preference of an identifier local to the RO-Crate (e.g. `#josiah` or `#0fa587c6-4580-4ece-a5df-69af3c5590e3`). 
 
@@ -72,7 +72,7 @@ Care should be taken to not describe two conceptually different contextual entit
 Where a related URL exists that may not be unique enough to serve as identifier, it can instead be added to a contextual entity using the property [url].
 
 
-See the [appendix on JSON-LD identifiers](appendix/jsonld.md#describing-entities-in-json-ld) for details.
+See the [appendix on JSON-LD identifiers](appendix/jsonld#describing-entities-in-json-ld) for details.
 
 
 ## People
