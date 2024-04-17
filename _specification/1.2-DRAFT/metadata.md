@@ -91,7 +91,7 @@ For all entities listed in an _RO-Crate Metadata Document_ the following princip
 RO-Crate relies heavily on [Schema.org], using a constrained subset of [JSON-LD], and this specification gives opinionated recommendations on how to represent the metadata using existing [linked data] best practices.
 
 {: .tip }
-> The main principle of RO-Crate is to use a [Schema.org] whenever possible, even if its official definition may seem broad or related to every day objects. For instance, [IndividualProduct] can describe scientific equipment and instruments (see [Provenance of entities](provenance)). RO-Crate implementers are free to use additional properties and types beyond this specification (see also appendix [Extending RO-Crate(appendix/jsonld#extending-ro-crate)]).
+> The main principle of RO-Crate is to use a [Schema.org] whenever possible, even if its official definition may seem broad or related to every day objects. For instance, [IndividualProduct] can describe scientific equipment and instruments (see [Provenance of entities](provenance)). RO-Crate implementers are free to use additional properties and types beyond this specification (see also appendix [Extending RO-Crate(appendix/jsonld.md#extending-ro-crate)]).
 
 
 ### Differences from Schema.org

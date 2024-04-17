@@ -194,7 +194,7 @@ Additional properties of _schema.org_ types [Dataset] and [CreativeWork] MAY be 
 
 ### Root Data Entity identifier
 
-The root data entity's `@id` SHOULD be either `./` (indicating the directory of `ro-crate-metadata.json` is the [RO-Crate Root](structure)), or an absolute URI (indicating a [detached RO-Crate](structure#detached-ro-crate)). 
+The root data entity's `@id` SHOULD be either `./` (indicating the directory of `ro-crate-metadata.json` is the [RO-Crate Root](structure)), or an absolute URI (indicating a [detached RO-Crate](structure.md#detached-ro-crate)). 
 
 If the `@id` of the Root Data Entity is an absolute URI, an _Attached RO-Crate_ MAY contain both [data entities](data-entities) using relative URI references (relative to the _RO-Crate Root_, and [Web-based Data Entities](data-entities.html#web-based-data-entities) using absolute URIs but it is RECOMMENDED that data entities are referenced using absolute URIs.
 

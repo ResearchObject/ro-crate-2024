@@ -42,7 +42,7 @@ identifying _Contextual entities_.
 
 ## Converting from Attached to Detached RO-Crate
 
-An [Attached RO-Crate](../structure#attached-ro-crate) can be published on the Web by placing its _RO-Crate Root_ directory on a static file-based Web server (e.g. Nginx, Apache HTTPd, GitHub Pages). The use of relative URI references in the _RO-Crate Metadata File_ ensures identifiers of [data entities](../data-entities) work as they should.
+An [Attached RO-Crate](../structure.md#attached-ro-crate) can be published on the Web by placing its _RO-Crate Root_ directory on a static file-based Web server (e.g. Nginx, Apache HTTPd, GitHub Pages). The use of relative URI references in the _RO-Crate Metadata File_ ensures identifiers of [data entities](../data-entities) work as they should.
 
 Sometimes it is desired to make a [Detached RO-Crate](../structure#detached-ro-crate), e.g. for depositing or integrating the RO-Crate Metadata File into a knowledge graph or repository that is unable to preserve data files using their existing pathnames. In this case one needs to:
 
