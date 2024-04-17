@@ -33,8 +33,7 @@ jobs:
 
       - name: Validate all links, enforce alt text
         run: |
-          gem install html-proofer
-          htmlproofer \
+          bundle exec htmlproofer \
           --ignore-files "/.*\/ro-crate-preview\.html/" \
           --ignore-urls "/.*pcdm\.org.*/" \
           --disable-external true
