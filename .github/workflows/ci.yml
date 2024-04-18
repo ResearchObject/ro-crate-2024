@@ -36,7 +36,7 @@ jobs:
           bundle exec htmlproofer \
           --ignore-files "/.*\/ro-crate-preview\.html/" \
           --ignore-urls "/.*pcdm\.org.*/" \
-          --disable-external true
+          --disable-external true \
           --enforce-https false \
           ./_site
 
