@@ -37,7 +37,7 @@ redirect_from:
 
 The _RO-Crate Metadata File_ use _relative URI references_ to identify files and directories
 contained within the _RO-Crate Root_ and its children.  As described in section
-[Describing entities in JSON-LD](#describing-entities-in-json-ld) above, 
+[Describing entities in JSON-LD](jsonld#describing-entities-in-json-ld) above, 
 relative URI references are also frequently used for 
 identifying _Contextual entities_.
 
@@ -141,7 +141,7 @@ Results in a valid _RO-Crate JSON-LD_ (actual order in `@graph` may differ):
 ## Expanding/parsing JSON-LD keeping relative referencing
 
 [JSON-LD Expansion] can be used to 
-resolve terms from the `@context` to absolute URIs, e.g. `http://schema.org/description`. This may be needed to parse [extended properties](#extending-ro-crate) or for combinations with other Linked Data.
+resolve terms from the `@context` to absolute URIs, e.g. `http://schema.org/description`. This may be needed to parse [extended properties](jsonld#extending-ro-crate) or for combinations with other Linked Data.
 
 This algorithm would normally also expand `@id` fields based on the current [base URI][JSON-LD base URI] of the _RO-Crate Metadata File_, but this may be a temporary location like `file:///tmp/rocrate54/ro-crate-metadata.json`, meaning `@id`: `subfolder/` becomes `file:///tmp/rocrate54/subfolder/` after JSON-LD expansion.
 
@@ -348,7 +348,7 @@ When parsing a _RO-Crate Metadata File_ into [RDF triples], for instance uploadi
 * The _RO-Crate Root_ may depend on where the _RO-Crate Metadata File_ was parsed from, e.g. `<file:///tmp/ro-crate-metadata.json>` (file) or `<http://localhost:3030/test/ro-crate-metadata.json>` (web upload)
 * Parsing multiple RO-Crates into the same RDF graph, using same base URI, may merge them into the same RO-Crate
 * `ro-crate-metadata.json` may not be recognized as JSON-LD and must be renamed to `ro-crate-metadata.jsonld`
-* Web servers hosting `ro-crate-metadata.json` may not send the [JSON-LD _Content-Type_](#ro-crate-json-ld-media-type)
+* Web servers hosting `ro-crate-metadata.json` may not send the [JSON-LD _Content-Type_](jsonld#ro-crate-json-ld-media-type)
 * If base URI is not correct it may be difficult to find the corresponding file and directory paths from an RDF query returning absolute URIs
 
 {: .tip }
