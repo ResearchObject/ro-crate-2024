@@ -49,8 +49,12 @@ versions:
     url: /specification/1.2-DRAFT/data-entities.html
   - title: Contextual Entities
     url: /specification/1.2-DRAFT/contextual-entities.html
+  - title: The focus of an RO-Crate
+    url: /specification/1.2-DRAFT/crate-focus.html
   - title: Provenance of entities
     url: /specification/1.2-DRAFT/provenance.html
+  - title: Profiles
+    url: /specification/1.2-DRAFT/profiles.html
   - title: Workflows and scripts
     url: /specification/1.2-DRAFT/workflows.html
   - title: Appendix
