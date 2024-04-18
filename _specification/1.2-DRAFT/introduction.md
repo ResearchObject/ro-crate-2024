@@ -38,7 +38,7 @@ In the simplest form, to describe some data on disk, an _RO-Crate Metadata Docum
 In the example below, a single file `data.csv` is placed with the RO-Crate Metadata Document in a directory named `crate1`:
 
 <figure>
-  <img src="../assets/img/crate1-folders.svg" alt="Folder listing of crate1, including data.csv and ro-crate-metadata.json" style="max-height: 5em;" />
+  <img src="../../assets/img/crate1-folders.svg" alt="Folder listing of crate1, including data.csv and ro-crate-metadata.json" style="max-height: 5em;" />
   <figcaption>Figure 1: Any folder can be made into an RO-Crate by adding <code>ro-crate-metadata.json</code></figcaption>
 </figure>
 
@@ -124,7 +124,7 @@ The descriptor also indicates via the `about` property which entity in the `@gra
 We can visualise how the above entity references the **RO-Crate Root** as:
 
 <figure id="figure2">
-<object type="image/svg+xml" data="../assets/img/introduction-figure-1.svg">
+<object type="image/svg+xml" data="../../assets/img/introduction-figure-1.svg">
 JSON block with id <code>ro-crate-metadata.json</code> has some attributes, `conformsTo` RO-Crate 1.2, and <code>about</code> referencing id <code>./</code>. 
 In second JSON block with id <code>./</code> we see additional attributes such as its name and description.
 </object>
@@ -157,10 +157,10 @@ The root is always typed `Dataset`, though it may have more than one type. It ha
 A main type of resources collected are _data_ -- simplifying, we can consider data as any kind of file that can be opened in other programs. These are aggregated by the Root Dataset with the `hasPart` property. In this example we have an array with a single value, a reference to the entity describing the file `data.csv`. 
 
 {: .tip}
-RO-Crates can also contain data entities that are folders and Web resources, as well as non-File-like data like online databases -- see section on [data entities](data-entitites).
+RO-Crates can also contain data entities that are folders and Web resources, as well as non-File-like data like online databases -- see section on [data entities](data-entities).
 
 <figure id="figure2">
-<object type="image/svg+xml" data="../assets/img/introduction-figure-2.svg">
+<object type="image/svg+xml" data="../../assets/img/introduction-figure-2.svg">
 JSON block with id <code>./</code> has an array under  <code>hasPart</code> listing id <code>data.csv</code>. In second JSON block with id <code>data.csv</code> we see it is typed <code>File</code> and have other properties.
 </object>
 <figcaption>Figure 3: RO-Crate Root entity referencing the data entity with <code>@id</code> identifier <code>data.csv</code></figcaption>
@@ -179,7 +179,7 @@ If we now follow the `@id` reference for the corresponding _data entity_ JSON bl
 },
 ```
 
-For more information on describing files and directories, including their recommended and required attributes, see section on [data entities](data-entitites).
+For more information on describing files and directories, including their recommended and required attributes, see section on [data entities](data-entities).
 
 
 ### Contextual entities
@@ -208,11 +208,11 @@ You may notice the subtle difference between a _data entity_ that is conceptuall
 
 ## HTML preview
 
-An RO-Crate can be distributed on disk, in packaged format such as a zip file or disk image, or placed on a static website. In any of these cases, an RO-Crate should have an accompanying HTML version (`ro-crate-metadata.html`) designed to be human-readable. The exact contents of the preview may vary but should correspond to the _RO-Crate Metadata Document_ content and link to the contained data entities. The preview may be generated automatically from the RO-Crate Metadata Document (see [RO-Crate tools](../../tools/)), or even by hand (equivalent to a README).
+An RO-Crate can be distributed on disk, in packaged format such as a zip file or disk image, or placed on a static website. In any of these cases, an RO-Crate should have an accompanying HTML version (`ro-crate-metadata.html`) designed to be human-readable. The exact contents of the preview may vary but should correspond to the _RO-Crate Metadata Document_ content and link to the contained data entities. The preview may be generated automatically from the RO-Crate Metadata Document (see [RO-Crate tools](../../tools)), or even by hand (equivalent to a README).
 
 Below is a [preview of the running example](examples/rainfall-1.2.0/ro-crate-preview.html):
 
-![Example dataset for RO-Crate specification](../assets/img/ro-crate-preview-example.png 'Figure 3 showing RO-Crate preview of the running example')
+![Example dataset for RO-Crate specification](../../assets/img/ro-crate-preview-example.png 'Figure 3 showing RO-Crate preview of the running example')
 
 
 ## Overview of specification
@@ -229,7 +229,7 @@ The rest of this specification is structured as follows:
 * Subsection [Digital Library and Repository content](provenance.md#digital-library-and-repository-content) details how records in an existing repository (which may  reference files, but also physical objects) can be described and published using RO-Crate.
 * [Workflows and Scripts](workflows) explains how computional software and code can be added to an RO-Crate, possibly as part of explaining provenance, but also for providing potential usage and further processing of the data. 
 * [Profiles](profiles) formalises how a set of RO-Crates can indicate they are conforming to a specific profile, which may add additional requirements beyond this general RO-Crate specification. Profiles may add additional terms from `schema.org` and other vocabularies, or require a certain type of data entity used in a particular research domain.  Profiles can themselves be expressed as an RO-Crate, explored in this section.
-* [Appendixes](appendix/) contain more technical references and suggestions for developers, e.g. for deciding on `@id` [in JSON-LD](appendix/jsonld.ld#describing-entities-in-json-ld) or [extending RO-Crate terms](appendix/jsonld.kd#extending-ro-crate). The appendix also explores how an RO-Crate can be [packaged with BagIt](appendix/implementation-notes.html#combining-with-other-packaging-schemes) or used as part of a repository.
+* [Appendixes](appendix/) contain more technical references and suggestions for developers, e.g. for deciding on `@id` [in JSON-LD](appendix/jsonld#describing-entities-in-json-ld) or [extending RO-Crate terms](appendix/jsonld#extending-ro-crate). The appendix also explores how an RO-Crate can be [packaged with BagIt](appendix/implementation-notes#combining-with-other-packaging-schemes) or used as part of a repository.
 
 Throughout the specifications you will find references to the keys and types reused from `schema.org` through the JSON-LD context, for instance [Dataset], which define many more properties than the ones highlighted by pages like [Root Data Entity](root-data-entity). The intention is that the RO-Crate specification gives a common minimum of metadata, and that producers of RO-Crate can use additional `schema.org` types and properties as needed. When some patterns emerge from such extensions they can be formalized in a published [profile](profiles) to ensure they are also used consistently.
 

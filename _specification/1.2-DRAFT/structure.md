@@ -104,8 +104,8 @@ Note that a detached RO-Crate may still use `#`-based local identifiers for [con
 
 A valid _RO-Crate JSON-LD_ graph MUST describe:
 
-1. The [RO-Crate Metadata Descriptor](root-data-entity.md#ro-crate-metadata-file-descriptor)
-2. The [Root Data Entity](root-data-entity.md#direct-properties-of-the-root-data-entity)
+1. The [RO-Crate Metadata Descriptor](root-data-entity#ro-crate-metadata-descriptor)
+2. The [Root Data Entity](root-data-entity#direct-properties-of-the-root-data-entity)
 3. Zero or more [Data Entities](data-entities)
 4. Zero or more [Contextual Entities](contextual-entities)
 

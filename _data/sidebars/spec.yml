@@ -23,6 +23,7 @@ versions:
   - title: Workflows and scripts
     url: /specification/1.1/workflows.html
   - title: Appendix
+    url: /specification/1.1/appendix/index.html
     subitems:
       - title: Changelog
         url: /specification/1.1/appendix/changelog.html
@@ -58,6 +59,7 @@ versions:
   - title: Workflows and scripts
     url: /specification/1.2-DRAFT/workflows.html
   - title: Appendix
+    url: /specification/1.2-DRAFT/appendix/index.html
     subitems:
       - title: Changelog
         url: /specification/1.2-DRAFT/appendix/changelog.html
