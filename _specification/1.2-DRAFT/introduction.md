@@ -36,7 +36,7 @@ In the simplest form, to describe some data on disk, an _RO-Crate Metadata Docum
 In the example below, a single file `data.csv` is placed with the RO-Crate Metadata Document in a directory named `crate1`:
 
 <figure>
-  <img src="../assets/img/crate1-folders.svg" alt="Folder listing of crate1, including data.csv and ro-crate-metadata.json" style="max-height: 5em;" />
+  <img src="../../assets/img/crate1-folders.svg" alt="Folder listing of crate1, including data.csv and ro-crate-metadata.json" style="max-height: 5em;" />
   <figcaption>Figure 1: Any folder can be made into an RO-Crate by adding <code>ro-crate-metadata.json</code></figcaption>
 </figure>
 
@@ -121,12 +121,9 @@ The descriptor also indicates via the `about` property which entity in the `@gra
 
 We can visualise how the above entity references the **RO-Crate Root** as:
 
-<figure id="figure2">
-<object type="image/svg+xml" data="../assets/img/introduction-figure-1.svg">
-JSON block with id <code>ro-crate-metadata.json</code> has some attributes, `conformsTo` RO-Crate 1.2, and <code>about</code> referencing id <code>./</code>. 
-In second JSON block with id <code>./</code> we see additional attributes such as its name and description.
-</object>
-<figcaption>Figure 2: showing RO-Crate Metadata descriptor's <code>about</code> property pointing at the RO-Crate Root entity with matching <code>@id</code></figcaption>
+<figure>
+  <img src="../../assets/img/introduction-figure-1.svg" alt="JSON block with id `ro-crate-metadata.json` has some attributes, `conformsTo` RO-Crate 1.2, and `about` referencing id `./`. An arrow points from the `about` attribute to a second JSON block with id `./`, which contains additional attributes such as name and description." />
+  <figcaption>Figure 2: showing RO-Crate Metadata descriptor's <code>about</code> property pointing at the RO-Crate Root entity with matching <code>@id</code></figcaption>
 </figure>
 
 By convention, in RO-Crate the `@id` value of  `./` means that this document describes the directory of content in which the RO-Crate metadata is located as in the example above. This reference from `ro-crate-metadata.json` is therefore marking the `crate1` directory as being the RO-Crate root.
@@ -210,7 +207,11 @@ An RO-Crate can be distributed on disk, in packaged format such as a zip file or
 
 Below is a [preview of the running example](examples/rainfall-1.2.0/ro-crate-preview.html):
 
-![Example dataset for RO-Crate specification](../assets/img/ro-crate-preview-example.png 'Figure 3 showing RO-Crate preview of the running example')
+
+<figure>
+  <img src="../../assets/img/ro-crate-preview-example.png" alt="Screenshot of RO-Crate HTML preview. The metadata attributes are listed in a table with links to each connected entity, such as the Bureau of Meteorology." />
+  <figcaption>Figure 3: RO-Crate preview of the running example.</figcaption>
+</figure>
 
 
 ## Overview of specification
