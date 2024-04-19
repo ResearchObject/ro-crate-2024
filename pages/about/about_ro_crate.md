@@ -7,7 +7,7 @@ sidebar: about
 
 ## What is an RO-Crate?
 
-An RO-Crate is a [Research Object](./background.md#research-object-background) (or _RO_) formed of a collection of data (a _crate_) and a special `ro-crate-metadata.json` file which describes the collection.
+An RO-Crate is a [Research Object](background#research-object-background) (or _RO_) formed of a collection of data (a _crate_) and a special `ro-crate-metadata.json` file which describes the collection.
 
 The collection may contain any kind of research data - papers, data files, software, references to other research, and so on. It may be a folder full of files, an abstract grouping of connected references, or a combination of both.
 
@@ -15,7 +15,7 @@ The `ro-crate-metadata.json` file (also known as the _RO-Crate Metadata Document
 
 Researchers can distribute their work as an RO-Crate to ensure their data travels with its metadata, so that key components are correctly tracked, archived, and attributed. [something about reproducibility]
 
-RO-Crate uses the [JSON-LD](https://json-ld.org) format, which is based on [JSON](https://www.json.org/json-en.html). The `ro-crate-metadata.json` file can be written by hand or by using one of the existing [tools](./pages/tools.md). Some workflow managers (such as Galaxy) support exporting RO-Crates from their web interface.
+RO-Crate uses the [JSON-LD](https://json-ld.org) format, which is based on [JSON](https://www.json.org/json-en.html). The `ro-crate-metadata.json` file can be written by hand or by using one of the existing [tools](./pages/tools). Some workflow managers (such as Galaxy) support exporting RO-Crates from their web interface.
 
 Below is an example of an `ro-crate-metadata.json` file, which describes rainfall data published by an Australian institute under a Creative Commons license:
 
@@ -65,7 +65,7 @@ Below is an example of an `ro-crate-metadata.json` file, which describes rainfal
 }
 ```
 
-See [Walkthrough of an RO-Crate](TODO - link section in DRAFT-1.2) for an explanation of each element of the file, or [Tutorials](TODO) for a hands-on introduction.
+See [Walkthrough of an RO-Crate](../../_specification/1.2-DRAFT/introduction#walkthrough-an-initial-ro-crate) for an explanation of each element of the file, or [Tutorials](TODO) for a hands-on introduction.
 
 ## Why should I use RO-Crate?
 
@@ -93,7 +93,7 @@ RO-Crate is for everyone! The RO-Crate effort brings together practitioners from
 
 RO-Crates are suitable for any domain, as they are general-purpose and can contain arbitrary data, but they can also be specialised through the use of [RO-Crate Profiles](TODO). Profiles define additional conventions, types and properties that RO-Crates may use within a particular domain, application or framework. For example, the [Workflow RO-Crate profile]() provides guidance on constructing RO-Crates that describe executable workflows.
 
-We continue to gather [use cases](./pages/use_cases.md), please help us by adding more.
+We continue to gather [use cases](./pages/use_cases), please help us by adding more.
 
 ## About the RO-Crate Project
 
@@ -103,10 +103,10 @@ RO-Crate is a community effort to establish a lightweight approach to packaging 
 
 ## More information
 
-Check the [FAQ](./pages/faq.html) for answers to common questions.
+Check the [FAQ](./faq) for answers to common questions.
 
 Visit the [Tutorials](TODO) page for hands-on introductions to RO-Crate and common associated tools and profiles.
 
-Visit the [Use Cases](./pages/use_cases.md) page to browse projects using RO-Crate, or find relevant information for your [domain](./pages/domains.md), [project role](./pages/roles.md), or [task](./pages/tasks.md).
+Visit the [Use Cases](../use_cases) page to browse projects using RO-Crate, or find relevant information for your [domain](../domains), [project role](../roles), or [task](../tasks).
 
-Read the [Background](./background.md) page to learn about the history of RO-Crate and its predecessors.
+Read the [Background](./background) page to learn about the history of RO-Crate and its predecessors.
