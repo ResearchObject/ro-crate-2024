@@ -138,18 +138,7 @@ $card-slide-transition:
       position: relative;  
       border-top: 1px solid $primary;
       border-bottom: 1px solid $primary;
-    }
-
-    .featured-content::before {    
-      content: "";
-      background-image: url('../img/bg22.jpg');
-      background-size: cover;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.3;
+      background-color: $blue-x;
     }
 
     .featured-content p {
@@ -167,7 +156,7 @@ $card-slide-transition:
       position: relative; 
     }
 
-    .featured-content-header a { 
+    .featured-content a { 
       color: $dark !important;
     }
 
@@ -181,6 +170,11 @@ $card-slide-transition:
       padding-top: 15px;
       display: inline-block;
     }
+
+    .card a {
+        text-decoration-color: $dark;
+    }
+    
 }
 
 /*-----Search box-----*/
