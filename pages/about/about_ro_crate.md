@@ -65,7 +65,7 @@ Below is an example of an `ro-crate-metadata.json` file, which describes rainfal
 }
 ```
 
-See [Walkthrough of an RO-Crate](/specification/1.2-DRAFT/introduction#walkthrough-an-initial-ro-crate) for an explanation of each element of the file, or [Tutorials](TODO) for a hands-on introduction.
+See [Walkthrough of an RO-Crate](/specification/1.2-DRAFT/introduction#walkthrough-an-initial-ro-crate) for an explanation of each element of the file, or [Tutorials](/tutorials) for a hands-on introduction.
 
 ## Why should I use RO-Crate?
 
@@ -86,7 +86,7 @@ RO-Crate is for both producers and consumers of data. The RO-Crate community eff
 * individual researchers looking for a straight-forward tool or how-to guide to “FAIRify” their data
 * data stewards supporting research projects in creating and curating datasets.
 
-RO-Crates are suitable for any domain, as they are general-purpose and can contain arbitrary data, but they can also be specialised through the use of [RO-Crate Profiles](TODO). Profiles define additional conventions, types and properties that RO-Crates may use within a particular domain, application or framework. For example, the [Workflow RO-Crate profile](https://w3id.org/workflowhub/workflow-ro-crate/) provides guidance on constructing RO-Crates that describe executable workflows.
+RO-Crates are suitable for any domain, as they are general-purpose and can contain arbitrary data, but they can also be specialised through the use of [RO-Crate Profiles](/profiles). Profiles define additional conventions, types and properties that RO-Crates may use within a particular domain, application or framework. For example, the [Workflow RO-Crate profile](https://w3id.org/workflowhub/workflow-ro-crate/) provides guidance on constructing RO-Crates that describe executable workflows.
 
 We continue to gather [use cases](/use_cases), please help us by adding more.
 
@@ -100,7 +100,7 @@ Anyone can join the RO-Crate community and contribute to these outputs. See the 
 
 Check the [FAQ](/faq) for answers to common questions.
 
-Visit the [Tutorials](TODO) page for hands-on introductions to RO-Crate and common associated tools and profiles.
+Visit the [Tutorials](/tutorials) page for hands-on introductions to RO-Crate and common associated tools and profiles.
 
 Visit the [Use Cases](/use_cases) page to browse projects using RO-Crate, or find relevant information for your [domain](/domains), [project role](/roles), or [task](/tasks).
 
