@@ -6,7 +6,7 @@
 
 - question: "What is RO-Crate?"
   answer: |
-    RO-Crate is an approach to packaging research data with its associated metadata and identifiers. This enables reproducibility and re-use. Each individual RO-Crate is formed of a collection of data, which can follow any format, and a special `ro-crate-metadata.json` file, which describes the collection. 
+    RO-Crate is an approach to packaging research data with its associated metadata and identifiers. This enables reproducibility and re-use. Each individual RO-Crate is formed of a collection of data, which can be included in its native format, and a special `ro-crate-metadata.json` file, which describes the collection. 
 
     The RO-Crate project is open and community-driven, and anyone can contribute to developing it.
 
