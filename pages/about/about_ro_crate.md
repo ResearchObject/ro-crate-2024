@@ -91,7 +91,7 @@ RO-Crate is for both producers and consumers of data. The RO-Crate community eff
 * individual researchers looking for a straight-forward tool or how-to guide to “FAIRify” their data
 * data stewards supporting research projects in creating and curating datasets.
 
-RO-Crates are suitable for any domain, as they are general-purpose and can contain arbitrary data, but they can also be specialised through the use of [RO-Crate Profiles](TODO). Profiles define additional conventions, types and properties that RO-Crates may use within a particular domain, application or framework. For example, the [Workflow RO-Crate profile](TODO) provides guidance on constructing RO-Crates that describe executable workflows.
+RO-Crates are suitable for any domain, as they are general-purpose and can contain arbitrary data, but they can also be specialised through the use of [RO-Crate Profiles](TODO). Profiles define additional conventions, types and properties that RO-Crates may use within a particular domain, application or framework. For example, the [Workflow RO-Crate profile](https://w3id.org/workflowhub/workflow-ro-crate/) provides guidance on constructing RO-Crates that describe executable workflows.
 
 We continue to gather [use cases](/use_cases), please help us by adding more.
 
