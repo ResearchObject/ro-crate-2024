@@ -1,5 +1,6 @@
 ---
 title: Frequently Asked Questions
+
 ---
 {%- assign allfaqs = site.data.faqs %}
 <h1>Frequently Asked Questions</h1>
@@ -11,18 +12,7 @@ title: Frequently Asked Questions
 </ol>
 
 {%- for faq in allfaqs %}
-  <h2>{{ faq.question }}</h2>
+  <h2 id="{{ faq.question | slugify }}">{{ faq.question }}</h2>
 
   {{ faq.answer | markdownify }}
-
-  {% if faq.see-also %}
-    See also:
-    <ul>
-      {%- for item in faq.see-also %}
-        <li>
-          <a href="{{ item.url }}">{{ item.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
 {% endfor %}
