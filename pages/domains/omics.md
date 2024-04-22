@@ -7,4 +7,4 @@ related_pages:
   tasks: [data_handling, manage_data, conduct_research]
   roles: [data_analyst, researcher]
 ---
-{% include footer.html %}
+{% include item_details.html %}
