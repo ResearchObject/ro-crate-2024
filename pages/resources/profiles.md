@@ -82,7 +82,7 @@ workflow to be executed.
 In summary the _Workflow RO-Crate profile_ covers as of 2021-03-09:
 
 -   [`Dataset`](http://schema.org/Dataset)
-    ([RO-Crate Root](https://www.researchobject.org/ro-crate/specification/1.1/root-data-entity#direct-properties-of-the-root-data-entity))
+    ([RO-Crate Root](/specification/1.1/root-data-entity#direct-properties-of-the-root-data-entity))
     -   [`hasPart`](/specification/1.1/data-entities#referencing-files-and-folders-from-the-root-data-entity):
         -   `File,SoftwareSourceCode,ComputationalWorkflow` (required)
         -   `File,SoftwareSourceCode,HowTo`
@@ -120,7 +120,7 @@ In summary the _Workflow RO-Crate profile_ covers as of 2021-03-09:
 An experimental
 [Profile Crate](https://about.workflowhub.eu/Workflow-RO-Crate/ro-crate-preview) has been
 created in preparation for
-[formalized RO-Crate profiles](researchobject.org/ro-crate/1.2-DRAFT/profiles) (draft for next
+[formalized RO-Crate profiles](specification/1.2-DRAFT/profiles) (draft for next
 release of specification).
 
 ### Workflow Testing RO-Crate profile
@@ -220,7 +220,7 @@ inline ad-hoc term definitions.
 In summary the _default profile_ covers:
 
 -   [`Dataset`](http://schema.org/Dataset) (e.g.
-    [RO-Crate Root](https://www.researchobject.org/ro-crate//specification/1.1/root-data-entity#direct-properties-of-the-root-data-entity))
+    [RO-Crate Root](/specification/1.1/root-data-entity#direct-properties-of-the-root-data-entity))
     -   [`name`](/specification/1.1/root-data-entity#direct-properties-of-the-root-data-entity): `Text`
         (required)
     -   [`description`](/specification/1.1/root-data-entity#direct-properties-of-the-root-data-entity): `Text`
@@ -245,8 +245,8 @@ portal.
 References:
 
 -   [**Metadata models and Research Objects for Earth Observation Data Cubes**](https://repository.eoscsecretariat.eu/index.php/s/ERebmpJcyjFRqcx/download?path=%2F18%20June%2F1115%20-%20Metadata%20and%20data%20quality&files=04%20-%20Daniel%20Garijo%20-%20Metadata%20models%20and%20Research%20Objects%20for%20Earth%20Observation%20Data%20Cubes.pdf&downloadStartSecret=9vslv3tqvmf)
-    at _[EOSC Symposium 2021](https://www.eoscsecretariat.eu/eosc-symposium-2021-programme)_,
-    2021-06-18.
+    at _[EOSC Symposium 2021](https://www.eoscsecretariat.eu)_,
+    2021-06-18.al
     [[video recording](https://youtu.be/qvtWJWsMLRg?list=PLbISfqJh3Tstmx6CgrBmYI7lyyVXiY5VE&t=1090)]
 -   [RELIANCE deliverable D5.1 RO Model Adapted to EOSC](https://doi.org/10.5281/zenodo.4913285)
 
@@ -322,25 +322,25 @@ evolved from this profile to conform with RO-Crate 1.1's
 
 ## ARC RO-Crate profile
 
-A profile of RO-Crate for [Annotated Research Contexts](https://nfdi4plants.org/content/learn-more/annotated-research-context) (ARC), developed by [DataPLANT](https://nfdi4plants.org/).
-An ARC consists of [ISA](https://isa-specs.readthedocs.io/en/latest/isamodel) metadata describing the experimental setup and computational workflows given in CWL.
-The current [profile](https://github.com/nfdi4plants/ARC-specification/blob/main/ARC%20specification#appendix-conversion-of-arcs-to-ro-crates) requires the crate to follow the ISA Investigation profile on the top level.
+A profile of RO-Crate for [Annotated Research Contexts](https://nfdi4plants.org/content/learn-more/annotated-research-context.html) (ARC), developed by [DataPLANT](https://nfdi4plants.org/).
+An ARC consists of [ISA](https://isa-specs.readthedocs.io/en/latest/isamodel.html) metadata describing the experimental setup and computational workflows given in CWL.
+The current [profile](https://github.com/nfdi4plants/ARC-specification/blob/main/ARC%20specification.md#appendix-conversion-of-arcs-to-ro-crates) requires the crate to follow the ISA Investigation profile on the top level.
 In the future, the ARC profile will be extended to not only cover the ISA part of an ARC, but also computational workflows, following the existing profiles for this kind of data.
 
 How such an RO-Crate can be generated from an ARC is described in the [arc-to-rocrate](https://github.com/nfdi4plants/arc-to-rocrate) repository, which also contains scripts to perform the conversion.
 
 ## ISA Profile
 
-A profile of RO-Crate for experimental data in plant sciences that is described by metadata following the [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel).
+A profile of RO-Crate for experimental data in plant sciences that is described by metadata following the [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel.html).
 Such datasets consist of three types of data entities: `Investigation`, `Study` and `Assay`.
-The [profile](https://github.com/nfdi4plants/arc-to-rocrate/blob/main/profiles/investigation) adds requirements of the crate such that the data folders match the Investigation, Study and Assay objects of the [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel).
+The [profile](https://github.com/nfdi4plants/arc-to-rocrate/blob/main/profiles/investigation.md) adds requirements of the crate such that the data folders match the Investigation, Study and Assay objects of the [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel.html).
 
 The profile here describes the top-level `Investigation` object (a dataset) and contained datasets following the `Study` and `Assay` profiles.
 Profiles for other included types can be found in the [full version](https://github.com/nfdi4plants/isa-ro-crate-profile).
 
 ### ISA Investigation Profile
 
-An `Investigation` object describes the top-level meatadata of a scientific investigation, e.g. descriptions of the context, the title, authors and publications (see [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel) for details).
+An `Investigation` object describes the top-level meatadata of a scientific investigation, e.g. descriptions of the context, the title, authors and publications (see [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel.html) for details).
 It SHOULD contain further datasets that follow the `Study` profile.
 
 - [`Dataset`](http://schema.org/dataset)
@@ -360,7 +360,7 @@ It SHOULD contain further datasets that follow the `Study` profile.
 
 ### ISA Study Profile
 
-A `Study` contains information on the subject under study, its characteristics and any treatments applied(see [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel) for details).
+A `Study` contains information on the subject under study, its characteristics and any treatments applied(see [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel.html) for details).
 It contexualizes further datasets that follow the `Assay` profile.
 
 - [`Dataset`](http://schema.org/dataset)
@@ -381,7 +381,8 @@ It contexualizes further datasets that follow the `Assay` profile.
 
 ### ISA Assay Profile
 
-An `Assay` contains information about a test performed either on material taken from a subject or on a whole initial subject(see [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel) for details).
+An `Assay` contains information about a test performed either on material taken from a subject or on a whole initial subject(see [ISA model](https://isa-specs.readthedocs.io/en/latest/isamodel.html) for details).
+
 
 - [`Dataset`](http://schema.org/dataset)
   - [`additionalType`](https://schema.org/additionalType): [`Text`](https://schema.org/Text) or [`URL`](https://schema.org/URL) (required)
@@ -442,7 +443,7 @@ This profile has been expressed
 adds keys like `number_of_rows`, `stdev`, `average_length`.
 
 _Note that this profile has not currently been updated to
-[use JSON-LD terms](https://www.researchobject.org/ro-crate/specification/1.1/appendix/jsonld#adding-new-or-ad-hoc-vocabulary-terms)_.
+[use JSON-LD terms](/specification/1.1/appendix/jsonld#adding-new-or-ad-hoc-vocabulary-terms)_.
 
 ## Making an RO-Crate profile
 
@@ -455,7 +456,7 @@ explicit what is a strict requirement of the profile, what are best practice rec
 what are open-ended extensions.
 
 New profiles can use any <https://schema.org/> terms, but are likely to need define or import
-[additional terms](https://www.researchobject.org/ro-crate/specification/1.1/appendix/jsonld#adding-new-or-ad-hoc-vocabulary-terms)
+[additional terms](/specification/1.1/appendix/jsonld#adding-new-or-ad-hoc-vocabulary-terms)
 that needs to be mapped in the `@context`.
 
 A more formal definition of the profile can take multiple forms, depending on the serialization
@@ -493,5 +494,5 @@ machine-readable.
 Next version of the RO-Crate specification 1.2 will
 [formalize RO-Crate profiles](1.2-DRAFT/profiles) as a **Profile Crate** - an RO-Crate that defines
 the profile. See the
-[Workflow Profile Crate](https://about.workflowhub.eu/Workflow-RO-Crate/ro-crate-preview) as
+[Workflow Profile Crate](https://about.workflowhub.eu/Workflow-RO-Crate/ro-crate-preview.html) as
 example.
