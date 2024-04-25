@@ -7,3 +7,5 @@ subitems:
     url: /tools
   - title: Profiles
     url: /profiles
+  - title: Examples
+    url: /examples
