@@ -75,7 +75,7 @@ Workflows can be exported from Workflow Hub as RO-Crates, e.g. [a Galaxy workflo
 
 ## ACTION: Survey Ontology
 
-The [ACTION project](https://actionproject.eu/) have published RO-Crates [using Survey Ontology](/use_cases/survey-ontology/) to describe citizen science:
+The [ACTION project](https://actionproject.eu/) have published RO-Crates [using Survey Ontology](/use_cases/survey_ontology/) to describe citizen science:
 
 * Survey Study about Motivation for Participants in Citizen Science Projects <https://doi.org/10.5281/zenodo.5753092> [[ro-crate-metadata.json](https://zenodo.org/record/5753092/files/ro-crate-metadata.json)]
 * Walk Up Aniene Motivation Survey <https://doi.org/10.5281/zenodo.5753229>

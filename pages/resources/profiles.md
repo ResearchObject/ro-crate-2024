@@ -254,7 +254,7 @@ References:
 
 The
 [PARADISEC Describo profile](https://github.com/UTS-eResearch/describo/blob/master/src/components/profiles/paradisec.describo.profile.json)
-is built in to [Describo](tool/describo) and is the basis for the
+is built in to [Describo](tools/describo) and is the basis for the
 [PARADISEC](https://arkisto-platform.github.io/case-studies/paradisec/) RO-Crates exposed in the
 [Modern PARADISEC demonstrator](https://mod.paradisec.org.au/) to annotate and expose digital
 cultural heritage records.

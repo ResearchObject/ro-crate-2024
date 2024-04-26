@@ -993,7 +993,7 @@ _To suggest an event, either [edit and raise pull request](https://github.com/Re
 
 ## RO-Crate logo
 
-The below RO-Crate logos can be used by for application, websites, posters, slides etc. for work that use, implement or support RO-Crate according to the [specification](specification.md), ideally linking to <https://w3id.org/ro/crate>. To ask permission for any other use, raise an [issue](https://github.com/ResearchObject/ro-crate/issues).
+The below RO-Crate logos can be used by for application, websites, posters, slides etc. for work that use, implement or support RO-Crate according to the [specification](specification), ideally linking to <https://w3id.org/ro/crate>. To ask permission for any other use, raise an [issue](https://github.com/ResearchObject/ro-crate/issues).
 
 <p style="vertical-align: bottom">
   <img src="assets/img/ro-crate-w-text.svg" style="max-width: 30%; max-height: 5em; vertical-align: middle" /> 
