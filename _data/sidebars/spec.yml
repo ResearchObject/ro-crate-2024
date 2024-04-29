@@ -67,7 +67,3 @@ versions:
   url: /specification/1.0
 - title: RO-Crate 0.2
   url: /specification/0.2
-- title: DataCrate 1.0 review (imported from datacrate)
-  url: https://docs.google.com/document/d/150SzIG8Zs3wecPTUue7wxKn6V26oi7rYucS5lxnmWZU/edit
-- title: ROLite Draft 0.1.0
-  url: /specification/0.1.0

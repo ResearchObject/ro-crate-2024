@@ -70,6 +70,12 @@ defaults:
       layout: "default"
       sidebar: community
 
+  - scope:
+      path: "pages/resources"
+    values:
+      layout: "default"
+      sidebar: resources
+
 collections:
   specification:
     output: true
