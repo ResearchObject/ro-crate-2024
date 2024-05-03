@@ -1,4 +1,4 @@
-name: "Built Site Linting"
+name: "Build and Lint Site"
 
 on:
   push:
@@ -35,7 +35,6 @@ jobs:
         run: |
           bundle exec htmlproofer \
           --ignore-files "/.*\/ro-crate-preview\.html/" \
-          --ignore-urls "/.*pcdm\.org.*/" \
           --disable-external true \
           --enforce-https false \
           ./_site
