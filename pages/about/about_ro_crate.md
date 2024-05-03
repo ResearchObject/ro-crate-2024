@@ -75,7 +75,7 @@ When someone else uses your data in their research, it's important for them to k
 * who should be cited as authors for this dataset?
 * how do the different files in the dataset relate to each other?
 
-A number of platforms currently support importing and/or exporting RO-Crates (see [Use Cases](/use_case)), and interoperability continues to grow thanks to the thriving [RO-Crate community](/community).
+A number of platforms currently support importing and/or exporting RO-Crates (see [Use Cases](/use_cases)), and interoperability continues to grow thanks to the thriving [RO-Crate community](/community).
 
 ## Who is RO-Crate for?
 

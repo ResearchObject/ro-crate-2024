@@ -99,7 +99,7 @@ In summary the _Workflow RO-Crate profile_ covers as of 2021-03-09:
         -   `"BSD-3-Clause"`
         -   ...
     -   [`name`](/specification/1.1/root-data-entity#direct-properties-of-the-root-data-entity): Text
-    -   [`description`](<(/specification/1.1/root-data-entity#direct-properties-of-the-root-data-entity)>):
+    -   [`description`](/specification/1.1/root-data-entity#direct-properties-of-the-root-data-entity):
         Text
     -   [`author`](/specification/1.1/contextual-entities#people): _`(Person|Organization)`??_
     -   [`keywords`](/specification/1.1/contextual-entities#subjects--keywords): Text
@@ -254,7 +254,7 @@ References:
 
 The
 [PARADISEC Describo profile](https://github.com/UTS-eResearch/describo/blob/master/src/components/profiles/paradisec.describo.profile.json)
-is built in to [Describo](tools/describo) and is the basis for the
+is built in to [Describo](#describo-profiles) and is the basis for the
 [PARADISEC](https://arkisto-platform.github.io/case-studies/paradisec/) RO-Crates exposed in the
 [Modern PARADISEC demonstrator](https://mod.paradisec.org.au/) to annotate and expose digital
 cultural heritage records.

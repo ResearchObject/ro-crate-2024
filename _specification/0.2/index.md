@@ -557,7 +557,7 @@ A core principle of Linked data is to use URIs to identify things such as people
 }
 ```
 
-This uses an [ORCID](https://orcid.org/) to unambiguously identify an author, with a _Contextual Entity_ of type [Person]((http://schema.org/Person)).
+This uses an [ORCID](https://orcid.org/) to unambiguously identify an author, with a _Contextual Entity_ of type [Person](http://schema.org/Person).
 
 Note the string-value of the organizational affiliation. This SHOULD be improved by also providing a _Context Entity_ for the organization (see example below).
 
