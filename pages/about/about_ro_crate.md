@@ -4,6 +4,13 @@ sidebar: about
 ---
 
 # About RO-Crate
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC 
+{:toc}
 
 ## What is an RO-Crate?
 

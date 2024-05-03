@@ -42,7 +42,7 @@
     For projects, RO-Crate is a lightweight and general system which can be used with any type of data. It can also be customised for particular domains or applications using community-developed [profiles](profiles). RO-Crate can be adopted and integrated into other platforms (see [use cases](use_cases)) thanks to its well-defined [specification](specification). RO-Crate is community-driven, and anyone can join the [community](community).
 
 - question: "How can I create an RO-Crate?"
-  answer: "There are [tutorials](tutorials) which can guide you through creating your first RO-Crate. There are also several [tools](tools) available for creating RO-Crates automatically, including the RO-Crate Python library, the RO-Crate CLI, and the RO-Crate Extension for Google Sheets. See the [Getting Started](getting_started) page for further information."
+  answer: "There are [tutorials](tutorials) which can guide you through creating your first RO-Crate. There are also several [tools](tools) available for creating RO-Crates automatically, including the RO-Crate Python library, the RO-Crate CLI, and the RO-Crate Extension for Google Sheets."
 
 - question: "How is RO-Crate different from other data packaging formats?"
   answer: "RO-Crate is unique in its use of [schema.org](https://schema.org) annotations, which allow for rich metadata descriptions of the data, making it more discoverable and reusable. It also provides a lightweight and flexible approach, making it easier for researchers to adopt and use."
