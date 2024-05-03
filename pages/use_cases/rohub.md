@@ -17,10 +17,7 @@ Additionally, as part of [RELIANCE project](https://www.reliance-project.eu/), R
 
 ROHub functionalities can be used via the [Web portal](https://reliance.rohub.org/) and via the provided [Python library](https://reliance-eosc.github.io/ROHUB-API_documentation/html/).
 
-*ROHub screenshot, export to publication service B2SHare with DOI*
-
-
-<img src="/assets/img/rohub-screenshot.png" style="max-width:90%">
+{% include image.html src="/assets/img/rohub-screenshot.png" caption="ROHub screenshot, export to publication service B2SHare with DOI" alt="The ROHub interface, showing steps for research object quality at the top with 'Basic information' step selected. A form shows the research object title, description, and choices for which publication service to use and whether to create a DOI" %}
 
 
 [](#ro-crate-in-rohub-api)RO-Crate in ROHub API

@@ -11,4 +11,4 @@ Data on an Arkisto deployment is alway available on disc (or object storage) wit
 Arkisto is built on top of Research Object Crate (RO-Crate) and the Oxford Common File System Layout (OCFL).
 With Arkisto there is no messy data migration.
 
-<img src="assets/img/arkisto.png" width="300px">
+<img src="assets/img/arkisto.png" alt="Arkisto logo" width="300px">
