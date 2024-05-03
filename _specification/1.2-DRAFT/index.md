@@ -2,7 +2,7 @@
 title: RO-Crate 1.2-DRAFT
 redirect_from:
   - /1.2-DRAFT/index
-  - /1.2/about
+  - /1.2-DRAFT/about
 has_children: true
 nav_order: 1
 excerpt: |
