@@ -40,15 +40,15 @@ _RO-Crate Metadata Descriptor_: A _Contextual Entity_ of type [CreativeWork], wh
 
 _RO-Crate Website_: Human-readable HTML pages which describe the RO-Crate (i.e. the _Root Data Entity_, its _Data Entities_ and _Context Entities_), with a home-page at `ro-crate-preview.html`. See section [RO-Crate Website](structure#ro-crate-website-ro-crate-previewhtml-and-ro-crate-preview_files).
 
-_Type_: A classification of objects or their descriptions. The type (or "class") is given as a short-hand _key_, mapped by the _RO-Crate JSON-LD Context_ to a _URI_ that has the type definition. See appendix [RO-Crate JSON-LD](jsonld).
+_Type_: A classification of objects or their descriptions. The type (or "class") is given as a short-hand _key_, mapped by the _RO-Crate JSON-LD Context_ to a _URI_ that has the type definition. See appendix [RO-Crate JSON-LD](appendix/jsonld).
 
 _Data Entity_: A JSON-LD representation (in the _RO-Crate Metadata Document_) of a directory, file, or other Web resource which is considered _contained_ by the _RO-Crate_. See section [Data entities](data-entities).
 
-_Property_: A relationship from one _entity_ to another entity, or to a _value_. The type of relationship is identified by a _URI_, mapped to a _key_ by _JSON-LD_. See appendix [RO-Crate JSON-LD](jsonld).
+_Property_: A relationship from one _entity_ to another entity, or to a _value_. The type of relationship is identified by a _URI_, mapped to a _key_ by _JSON-LD_. See appendix [RO-Crate JSON-LD](appendix/jsonld).
 
 _Root Data Entity_: A _Data Entity_ of _type_ [Dataset], representing the RO-Crate as a whole.  See section [Root Data Entity](root-data-entity).
 
-_JSON-LD_: A JSON-based file format for storing _Linked Data_. This document assumes [JSON-LD 1.0]. JSON-LD use a _context_ to map from JSON keys to _URIs_. See appendix [RO-Crate JSON-LD](jsonld).
+_JSON-LD_: A JSON-based file format for storing _Linked Data_. This document assumes [JSON-LD 1.0]. JSON-LD use a _context_ to map from JSON keys to _URIs_. See appendix [RO-Crate JSON-LD](appendix/jsonld).
 
 _JSON_: The _JavaScript Object Notation (JSON) Data Interchange Format_ as defined by [RFC 7159]; a structured text file format that can be programmatically consumed and generated in a wide range of programming languages. The main JSON structures are _objects_ (`{}`) indexed by _keys_, sequential _arrays_ (`[]`) and literal _values_ (`""`).
 
@@ -60,7 +60,7 @@ _URI_: A _Uniform Resource Identifier_ as defined in [RFC 3986], for example `ht
 
 _URI Path_: The relative _path_ element of an _URI_ as defined in [RFC3986 section 3.3], e.g. `path/file.html`
 
-_RO-Crate JSON-LD Context_: A JSON-LD [context][JSON-LD context] that provides Linked Data mapping for RO-Crate metadata to vocabularies like [Schema.org]. This mapping assigns meaning to the JSON keys, see appendix [RO-Crate JSON-LD](jsonld).
+_RO-Crate JSON-LD Context_: A JSON-LD [context][JSON-LD context] that provides Linked Data mapping for RO-Crate metadata to vocabularies like [Schema.org]. This mapping assigns meaning to the JSON keys, see appendix [RO-Crate JSON-LD](appendix/jsonld).
 
 _RO-Crate JSON-LD_: JSON-LD that use the _RO-Crate JSON-LD Context_ and contain RO-Crate metadata, written as if [flattened] and then [compacted] according to the rules in JSON-LD 1.0. The _RO-Crate JSON-LD_ for an _RO-Crate_ is stored or transmitted in the _RO-Crate Metadata Document.
 
