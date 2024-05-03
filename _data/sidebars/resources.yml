@@ -1,6 +1,8 @@
 title: Resources
 title_url: /tutorials
 subitems:
+  # - title: Getting Started
+  #   url: /getting_started
   - title: Tutorials
     url: /tutorials
   - title: Tools
