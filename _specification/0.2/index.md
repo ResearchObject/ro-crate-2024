@@ -1,5 +1,7 @@
 ---
 title: RO-Crate 0.2
+redirect_from: 
+  - /0.2/
 nav_exclude: true
 ---
 <!--

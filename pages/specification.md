@@ -23,12 +23,12 @@ sidebar: spec
 
 The RO-Crate 1.1 specification has been **released**.
 
-* **[RO-Crate 1.1](../specification/1.1)** **(newest release)**
-* [RO-Crate 1.2-DRAFT](../specification/1.2-DRAFT) (draft for next release)
-* [RO-Crate 1.0](../specification/1.0) 
-* [RO-Crate 0.2](../specification/0.2)
+* **[RO-Crate 1.1](1.1)** **(newest release)**
+* [RO-Crate 1.2-DRAFT](1.2-DRAFT) (draft for next release)
+* [RO-Crate 1.0](1.0) 
+* [RO-Crate 0.2](0.2)
 * [DataCrate 1.0](https://github.com/UTS-eResearch/datacrate/blob/ba37cc707d48d3569663ab04f9d4f5c25dac6e34/spec/1.0/data_crate_specification_v1.0.md)
-* [ROLite Draft 0.1.0](../specification/0.1.0) 
+* [ROLite Draft 0.1.0](0.1.0) 
 
 _Historical note_: After the initial draft, the community decided to base the specification on [DataCrate](https://github.com/UTS-eResearch/datacrate/), and changed the name from _ROLite_ to **RO-Crate**.
 
