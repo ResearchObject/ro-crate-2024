@@ -8,7 +8,7 @@
 <!-- SPEC MENUS -->
 {%- if page.sidebar == 'spec' %}
 <nav id="side-nav" aria-label="Side navigation">
-  <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="/specification">Specification</a>
+  <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="{{ sidebar.title_url | relative_url }}">Specification</a>
   <ul class="list-unstyled mb-4">
     {%- for version in sidebar.versions %}
     {%- if page.url == version.url %}
@@ -59,7 +59,7 @@
 <!-- OTHER MENUS -->
 {%- else %}
 <nav id="side-nav" aria-label="Side navigation">
-  <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="{{ sidebar.title_url }}">{{ sidebar.title }}</a>
+  <a class="btn hover-primary text-start d-block mb-1 sidebar-title" href="{{ sidebar.title_url | relative_url }}">{{ sidebar.title }}</a>
   <ul class="list-unstyled mb-4">
     {%- for folder in sidebar.subitems %}
     {%- if page.url == folder.url %}
