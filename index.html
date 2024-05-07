@@ -9,7 +9,7 @@ layout: none
 
 <body>
   {% include topnav.html search=true %}
-  <div class="landingpage">
+  <div class="landingpage" id="content">
     <section class="container mb-5">
       <div>
         <h1>Research Object Crate (RO-Crate)</h1>
@@ -21,7 +21,7 @@ layout: none
     <section class="featured-content">
       <div class="featured-content-header mb-3"><a href="use_cases">Explore RO-Crate in Use</a></div>
       <div class="mx-5">
-        {% include section-navigation-tiles-simple.html type="use_cases" %}
+        {% include section-navigation-tiles.html type="use_cases" %}
       </div>      
     </section>
     <section class="bg-light pb-5">
