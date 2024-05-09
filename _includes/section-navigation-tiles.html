@@ -36,9 +36,9 @@
     {%- unless include.search == nil %}
     <div class="col">
         <div class="input-group">
-            <span class="input-group-text" id="search-label">Search</span>
-            <input type="text" id="title-search" class="form-control" onkeyup="StartSearch();" placeholder="Type here..." aria-label="{{page.type | replace: '_', ' ' |}}" aria-describedby="search-label">
-            <button class="btn btn-primary" title="Button to clear search" type="button" id="clearsearch">
+            <label class="input-group-text" id="search-label">Search</label>
+            <input type="text" id="title-search" class="form-control" onkeyup="StartSearch();" placeholder="Type here..." aria-label="Search {{ include.type | replace: '_', ' ' }}">
+            <button class="btn btn-primary" title="Clear search" type="button" id="clearsearch" aria-label="Clear search">
                 <i class="fa-solid fa-backspace"></i>
             </button>
         </div>
@@ -83,7 +83,7 @@
     <div class="col" data-affiliations="{{affiliations_classes}}" related-pages="{{related_pages_classes}}">
         <div class="card h-100">
             <div class="card-header d-inline">
-               <a class="stretched-link" aria-label="Go to the {{current_page.title}} page" href="{{ current_page.url | relative_url }}">
+               <a class="stretched-link" aria-label="{{current_page.title}}" href="{{ current_page.url | relative_url }}">
                   <div class="px-3 pb-3 d-flex justify-content-between align-items-center">                    
                     <h3 class="card-title ml-3">{{current_page.title}}</h3>
                     {%- if current_page.image %}
