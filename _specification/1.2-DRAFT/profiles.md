@@ -50,7 +50,7 @@ Suggestions:
 * The profile MAY require/suggest _properties_ expected per type of entity (e.g. _"Each [CreativeWork] must declare a [license]"_)
 * The profile MAY require/suggest a particular [version of RO-Crate](https://www.researchobject.org/ro-crate/specification.html).
 * The profile MAY recommend [RO-Crate extensions](appendix/jsonld#extending-ro-crate) with domain-specific terms and vocabularies.
-* The profile MAY require/suggest a particular [JSON-LD context](appendix/jsonld.md?highlight=@context#ro-crate-json-ld-context).
+* The profile MAY require/suggest a particular [JSON-LD context](appendix/jsonld?highlight=@context#ro-crate-json-ld-context).
 * The profile MAY require/suggest a particular RO-Crate publishing method or [packaging](appendix/implementation-notes#combining-with-other-packaging-schemes) like .zip or BagIt.
 
 
@@ -120,7 +120,7 @@ The rest of the requirements for being referenced as a contextual entity also ap
 
 ### How to retrieve a Profile Crate
 
-To resolve a Profile URI to a machine-readable _Profile Crate_, two approaches are recommended to retrieve its [RO-Crate Metadata Document](root-data-entity#ro-crate-metadata-file-descriptor):
+To resolve a Profile URI to a machine-readable _Profile Crate_, two approaches are recommended to retrieve its [RO-Crate Metadata Document](root-data-entity#ro-crate-metadata-descriptor):
 
 1. [HTTP Content-negotiation] for the [RO-Crate media type](appendix/jsonld#ro-crate-json-ld-media-type), for example:  
 
@@ -299,7 +299,7 @@ An optional machine-readable _schema_ of the profile, for instance a [Describo J
 ```
 
 A schema may formalize restrictions on the 
-[RO-Crate Metadata Document](root-data-entity#ro-crate-metadata-file-descriptor) on 
+[RO-Crate Metadata Document](root-data-entity#ro-crate-metadata-descriptor) on 
 a graph-level (e.g. what types/properties) as well as serialization level
 (e.g. use of JSON arrays). 
 

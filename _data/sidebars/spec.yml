@@ -1,5 +1,5 @@
 title: Specification
-title_url: /specification
+title_url: specification
 versions:
 - title: RO-Crate 1.1 (newest release)
   url: /specification/1.1/
@@ -23,6 +23,7 @@ versions:
   - title: Workflows and scripts
     url: /specification/1.1/workflows.html
   - title: Appendix
+    url: /specification/1.1/appendix/index.html
     subitems:
       - title: Changelog
         url: /specification/1.1/appendix/changelog.html
@@ -49,11 +50,16 @@ versions:
     url: /specification/1.2-DRAFT/data-entities.html
   - title: Contextual Entities
     url: /specification/1.2-DRAFT/contextual-entities.html
+  - title: The focus of an RO-Crate
+    url: /specification/1.2-DRAFT/crate-focus.html
   - title: Provenance of entities
     url: /specification/1.2-DRAFT/provenance.html
+  - title: Profiles
+    url: /specification/1.2-DRAFT/profiles.html
   - title: Workflows and scripts
     url: /specification/1.2-DRAFT/workflows.html
   - title: Appendix
+    url: /specification/1.2-DRAFT/appendix/index.html
     subitems:
       - title: Changelog
         url: /specification/1.2-DRAFT/appendix/changelog.html

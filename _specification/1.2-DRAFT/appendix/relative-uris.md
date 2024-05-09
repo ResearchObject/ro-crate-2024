@@ -47,8 +47,8 @@ An [Attached RO-Crate](../structure#attached-ro-crate) can be published on the W
 Sometimes it is desired to make a [Detached RO-Crate](../structure#detached-ro-crate), e.g. for depositing or integrating the RO-Crate Metadata File into a knowledge graph or repository that is unable to preserve data files using their existing pathnames. In this case one needs to:
 
 1. Decide on new Web locations for individual data files and update their absolute URI in `@id`
-2. Observe the preservation considerations for [Web-based Data Entities](data-entities#web-based-data-entities)
-3. Ensure all nested directories not browsable on the Web are represented as `Dataset` with its content listed with `hasPart` or `distribution` (see section [Directories on the web](../data-entities#Directories on the web; dataset distributions)). Change their relative `@id` to become absolute, e.g. using [ARCP](#establishing-a-base-uri-inside-a-zip-file).
+2. Observe the preservation considerations for [Web-based Data Entities](../data-entities#web-based-data-entities)
+3. Ensure all nested directories not browsable on the Web are represented as `Dataset` with its content listed with `hasPart` or `distribution` (see section [Directories on the web](../data-entities#directories-on-the-web-dataset-distributions)). Change their relative `@id` to become absolute, e.g. using [ARCP](#establishing-a-base-uri-inside-a-zip-file).
 4. Rewrite the JSON-LD with absolute URIs for data entities
 
 If the RO-Crate is already published on the Web, with directory browsing enabled for nested directories, then these steps can be achieved using JSON-LD tooling.
@@ -263,7 +263,7 @@ Results in a valid _RO-Crate JSON-LD_ (actual order in `@graph` may differ):
 ## Expanding/parsing JSON-LD keeping relative referencing
 
 [JSON-LD Expansion] can be used to 
-resolve terms from the `@context` to absolute URIs, e.g. `http://schema.org/description`. This may be needed to parse [extended properties](#extending-ro-crate) or for combinations with other Linked Data.
+resolve terms from the `@context` to absolute URIs, e.g. `http://schema.org/description`. This may be needed to parse [extended properties](jsonld#extending-ro-crate) or for combinations with other Linked Data.
 
 This algorithm would normally also expand `@id` fields based on the current [base URI][JSON-LD base URI] of the _RO-Crate Metadata File_, but this may be a temporary location like `file:///tmp/rocrate54/ro-crate-metadata.json`, meaning `@id`: `subfolder/` becomes `file:///tmp/rocrate54/subfolder/` after JSON-LD expansion.
 
@@ -453,7 +453,7 @@ When parsing a _RO-Crate Metadata File_ into [RDF triples], for instance uploadi
 * The _RO-Crate Root_ may depend on where the _RO-Crate Metadata File_ was parsed from, e.g. `<file:///tmp/ro-crate-metadata.json>` (file) or `<http://localhost:3030/test/ro-crate-metadata.json>` (web upload)
 * Parsing multiple RO-Crates into the same RDF graph, using same base URI, may merge them into the same RO-Crate
 * `ro-crate-metadata.json` may not be recognized as JSON-LD and must be renamed to `ro-crate-metadata.jsonld`
-* Web servers hosting `ro-crate-metadata.json` may not send the [JSON-LD _Content-Type_](#ro-crate-json-ld-media-type)
+* Web servers hosting `ro-crate-metadata.json` may not send the [JSON-LD _Content-Type_](jsonld#ro-crate-json-ld-media-type)
 * If base URI is not correct it may be difficult to find the corresponding file and directory paths from an RDF query returning absolute URIs
 
 {: .tip }
@@ -597,7 +597,7 @@ Parsing this as RDF will generate triples including:
 Here consumers can assume `/` is the _RO-Crate Root_ and generating relative URIs can safely be achieved by  search-replace as the arcp URI is unique. Saving _RO-Crate JSON-LD_ from the triples can be done by using the arcp URI to [relativize absolute URIs within RO-Crate Root](#relativizing-absolute-uris-within-ro-crate-root).
 
 {: .tip }
-> **Bagit**: The arcp specification suggests how [BagIt identifiers][ARCP BagIt] can be used to calculate the base URI. See also section [Combining with other packaging schemes](#combining-with-other-packaging-schemes) - note that in this approach the _RO-Crate Root_ will be the payload folder `/data/` under the calculated arcp base URI.
+> **Bagit**: The arcp specification suggests how [BagIt identifiers][ARCP BagIt] can be used to calculate the base URI. See also section [Combining with other packaging schemes](implementation-notes#combining-with-other-packaging-schemes) - note that in this approach the _RO-Crate Root_ will be the payload folder `/data/` under the calculated arcp base URI.
 
 ## Relativizing absolute URIs within RO-Crate Root
 
