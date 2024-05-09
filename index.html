@@ -21,7 +21,9 @@ layout: none
     <section class="featured-content">
       <div class="featured-content-header mb-3"><a href="use_cases">Explore RO-Crate in Use</a></div>
       <div class="mx-5">
-        {% include section-navigation-tiles.html type="use_cases" %}
+        {% assign featured_use_cases = site.data.featured | map: 'page_id' | join: ", " %}
+        {{ featured_use_cases }}
+        {% include section-navigation-tiles.html type="use_cases" custom=featured_use_cases %}
       </div>      
     </section>
     <section class="bg-light pb-5">
