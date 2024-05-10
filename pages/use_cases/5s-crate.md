@@ -1,5 +1,5 @@
 ---
-page_id: fives-crate
+page_id: 5s-crate
 title: Five Safes Crate
 description: The Five Safes RO-Crate profile extend the Workflow Run RO-Crate profile for use in Trusted Research Environments (TRE).
 url: https://trefx.uk/5s-crate/
