@@ -123,12 +123,9 @@ The descriptor also indicates via the `about` property which entity in the `@gra
 
 We can visualise how the above entity references the **RO-Crate Root** as:
 
-<figure id="figure2">
-<object type="image/svg+xml" data="../../assets/img/introduction-figure-1.svg">
-JSON block with id <code>ro-crate-metadata.json</code> has some attributes, `conformsTo` RO-Crate 1.2, and <code>about</code> referencing id <code>./</code>. 
-In second JSON block with id <code>./</code> we see additional attributes such as its name and description.
-</object>
-<figcaption>Figure 2: showing RO-Crate Metadata descriptor's <code>about</code> property pointing at the RO-Crate Root entity with matching <code>@id</code></figcaption>
+<figure>
+  <img src="../../assets/img/introduction-figure-1.svg" alt="JSON block with id `ro-crate-metadata.json` has some attributes, `conformsTo` RO-Crate 1.2, and `about` referencing id `./`. An arrow points from the `about` attribute to a second JSON block with id `./`, which contains additional attributes such as name and description." />
+  <figcaption>Figure 2: showing RO-Crate Metadata descriptor's <code>about</code> property pointing at the RO-Crate Root entity with matching <code>@id</code></figcaption>
 </figure>
 
 By convention, in RO-Crate the `@id` value of  `./` means that this document describes the directory of content in which the RO-Crate metadata is located as in the example above. This reference from `ro-crate-metadata.json` is therefore marking the `crate1` directory as being the RO-Crate root.
@@ -210,9 +207,12 @@ You may notice the subtle difference between a _data entity_ that is conceptuall
 
 An RO-Crate can be distributed on disk, in packaged format such as a zip file or disk image, or placed on a static website. In any of these cases, an RO-Crate should have an accompanying HTML version (`ro-crate-metadata.html`) designed to be human-readable. The exact contents of the preview may vary but should correspond to the _RO-Crate Metadata Document_ content and link to the contained data entities. The preview may be generated automatically from the RO-Crate Metadata Document (see [RO-Crate tools](../../tools)), or even by hand (equivalent to a README).
 
-Below is a [preview of the running example](examples/rainfall-1.2.0/ro-crate-preview.html):
+Below is a screenshot from the [preview of the running example](examples/rainfall-1.2.0/ro-crate-preview.html):
 
-![Example dataset for RO-Crate specification](../../assets/img/ro-crate-preview-example.png 'Figure 3 showing RO-Crate preview of the running example')
+<figure>
+  <img src="../../assets/img/ro-crate-preview-example.png" alt="Screenshot of RO-Crate HTML preview. The metadata attributes are listed in a table with links to each connected entity, such as the Bureau of Meteorology." />
+  <figcaption>Figure 3: RO-Crate preview of the running example.</figcaption>
+</figure>
 
 
 ## Overview of specification
