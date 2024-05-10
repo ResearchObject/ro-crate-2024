@@ -33,7 +33,7 @@ Researchers interested in specific data sets in BioConnect can create data packa
 
 
 In addition to the standard RO Crate metadata file, BioConnect RO-Crate packages contain a custom HTML preview file that provides a user-friendly view of the data package contents. The preview file includes links to the data files and to the ISA context entities within BioConnect. If any of the included files has a file type defintion, these are packaged as well. 
-{: .note }
+
 > BioConnect's file type definitions are based upon the [Frictionless](https://specs.frictionlessdata.io//table-schema/) table schema format.
 
 To create a data package, a BioConnect user selects a study or set of assays. They are presented with an interface that allows them to customize the package contents, with options to include/exclude specific files, and/or download the source files.
