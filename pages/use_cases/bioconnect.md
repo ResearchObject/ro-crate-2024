@@ -49,7 +49,7 @@ Example:
 {
     "@context": [
         "https://w3id.org/ro/crate/1.1/context",
-        "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/init/isa/isa_context_1_0.json"
+        "https://raw.githubusercontent.com/TheJacksonLaboratory/ro-crate-isa-context/main/isa/isa_context_1_0.json"
     ],
     "@graph": [
         {
