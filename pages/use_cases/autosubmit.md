@@ -1,4 +1,5 @@
 ---
+page_id: autosubmit
 title: Autosubmit
 description: Autosubmit is an open source Python experiment and workflow manager used to manage complex workflows on Cloud and HPC platforms. Autosubmit uses RO-Crate to package the configuration, traces (logs, metrics, databases, etc.), and data of experiments and workflows.
 url: https://autosubmit.readthedocs.io/

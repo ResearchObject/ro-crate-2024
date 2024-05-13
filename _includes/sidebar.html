@@ -72,7 +72,8 @@
       </a>
       {%- if folder.submenu_type | size > 0 %}
       <ul class="list-unstyled">
-        {%- for linked_page in site.pages %}
+        {% assign linked_pages = site.pages | sort: 'title' %}
+        {%- for linked_page in linked_pages %}
         {%- if linked_page.type == folder.submenu_type %}
         {%- if page.url == linked_page.url %}
         <li class="active">

@@ -23,8 +23,9 @@ layout: none
         <h2>Explore RO-Crate in Use</h2>
       </div>
       <div class="mx-5">
-        {% include section-navigation-tiles.html type="use_cases" %}
-      </div>
+        {% assign featured_use_cases = site.data.featured | map: 'page_id' | join: ", " %}
+        {% include section-navigation-tiles.html type="use_cases" custom=featured_use_cases %}
+      </div>      
       <p class="text-center pb-3">
         <a class="fs-3 fw-bold" href="use_cases">See all use cases</a>
       </p>
