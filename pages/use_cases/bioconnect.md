@@ -22,7 +22,7 @@ image: bioconnect.png
 -->
 
 # BioConnect (The Jackson Laboratory)
-[![BioConnect logo](/assets/img/bioconnect.png)](https://docs.bioconnect.jax.org/)
+[![BioConnect logo](assets/img/bioconnect.png)](https://docs.bioconnect.jax.org/)
 
 JAX BioConnect provides a digital index for internal researchers, connecting assay results to well-curated metadata. Study metadata are collected and stored in accordance with the [ISA](https://isa-specs.readthedocs.io/en/latest/isamodel.html) format. BioConnect provides a rich UI for data curation and search, and data files are packaged in RO-Crate format for download.
 
@@ -38,7 +38,7 @@ In addition to the standard RO Crate metadata file, BioConnect RO-Crate packages
 
 To create a data package, a BioConnect user selects a study or set of assays. They are presented with an interface that allows them to customize the package contents, with options to include/exclude specific files, and/or download the source files.
 
-![BioConnect screenshot](/assets/img/bioconnect-screenshot.png)
+![BioConnect screenshot](assets/img/bioconnect-screenshot.png)
 
 Because BioConnect uses the ISA format for study metadata, the RO-Crate metadata file references ISA schema models as context entities. To support linked data mapping to ISA vocabularies, BioConnect uses an additional [ISA context file](https://github.com/TheJacksonLaboratory/ro-crate-isa-context).
 
