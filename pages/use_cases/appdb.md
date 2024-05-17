@@ -3,6 +3,9 @@ page_id: appdb
 title: EGI AppDB
 description: EGI’s Application Database (AppDB) has support for RO-Crate download, either as a JSON-LD metadata file or a ZIP archive.
 url: https://appdb.egi.eu/
+domains: []
+tasks: [software_development]
+roles: [repository_manager, software_developer]
 ---
 
 # EGI's Application Database
@@ -13,4 +16,3 @@ The AppDB RO-Crates describe the software as `SoftwareApplication` entities, sim
 
 * [RO-Crate integration in AppDB](https://wiki.appdb.egi.eu/docs/integration/ro-crate/)
 * [Example RO-Crate](https://appdb.egi.eu/store/vappliance/egi.ubuntu.20.04#) for appliance [EGI Ubuntu 20.04](https://appdb.egi.eu/store/vappliance/egi.ubuntu.20.04)
-

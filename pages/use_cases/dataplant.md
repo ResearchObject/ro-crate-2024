@@ -3,6 +3,9 @@ page_id: dataplant
 title: Data Plant
 description: DataPLANT`s mission is to provide a sustainable and well annotated data management platform for plant sciences.
 url: https://nfdi4plants.org/content/learn-more/annotated-research-context.html
+domains: [plant_science]
+tasks: [manage_data]
+roles: [information_architect]
 ---
 
 # DataPlant
