@@ -6,12 +6,11 @@
 {% for case in all_use_cases %}
     {% if page.type == "domains" %}
         {% assign metadata = case.domains %}
-    {% else if page.type == "tasks" %}
+    {% elsif page.type == "tasks" %}
         {% assign metadata = case.tasks %}
-    {% else if page.type == "roles" %}
+    {% elsif page.type == "roles" %}
         {% assign metadata = case.roles %}
     {% endif %}
-
     {% if metadata contains page.page_id %}
         {% assign matched_cases = matched_cases | push: case.page_id %}
     {% endif %}

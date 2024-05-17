@@ -3,6 +3,9 @@ page_id: 5s-crate
 title: Five Safes Crate
 description: The Five Safes RO-Crate profile extend the Workflow Run RO-Crate profile for use in Trusted Research Environments (TRE).
 url: https://trefx.uk/5s-crate/
+domains: [medicine]
+tasks: [compliance, data_handling, manage_data]
+roles: [compliance_officer, data_steward, information_architect]
 ---
 
 # Five Safes Crate
@@ -34,4 +37,3 @@ The profile uses the [BagIt](https://www.researchobject.org/ro-crate/1.1/appendi
 * Profile report <https://doi.org/10.5281/zenodo.10376350>:
 * Workflow Run Crate paper: <https://doi.org/10.48550/arXiv.2312.07852>:
 * Example: [example-result.bagit.zip](https://trefx.uk/5s-crate/0.4/example-result.bagit.zip) [ro-crate-metadata.json](https://trefx.uk/5s-crate/0.4/example-hutch/data/ro-crate-metadata.json) [ro-crate-preview.html](https://trefx.uk/5s-crate/0.4/example-result/data/ro-crate-preview.html)
-
