@@ -1,3 +1,4 @@
+{%- if page.related_pages %}
 <h2>Related pages</h2>
 
 {%- for section in page.related_pages %}
@@ -15,3 +16,4 @@
 </ul>
   
 {%- endfor %}
+{% endif %}

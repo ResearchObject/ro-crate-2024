@@ -5,3 +5,5 @@ icon: fa-database
 page_id: repository_manager
 ---
 {% include item_details.html %}
+
+{% include related_pages.html %}

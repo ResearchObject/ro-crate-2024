@@ -5,3 +5,5 @@ icon: fa-file-circle-check
 page_id: curation
 ---
 {% include item_details.html %}
+
+{% include related_pages.html %}

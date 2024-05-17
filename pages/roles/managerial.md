@@ -5,3 +5,5 @@ icon: fa-paperclip
 page_id: managerial
 ---
 {% include item_details.html %}
+
+{% include related_pages.html %}
