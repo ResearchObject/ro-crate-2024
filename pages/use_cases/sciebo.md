@@ -3,6 +3,9 @@ page_id: sciebo
 title: Sciebo RDS
 description: Sciebo RDS (Research Data Services) is a self-hosted interface between data repositories and file storage solutions, assisting the research data deposition process with annotations made using Describo Online and stored as an RO-Crate
 url: https://cs3mesh4eosc.eu/
+domains: [language_text]
+tasks: [data_handling]
+roles: [data_steward, information_architect]
 ---
 
 # Sciebo RDS

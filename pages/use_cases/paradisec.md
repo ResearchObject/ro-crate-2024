@@ -3,6 +3,9 @@ page_id: paradisec
 title: PARADISEC
 description: Modern PARADISEC demonstrates the use of RO-Crate to describe the collections and items
 url: https://arkisto-platform.github.io/case-studies/paradisec/
+domains: [language_text]
+tasks: [data_handling]
+roles: [information_architect, repository_manager]
 ---
 
 # Modern PARADISEC

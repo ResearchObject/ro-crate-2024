@@ -3,6 +3,9 @@ page_id: ro-compose
 title: Research Object Composer
 description: Research Object Composer is a REST API for gradually building and depositing Research Objects according to a pre-defined profile. 
 url: https://github.com/researchobject/research-object-composer
+domains: []
+tasks: [conduct_research, software_development]
+roles: [researcher, software_developer]
 ---
 
 ## Research Object Composer
