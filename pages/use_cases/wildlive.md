@@ -3,6 +3,9 @@ page_id: wildlive
 title: Wildlive portal
 description: Senckenberg’s Wildlive data portal, is a repository and analysis platform for biodiversity monitoring.
 url: "https://wildlive.senckenberg.de/"
+domains: [ecology]
+tasks: [conduct_research, manage_data]
+roles: [data_analyst, repository_manager, researcher]
 ---
 
 # Senckenberg Wildlive data portal
