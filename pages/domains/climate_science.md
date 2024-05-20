@@ -4,8 +4,8 @@ description: The study of climate and weather.
 icon: fa-cloud-sun
 page_id: climate_science
 related_pages: 
-  tasks: []
-  roles: []
+  tasks: [curation, data_handling, manage_data]
+  roles: [data_analyst, researcher]
 ---
 {% include item_details.html %}
 

@@ -5,8 +5,8 @@ icon: fa-seedling
 page_id: ecology
 edam_url: http://edamontology.org/topic_0610
 related_pages: 
-  tasks: []
-  roles: []
+  tasks: [curation, data_handling, manage_data]
+  roles: [data_analyst, researcher]
 ---
 {% include item_details.html %}
 

@@ -4,7 +4,7 @@ description: The study of the human past.
 icon: fa-scroll
 page_id: history
 related_pages: 
-  tasks: [conduct_research, data_curation, manage_data]
+  tasks: [conduct_research, curation, manage_data]
   roles: [data_steward, repository_manager, researcher]
 ---
 {% include item_details.html %}
