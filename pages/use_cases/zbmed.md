@@ -4,6 +4,9 @@ title: ZBMed SemTec web pages
 description: The Semantic Technologies (SemTec) team in ZB MED uses GitHub pages to share research projects and corresponding research artefacts/outcomes.
 url: https://www.zbmed.de/en/
 image: ZBMED.svg
+domains: [biomedical_science, medicine, informatics]
+tasks: [conduct_research, manage_data]
+roles: [data_steward, researcher]
 ---
 
 # ZBMed

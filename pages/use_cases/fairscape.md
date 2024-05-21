@@ -3,6 +3,9 @@ page_id: fairscape
 title: FAIRSCAPE
 description: FAIRSCAPE is a framework for reusable cloud-based computations using ARK identifiers with rich provenance in an evidence graph and the Evidence Graph Ontology (EVI)
 url: https://fairscape.github.io/
+domains: [page_id]
+tasks: [conduct_research, data_handling]
+roles: [information_architect, researcher]
 ---
 
 # FAIRSCAPE

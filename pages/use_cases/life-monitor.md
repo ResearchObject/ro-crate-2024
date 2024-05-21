@@ -4,6 +4,9 @@ redirect_from: life_monitor
 title: Life Monitor
 description: Life Monitor is a testing and monitoring service for computational workflows being developed as part of the EOSC-Life project. It aims to facilitate the execution, monitoring and sharing of workflow tests over time, allowing to detect deviations from expected workflow operation and provide useful feedback to the workflow authors
 image: life_monitor.png
+domains: [biology, biomedical_science, medicine, omics]
+tasks: [conduct_research, software_development]
+roles: [researcher, software_developer]
 ---
 ## Life Monitor
 [Life Monitor](https://crs4.github.io/life_monitor/) is a testing and monitoring service for computational workflows being developed as part of the [EOSC-Life](https://www.eosc-life.eu/) project. It aims to facilitate the execution, monitoring and sharing of workflow tests over time, allowing to detect deviations from expected workflow operation and provide useful feedback to the workflow authors for maintaining and improving their work.
