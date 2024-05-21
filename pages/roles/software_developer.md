@@ -5,3 +5,5 @@ icon: fa-code
 page_id: software_developer
 ---
 {% include item_details.html %}
+
+{% include related_pages.html %}

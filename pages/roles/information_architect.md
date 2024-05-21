@@ -5,3 +5,5 @@ icon: fa-file-contract
 page_id: information_architect
 ---
 {% include item_details.html %}
+
+{% include related_pages.html %}

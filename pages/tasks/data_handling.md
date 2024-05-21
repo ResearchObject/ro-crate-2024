@@ -5,3 +5,5 @@ icon: fa-laptop-file
 page_id: data_handling
 ---
 {% include item_details.html %}
+
+{% include related_pages.html %}

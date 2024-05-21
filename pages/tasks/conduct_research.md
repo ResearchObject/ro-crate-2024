@@ -5,3 +5,5 @@ icon: fa-microscope
 page_id: conduct_research
 ---
 {% include item_details.html %}
+
+{% include related_pages.html %}

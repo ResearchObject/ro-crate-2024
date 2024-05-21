@@ -7,3 +7,5 @@ related_pages:
   domains: [biomedical_science]
 ---
 {% include item_details.html %}
+
+{% include related_pages.html %}

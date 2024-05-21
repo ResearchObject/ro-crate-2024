@@ -5,3 +5,5 @@ icon: fa-list-check
 page_id: compliance
 ---
 {% include item_details.html %}
+
+{% include related_pages.html %}
