@@ -1,5 +1,5 @@
 ---
-title: Medicine & Health data
+title: Medicine and Health
 description: Research in support of healing by diagnosis, treatment, and prevention of disease.
 icon: fa-stethoscope
 page_id: medicine
