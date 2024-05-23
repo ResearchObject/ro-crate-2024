@@ -8,7 +8,7 @@ tasks: [curation]
 roles: [information_architect]
 ---
 
-# KEOD Data Lake
+# KEDO Data Lake
 
 
 Knowledge Enhanced Digital Objects ([KEDO](https://github.com/luoyu357/KEDODataLake)) is an experimental approach of building a data lake using a combination of knowledge graphs, RO-Crate and PID records. 
