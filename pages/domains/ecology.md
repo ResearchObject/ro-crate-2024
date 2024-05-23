@@ -1,5 +1,5 @@
 ---
-title: Ecology
+title: "Ecology and Biodiversity"
 description: The ecological and environmental sciences and especially the application of information technology (ecoinformatics).
 icon: fa-seedling
 page_id: ecology
