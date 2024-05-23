@@ -1,7 +1,3 @@
----
-type: hidden
----
-
 # Add your use case
 
 If you are using RO-Crate in your project, we welcome you to add your use case here. The use case should be written in [Markdown](https://www.markdownguide.org/),  include a description of the project, how it uses RO-Crate, and any relevant links. You may also include a logo and screenshots.
