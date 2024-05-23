@@ -1,5 +1,5 @@
 ---
-title: Climate Science
+title: Climate Science & Earth sciences
 description: The study of climate and weather.
 icon: fa-cloud-sun
 page_id: climate_science
