@@ -46,3 +46,6 @@
 
 - question: "How is RO-Crate different from other data packaging formats?"
   answer: "RO-Crate is unique in its use of [schema.org](https://schema.org) annotations, which allow for rich metadata descriptions of the data, making it more discoverable and reusable. It also provides a lightweight and flexible approach, making it easier for researchers to adopt and use."
+
+- question: "How can I cite RO-Crate?"
+  answer: "See [Cite RO-Crate](about_ro_crate#cite-ro-crate)."
