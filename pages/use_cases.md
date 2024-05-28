@@ -2,6 +2,8 @@
 title: Use Cases
 layout: default
 sidebar: main
+redirect_from:
+    - /implementations
 ---
 # RO-Crate in use
 
