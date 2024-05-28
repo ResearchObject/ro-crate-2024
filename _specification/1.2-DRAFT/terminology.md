@@ -1,5 +1,7 @@
 ---
 title: Terminology
+redirect_from:
+  - /1.2-DRAFT/terminology
 nav_order: 2
 parent: RO-Crate 1.2-DRAFT
 ---
