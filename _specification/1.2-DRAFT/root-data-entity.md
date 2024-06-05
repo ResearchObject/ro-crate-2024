@@ -1,5 +1,7 @@
 ---
 title: Root Data Entity
+redirect_from:
+  - /1.2-DRAFT/root-data-entity
 nav_order: 5
 parent: RO-Crate 1.2-DRAFT 
 ---

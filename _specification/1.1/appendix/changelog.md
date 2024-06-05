@@ -28,7 +28,7 @@ excerpt: List of changes in releases of this specifications
 * [RO-Crate 1.1.3](https://github.com/ResearchObject/ro-crate/releases/tag/1.1.3) 
   * JSON-LD context https://w3id.org/ro/crate/1.1/context fix typo in mapping from `RepositoryObject` to <http://pcdm.org/2016/04/18/models#Object> [#243](https://github.com/ResearchObject/ro-crate/issues/243)
 * [RO-Crate 1.1.2](https://github.com/ResearchObject/ro-crate/releases/tag/1.1.2) 
-  * Typo fixes in [data entity section](../data-entities) [#177](https://github.com/ResearchObject/ro-crate/issues/177), [workflow section](../workflows)180](https://github.com/ResearchObject/ro-crate/issues/180), [metadata section](../metadata)](https://github.com/ResearchObject/ro-crate/issues/181) and others.
+  * Typo fixes in [data entity section](../data-entities) [#177](https://github.com/ResearchObject/ro-crate/issues/177), [workflow section](../workflows) [#180](https://github.com/ResearchObject/ro-crate/issues/180), [metadata section](../metadata) [#181](https://github.com/ResearchObject/ro-crate/issues/181) and others.
   * Correct namespace for `rdfs:comment` on [ad-hoc terms](jsonld#add-local-definitions-of-ad-hoc-terms) [#164](https://github.com/ResearchObject/ro-crate/issues/164)
   * Fixed broken links to Bioschemas and SPAR ontologies [#185](https://github.com/ResearchObject/ro-crate/issues/185) (note: `conformsTo` URIs unchanged, will be updated in RO-Crate 1.2)
 * [RO-Crate 1.1.1](https://github.com/ResearchObject/ro-crate/releases/tag/1.1.1)

@@ -1,5 +1,7 @@
 ---
 title: RO-Crate Structure
+redirect_from:
+  - /1.2-DRAFT/structure
 nav_order: 3
 parent: RO-Crate 1.2-DRAFT
 ---

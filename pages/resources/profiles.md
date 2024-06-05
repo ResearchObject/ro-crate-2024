@@ -135,7 +135,7 @@ additional terms from the
 
 ```json
 [
-    "https://w3id.org/ro/crate/specification/1.1/context",
+    "https://w3id.org/ro/crate/1.1/context",
     {
         "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
         "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
