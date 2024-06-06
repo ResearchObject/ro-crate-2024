@@ -37,13 +37,13 @@ The COMPSs runtime includes the capacity of automatically recording details of t
 
 Provenance information can be useful for a number of things, including Governance, Reproducibility, Replicability, Traceability, or Knowledge Extraction, among others. In our case, we have initially targeted workflow provenance recording to enable users to publish research results obtained with COMPSs as artifacts that can be cited in scientific publications with their corresponding DOI, by using [WorkflowHub](https://workflowhub.eu/).
 
-![COMPSs with RO-Crate](../assets/img/COMPSs-screenshot.png)
+![COMPSs with RO-Crate](/assets/img/COMPSs-screenshot.png)
 
 ## RO-Crate in Example
 
 Plenty of examples of COMPSs Workflows with enabled provenance recording can be found at [WorkflowHub](https://workflowhub.eu/workflows?filter%5Bworkflow_type%5D=pycompss) (filtering the browsing by 'COMPSs' workflow type).
 
-In addition, the COMPSs User Manual has a dedicated section on [how to generate Workflow Provenance with COMPSs](https://compss-doc.readthedocs.io/en/stable/Sections/05_Tools/04_Workflow_Provenance.html)
+In addition, the COMPSs User Manual has a dedicated section on [how to generate Workflow Provenance with COMPSs](https://compss-doc.readthedocs.io/en/stable/Sections/05_Tools/04_Workflow_Provenance.html).
 
 ## Resources
 
