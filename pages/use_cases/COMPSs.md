@@ -39,7 +39,7 @@ Provenance information can be useful for a number of things, including Governanc
 
 ![COMPSs with RO-Crate](/assets/img/COMPSs-screenshot.png)
 
-## RO-Crate in Example
+## Examples of COMPSs RO-Crates
 
 Plenty of examples of COMPSs Workflows with enabled provenance recording can be found at [WorkflowHub](https://workflowhub.eu/workflows?filter%5Bworkflow_type%5D=pycompss) (filtering the browsing by 'COMPSs' workflow type).
 
